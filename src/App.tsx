@@ -1,7 +1,8 @@
 import React from "react";
 
 import './App.css';
-import Navigation from './Navigation.tsx';
+import Navigation from './Navigation';
+import Greeting from './Greeting';
 import AboutMe from './About';
 import Skills from './Skills';
 import Projects from './Projects';
@@ -12,28 +13,15 @@ function App() {
 
   return (
     <>
-      <div>
-
+      
         <Navigation />
-
-        <div className="container">
-          <div className="content">
-            <h1>Welcome to my portfolio</h1>
-            <p>This is a simple portfolio website.</p>
-        </div>
-        </div>
-
+        <Greeting />
         <AboutMe />
-
         <Skills />
-
         <Projects />
-
         <Contact />
-
         <Footer />
       
-      </div>
     </>
   )
 }

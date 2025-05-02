@@ -6,7 +6,7 @@ function Skills() {
 
         <div className="skills">
             
-            <span> Skills </span>
+             <span className="section-heading"> Skills </span>
 
         </div>
     )

@@ -6,7 +6,7 @@ function Projects() {
 
         <div className="projects">
             
-            <span> Projects </span>
+             <span className="section-heading"> Projects </span>
 
         </div>
     )

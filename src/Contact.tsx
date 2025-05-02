@@ -7,7 +7,7 @@ function Contact() {
 
         <div className="contact">
             
-            <span> Contact </span>
+            <span className="section-heading"> Contact </span>
 
         </div>
     )

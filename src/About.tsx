@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./App.css";
 
 function AboutMe() { 
 
@@ -7,7 +7,7 @@ function AboutMe() {
 
         <div className="about">
             
-            <span> About </span>
+            <span className="section-heading"> About </span>
 
         </div>
     )
