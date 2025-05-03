@@ -26,14 +26,13 @@ const Greeting = () => {
             />
 
             <div className="socials">
-
                 <div className="social-item">
+                   <span> Download my Resume </span>
                     <span className="social-title">
                         <SiReaddotcv style={{
                             fontSize: '30px',
                             margin: '10px',
                             color: 'white',
-
                         }}
                         />
                     </span>
@@ -45,7 +44,7 @@ const Greeting = () => {
                             <IoLogoLinkedin style={{
                                 fontSize: '30px',
                                 margin: '10px',
-                                color: ''
+                                color: 'white'
                             }}
                             />
                         </a>
@@ -58,7 +57,7 @@ const Greeting = () => {
                             <LuGithub style={{
                                 fontSize: '30px',
                                 margin: '10px',
-
+                                color: 'white'
                             }}
                             />
                         </a>
