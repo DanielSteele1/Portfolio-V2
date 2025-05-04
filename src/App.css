@@ -285,19 +285,50 @@ body {
 
 }
 
+.skill-item {
+
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: 25px;
+  height: 50px;
+  border-radius: 10px;
+  padding: 10px;
+
+}
+
+.skill-sub-item {
+  display:flex;
+  padding: 5px;
+}
+
+
 .Frontend-skills, .Backend-skills, .Other {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  margin: 0 auto;
   align-items: center;
-  width: 100%;
+  width: 80%;
 }
 
-.skill-item {
+.progress-bar {
+  width: 200px;
+  height: 10px !important;
+  border-radius: 50px;
+  background-color:#4b3030 !important;
+}
+
+.css-l16vtb-MuiLinearProgress-bar1 {
+  background-color:#e66465 !important;
+}
+
+.skill-icon {
+
   display:flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  margin: 0 auto;
-  padding: 10px;
+  color:#e66465;
+  font-size: 35px;
+  margin-right:10px;
 }
