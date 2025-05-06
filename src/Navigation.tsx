@@ -1,6 +1,5 @@
 import React from "react";
 
-
 function Navigation() {
 
     return (
@@ -16,6 +15,7 @@ function Navigation() {
                     
                     <span className="nav-title"> Projects </span>
                     <span className="nav-title"> Skills </span>
+                    <span className="nav-title"> Dev Tools </span>
                     <span className="nav-title"> Contact </span>
 
                 </div>

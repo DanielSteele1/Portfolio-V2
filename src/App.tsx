@@ -1,5 +1,5 @@
-import React from "react";
-
+import React from 'react';
+import {useState} from 'react';
 import './App.css';
 import Navigation from './Navigation';
 import Greeting from './Greeting';
@@ -8,12 +8,12 @@ import Skills from './Skills';
 import Projects from './Projects';
 import Contact from './Contact';
 import Footer from './Footer';
+import { motion } from "motion/react"
 
 function App() {
 
   return (
     <>
-      
         <Navigation />
         <Greeting />
         <Skills />
@@ -21,7 +21,7 @@ function App() {
         <AboutMe />
         <Contact />
         <Footer />
-      
+
     </>
   )
 }

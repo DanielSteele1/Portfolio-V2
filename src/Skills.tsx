@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { SiReact } from "react-icons/si";
+import { SiCplusplus, SiExpress, SiGraphql, SiJavascript, SiNodedotjs, SiReact, SiVite } from "react-icons/si";
 import { LuPalette } from "react-icons/lu";
-import { FaServer } from "react-icons/fa";
-import { TbBrandGraphql } from "react-icons/tb";
+import { FaNode, FaReact, FaServer } from "react-icons/fa";
+import { TbApi, TbApiApp, TbBrandFramerMotion, TbBrandGraphql } from "react-icons/tb";
 import { LinearProgress } from '@mui/material';
 import { FaGitAlt } from "react-icons/fa6";
 import { SiTypescript } from "react-icons/si";
@@ -12,6 +12,7 @@ import { SiCsswizardry } from "react-icons/si";
 import { FaFigma } from "react-icons/fa";
 import { FaNodeJs } from "react-icons/fa";
 import { SiMui } from "react-icons/si";
+import { LazyMotion } from "motion/react";
 
 function Skills() {
 
@@ -22,7 +23,7 @@ function Skills() {
 
     // function to animate the progressbars 
     // - basically just stalls the fill up animation to make it slower, giving the illusion of animation.
-    function AnimateProgressbar({ value, ...props }: {value: number}) {
+    function AnimateProgressbar({ value, ...props }: { value: number }) {
         const [animate, setAnimate] = useState(0);
 
         useEffect(() => {
@@ -66,43 +67,70 @@ function Skills() {
 
                         <div className="skill-item">
                             <div className="skill-sub-item">
-                                <FaHtml5 className="skill-icon"/>
-                                <SiCsswizardry className="skill-icon"/>
+                                <FaHtml5 className="skill-icon" />
+                                <SiCsswizardry className="skill-icon" />
                                 <span className="skills-title"> HTML/CSS </span>
                             </div>
-                            <AnimateProgressbar value={90} className="progress-bar" />
+
+                            <div className="progress-container">
+                                <AnimateProgressbar value={90} className="progress-bar" />
+                                <div className="Progress-value"> 100 % </div>
+                            </div>
+
+
                         </div>
 
                         <div className="skill-item">
                             <div className="skill-sub-item">
-                                <SiTypescript className="skill-icon"/>
+                                <SiJavascript className="skill-icon" />
+                                <span className="skills-title"> JavaScript </span>
+                            </div>
+
+                            <div className="progress-container">
+                                <AnimateProgressbar value={85} className="progress-bar" />
+                                <div className="Progress-value"> 85 % </div>
+                            </div>
+
+                        </div>
+
+                        <div className="skill-item">
+                            <div className="skill-sub-item">
+                                <SiTypescript className="skill-icon" />
                                 <span className="skills-title"> TypeScript </span>
                             </div>
-                            <AnimateProgressbar value={90} className="progress-bar" />
+
+                            <div className="progress-container">
+                                <AnimateProgressbar value={85} className="progress-bar" />
+                                <div className="Progress-value"> 85 % </div>
+                            </div>
+
                         </div>
 
                         <div className="skill-item">
                             <div className="skill-sub-item">
-                                <SiReact className="skill-icon"/>
+                                <FaReact className="skill-icon" />
                                 <span className="skills-title"> React </span>
                             </div>
-                            <AnimateProgressbar  value={90} className="progress-bar" />
-                        </div>
 
-                        <div className="skill-item">
-                            <div className="skill-sub-item">
-                                <SiMui className="skill-icon"/>
-                                <span className="skills-title"> MatUI </span>
+                            <div className="progress-container">
+                                <AnimateProgressbar value={90} className="progress-bar" />
+                                <div className="Progress-value"> 90 % </div>
                             </div>
-                            <AnimateProgressbar value={90} className="progress-bar" />
-                        </div>
 
+
+                        </div>
                         <div className="skill-item">
                             <div className="skill-sub-item">
-                                <FaFigma className="skill-icon"/>
+                                <FaFigma className="skill-icon" />
                                 <span className="skills-title"> Figma </span>
                             </div>
-                            <AnimateProgressbar value={90} className="progress-bar" />
+
+                            <div className="progress-container">
+                                <AnimateProgressbar value={100} className="progress-bar" />
+                                <div className="Progress-value"> 100 % </div>
+                            </div>
+
+
                         </div>
 
                     </div>
@@ -113,20 +141,43 @@ function Skills() {
 
                         <div className="skill-item">
                             <div className="skill-sub-item">
-                                <SiMongodb className="skill-icon"/>
+                                <SiMongodb className="skill-icon" />
                                 <span className="skills-title"> MongoDB </span>
                             </div>
-                            <AnimateProgressbar value={90} className="progress-bar" />
+
+                            <div className="progress-container">
+                                <AnimateProgressbar value={90} className="progress-bar" />
+                                <div className="Progress-value"> 90 % </div>
+                            </div>
+
                         </div>
 
                         <div className="skill-item">
                             <div className="skill-sub-item">
-                                <FaNodeJs className="skill-icon"/>
-                                <span className="skills-title"> NodeJS </span>
+                                <SiNodedotjs className="skill-icon" />
+                                <span className="skills-title"> NodeJs </span>
                             </div>
-                            <AnimateProgressbar value={90} className="progress-bar" />
+
+                            <div className="progress-container">
+                                <AnimateProgressbar value={80} className="progress-bar" />
+                                <div className="Progress-value"> 80 % </div>
+                            </div>
+
                         </div>
 
+                        <div className="skill-item">
+                            <div className="skill-sub-item">
+
+                                <SiExpress className="skill-icon" />
+                                <span className="skills-title"> Express </span>
+                            </div>
+
+                            <div className="progress-container">
+                                <AnimateProgressbar value={80} className="progress-bar" />
+                                <div className="Progress-value"> 80 % </div>
+                            </div>
+
+                        </div>
                     </div>
                 }
 
@@ -135,27 +186,67 @@ function Skills() {
 
                         <div className="skill-item">
                             <div className="skill-sub-item">
-                                <SiReact className="skill-icon"/>
+                                <SiCplusplus className="skill-icon" />
+                                <span className="skills-title"> C++ </span>
+                            </div>
+
+                            <div className="progress-container">
+                                <AnimateProgressbar value={80} className="progress-bar" />
+                                <div className="Progress-value"> 80 % </div>
+                            </div>
+
+                        </div>
+
+                        <div className="skill-item">
+                            <div className="skill-sub-item">
+                                <TbApi className="skill-icon" />
                                 <span className="skills-title"> REST API </span>
                             </div>
-                            <AnimateProgressbar value={90} className="progress-bar" />
-                        </div>
 
-                        <div className="skill-item">
-                            <div className="skill-sub-item">
-                                <FaGitAlt className="skill-icon"/>
-                                <span className="skills-title"> Git </span>
+                            <div className="progress-container">
+                                <AnimateProgressbar value={80} className="progress-bar" />
+                                <div className="Progress-value"> 80 % </div>
                             </div>
-                            <AnimateProgressbar value={90} className="progress-bar" />
 
                         </div>
 
                         <div className="skill-item">
                             <div className="skill-sub-item">
-                               <TbBrandGraphql className="skill-icon"/>
+                                <SiGraphql className="skill-icon" />
                                 <span className="skills-title"> GraphQL </span>
                             </div>
-                            <AnimateProgressbar value={90} className="progress-bar" />
+
+                            <div className="progress-container">
+                                <AnimateProgressbar value={80} className="progress-bar" />
+                                <div className="Progress-value"> 80 % </div>
+                            </div>
+
+                        </div>
+
+                        <div className="skill-item">
+                            <div className="skill-sub-item">
+                                <TbBrandFramerMotion className="skill-icon" />
+                                <span className="skills-title"> Framer Motion </span>
+                            </div>
+
+                            <div className="progress-container">
+                                <AnimateProgressbar value={60} className="progress-bar" />
+                                <div className="Progress-value"> 60 % </div>
+                            </div>
+
+                        </div>
+
+                        <div className="skill-item">
+                            <div className="skill-sub-item">
+                                <SiVite className="skill-icon" />
+                                <span className="skills-title"> Vite </span>
+                            </div>
+
+                            <div className="progress-container">
+                                <AnimateProgressbar value={100} className="progress-bar" />
+                                <div className="Progress-value"> 100 % </div>
+                            </div>
+
                         </div>
 
                     </div>
