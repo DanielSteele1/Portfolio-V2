@@ -30,12 +30,12 @@ body {
 
 .logo:hover {
 
-    background: linear-gradient(180deg, #e66465, #9198e5);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    transition: all 0.3s ease-in-out;
-    color: transparent; 
+  background: linear-gradient(180deg, #e66465, #9198e5);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+  color: transparent;
 
 }
 
@@ -68,7 +68,7 @@ body {
   margin: 0 auto;
   justify-content: center;
   align-items: center;
-  padding-bottom: 10px;
+  padding-bottom: 110px;
 }
 
 .gradient {
@@ -165,9 +165,6 @@ body {
 .projects {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
   margin: 0 auto;
   padding-bottom: 10px;
 
@@ -241,13 +238,23 @@ body {
 
 .section-heading {
 
-
   display: flex;
   margin: 0 auto;
   justify-content: center;
   align-items: center;
   width: 100%;
   font-size: 2.5rem;
+}
+
+.section-sub-heading {
+  display: flex;
+  width: 40%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 10px;
+
 }
 
 .skills-container {
@@ -259,7 +266,7 @@ body {
 }
 
 .skills-tabs {
-  display:flex;
+  display: flex;
   width: 80%;
   margin: 10px;
   align-items: center;
@@ -268,7 +275,7 @@ body {
 }
 
 .skills-tabs button {
-  display:flex;
+  display: flex;
   margin: 10px;
   padding: 10px;
   font-family: 'Figtree', sans-serif !important;
@@ -284,6 +291,12 @@ body {
   transition: 0.3s ease-in-out;
 }
 
+.skills-tabs button.active {
+  border-color: #e66465;
+  transition: 0.3s ease-in-out;
+
+}
+
 .skill-item {
 
   margin: 0 auto;
@@ -293,7 +306,7 @@ body {
   align-items: flex-start;
   font-size: 20px;
   height: 80px;
-  width:fit-content;
+  width: fit-content;
   border-radius: 10px;
   padding: 10px;
   border: 2px solid rgba(255, 255, 255, 0.1);
@@ -301,14 +314,16 @@ body {
 }
 
 .skill-sub-item {
-  display:flex;
+  display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
   padding: 5px;
 }
 
-.Frontend-skills, .Backend-skills, .Other {
+.Frontend-skills,
+.Backend-skills,
+.Other {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   justify-content: center;
@@ -323,34 +338,90 @@ body {
   height: 13px !important;
   border-radius: 50px;
   justify-content: flex-start;
-  background-color:#4b3030 !important;
+  background-color: #4b3030 !important;
 }
 
 .css-l16vtb-MuiLinearProgress-bar1 {
-  background-color:#e66465 !important;
+  background-color: #e66465 !important;
   width: 100% !important;
 }
 
 .skill-icon {
 
-  display:flex;
-  color:#e66465;
+  display: flex;
+  color: #e66465;
   font-size: 35px;
-  margin-right:10px;
+  margin-right: 10px;
 }
 
 .Progress-value {
-  display:flex;
+  display: flex;
   width: 80px;
   justify-content: flex-end;
   align-items: flex-end;
-  font-size:18px;
-  color:rgb(190, 186, 186);
+  font-size: 18px;
+  color: rgb(190, 186, 186);
 }
 
 .progress-container {
-  display:flex;
+  display: flex;
   flex-direction: row;
   justify-content: center;
+  margin-left: 5px;
   align-items: center;
+}
+
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  margin: 0 auto;
+
+}
+
+.Project {
+  display: flex;
+  height: 50%;
+  width:70%;
+  margin: 0 auto;
+  flex-direction: column;
+  border-radius: 10px;
+
+}
+
+.project-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  margin: 10px;
+  font-size: 15px;
+
+}
+
+.project-title {
+
+  font-size: 28px;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+
+}
+
+.project-image img {
+
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+
+}
+
+.project-image {
+  height: auto;
 }

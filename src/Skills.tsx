@@ -35,7 +35,13 @@ function Skills() {
             }
 
         }, [animate, value]);
-        return <LinearProgress variant="determinate" value={animate} {...props} />
+        return <LinearProgress variant="determinate" value={animate} {...props}
+            sx={{
+                '& .MuiLinearProgress-bar': {
+                    backgroundImage: 'linear-gradient(to right, #ff92a5, #e66465)',
+                },
+            }}
+            />
     }
 
     return (
@@ -43,6 +49,7 @@ function Skills() {
         <div className="skills">
 
             <span className="section-heading">My{"\u00A0"}<span className="gradient">Skills</span> </span>
+            <span className="section-sub-heading">A list of all the skills i'm capable of and where i consider myself. I am especially capable at front-end development and can create visually-stunning websites. </span>
 
             {/* map the tabs to create a button for each item in array. 
             once pressed, setActive(index) updates the tab to the corrosponding section.*/}
@@ -76,7 +83,6 @@ function Skills() {
                                 <AnimateProgressbar value={90} className="progress-bar" />
                                 <div className="Progress-value"> 100 % </div>
                             </div>
-
 
                         </div>
 
