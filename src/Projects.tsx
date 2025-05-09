@@ -1,5 +1,4 @@
 import React from "react";
-import { RiExternalLinkLine } from "react-icons/ri";
 import { LuGithub } from "react-icons/lu";
 import { RiEarthFill } from "react-icons/ri";
 

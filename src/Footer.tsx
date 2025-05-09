@@ -1,6 +1,5 @@
 import React from "react";
 import { LuGithub } from "react-icons/lu";
-import { SiReaddotcv } from "react-icons/si";
 import { IoLogoLinkedin } from "react-icons/io5";
 
 function Footer() { 

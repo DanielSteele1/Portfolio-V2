@@ -8,7 +8,6 @@ import Skills from './Skills';
 import Projects from './Projects';
 import Contact from './Contact';
 import Footer from './Footer';
-import { motion } from "motion/react"
 
 function App() {
 

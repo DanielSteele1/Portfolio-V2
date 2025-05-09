@@ -1,18 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { SiCplusplus, SiExpress, SiGraphql, SiJavascript, SiNodedotjs, SiReact, SiVite } from "react-icons/si";
 import { LuPalette } from "react-icons/lu";
-import { FaNode, FaReact, FaServer } from "react-icons/fa";
-import { TbApi, TbApiApp, TbBrandFramerMotion, TbBrandGraphql } from "react-icons/tb";
+import { FaReact, FaServer } from "react-icons/fa";
+import { TbApi, TbBrandFramerMotion, TbBrandGraphql } from "react-icons/tb";
 import { LinearProgress } from '@mui/material';
-import { FaGitAlt } from "react-icons/fa6";
 import { SiTypescript } from "react-icons/si";
 import { SiMongodb } from "react-icons/si";
 import { FaHtml5 } from "react-icons/fa";
 import { SiCsswizardry } from "react-icons/si";
 import { FaFigma } from "react-icons/fa";
-import { FaNodeJs } from "react-icons/fa";
-import { SiMui } from "react-icons/si";
-import { LazyMotion } from "motion/react";
+
 
 function Skills() {
 
@@ -35,7 +32,7 @@ function Skills() {
             }
 
         }, [animate, value]);
-        return <LinearProgress variant="determinate" value={animate} {...props}
+        return <LinearProgress variant="determinate" className="progress-bar" value={animate} {...props}
             sx={{
                 '& .MuiLinearProgress-bar': {
                     backgroundImage: 'linear-gradient(to right, #ff92a5, #e66465)',
@@ -80,7 +77,7 @@ function Skills() {
                             </div>
 
                             <div className="progress-container">
-                                <AnimateProgressbar value={100} className="progress-bar" />
+                                <AnimateProgressbar value={100} />
                                 <div className="Progress-value"> 100 % </div>
                             </div>
                         </div>
@@ -92,7 +89,7 @@ function Skills() {
                             </div>
 
                             <div className="progress-container">
-                                <AnimateProgressbar value={85} className="progress-bar" />
+                                <AnimateProgressbar value={85} />
                                 <div className="Progress-value"> 85 % </div>
                             </div>
 
@@ -105,7 +102,7 @@ function Skills() {
                             </div>
 
                             <div className="progress-container">
-                                <AnimateProgressbar value={85} className="progress-bar" />
+                                <AnimateProgressbar value={85} />
                                 <div className="Progress-value"> 85 % </div>
                             </div>
 
@@ -118,8 +115,8 @@ function Skills() {
                             </div>
 
                             <div className="progress-container">
-                                <AnimateProgressbar value={90} className="progress-bar" />
-                                <div className="Progress-value"> 90 % </div>
+                                <AnimateProgressbar value={80} />
+                                <div className="Progress-value"> 80 % </div>
                             </div>
 
 
@@ -131,7 +128,7 @@ function Skills() {
                             </div>
 
                             <div className="progress-container">
-                                <AnimateProgressbar value={100} className="progress-bar" />
+                                <AnimateProgressbar value={100} />
                                 <div className="Progress-value"> 100 % </div>
                             </div>
 
@@ -151,7 +148,7 @@ function Skills() {
                             </div>
 
                             <div className="progress-container">
-                                <AnimateProgressbar value={90} className="progress-bar" />
+                                <AnimateProgressbar value={90} />
                                 <div className="Progress-value"> 90 % </div>
                             </div>
 
@@ -164,7 +161,7 @@ function Skills() {
                             </div>
 
                             <div className="progress-container">
-                                <AnimateProgressbar value={80} className="progress-bar" />
+                                <AnimateProgressbar value={80} />
                                 <div className="Progress-value"> 80 % </div>
                             </div>
 
@@ -178,7 +175,7 @@ function Skills() {
                             </div>
 
                             <div className="progress-container">
-                                <AnimateProgressbar value={80} className="progress-bar" />
+                                <AnimateProgressbar value={80} />
                                 <div className="Progress-value"> 80 % </div>
                             </div>
 
@@ -196,7 +193,7 @@ function Skills() {
                             </div>
 
                             <div className="progress-container">
-                                <AnimateProgressbar value={80} className="progress-bar" />
+                                <AnimateProgressbar value={80} />
                                 <div className="Progress-value"> 80 % </div>
                             </div>
 
@@ -209,7 +206,7 @@ function Skills() {
                             </div>
 
                             <div className="progress-container">
-                                <AnimateProgressbar value={80} className="progress-bar" />
+                                <AnimateProgressbar value={80} />
                                 <div className="Progress-value"> 80 % </div>
                             </div>
 
@@ -222,7 +219,7 @@ function Skills() {
                             </div>
 
                             <div className="progress-container">
-                                <AnimateProgressbar value={80} className="progress-bar" />
+                                <AnimateProgressbar value={80} />
                                 <div className="Progress-value"> 80 % </div>
                             </div>
 
@@ -235,7 +232,7 @@ function Skills() {
                             </div>
 
                             <div className="progress-container">
-                                <AnimateProgressbar value={60} className="progress-bar" />
+                                <AnimateProgressbar value={60} />
                                 <div className="Progress-value"> 60 % </div>
                             </div>
 
@@ -248,7 +245,7 @@ function Skills() {
                             </div>
 
                             <div className="progress-container">
-                                <AnimateProgressbar value={100} className="progress-bar" />
+                                <AnimateProgressbar value={100} />
                                 <div className="Progress-value"> 100 % </div>
                             </div>
 
