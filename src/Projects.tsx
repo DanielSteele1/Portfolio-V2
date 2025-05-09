@@ -1,4 +1,7 @@
 import React from "react";
+import { RiExternalLinkLine } from "react-icons/ri";
+import { LuGithub } from "react-icons/lu";
+import { RiEarthFill } from "react-icons/ri";
 
 interface ProjectCardProps {
 
@@ -10,7 +13,7 @@ interface ProjectCardProps {
     github: string;
 }
 
-
+// for future referance, figure out a way to add multiple tags without just declaring tag1, tag2 etc. There's gotta be a way.
 
 const Project_card: React.FC<ProjectCardProps> = ({ title, src, tag, description, link, github }) => {
 
@@ -18,17 +21,20 @@ const Project_card: React.FC<ProjectCardProps> = ({ title, src, tag, description
         <>
             <div className="project-image"> <img src={src} loading="lazy" /> </div>
 
-            <span className="project-title"> <div className="gradient"> {title} </div> </span>
+            <div className="project-information">
 
-            <div className="project-text"> {description} </div>
+                <span className="project-title"> <div className="gradient"> {title} </div> </span>
 
-            <div className="project-tags"> {tag} </div>
+                <div className="project-tags"> {tag} </div>
 
-            <div className="project-buttons">
+                <div className="project-text"> {description} </div>
 
-                <button className="Project-button"> <a href={link}> Live page </a> </button>
-                <button className="Project-button"> <a href={github}> Github repo </a>  </button>
+                <div className="project-buttons">
 
+                    <div className="project-button"> <a className="live-button" href={link}> <RiEarthFill style={{display: 'flex', fontSize: "25px", margin: '1px', verticalAlign: 'middle', color: '#'}}/> </a> </div>
+                    <div className="project-button"> <a className="github-button" href={github}> <LuGithub style={{display: 'flex', fontSize: "25px", margin: '1px', verticalAlign: 'middle'}}/> </a>  </div>
+
+                </div>
             </div>
         </>
     )
@@ -56,7 +62,6 @@ function Projects() {
                         tag="Hello world"
                         link="https://github.com/DanielSteele1/UtilitiesApp"
                         github="https://github.com/DanielSteele1/UtilitiesApp"
-
                     >
 
                     </Project_card>
@@ -65,10 +70,13 @@ function Projects() {
 
                 <div className="Project">
                     <Project_card
-                        title="FocusDev"
-                        description="hello world"
+                        title="Portfolio V1"
+                        description="The first iteration of my portfolio website. (this website). 
+                        It uses mainly Html/CSS & JS with some basic React work. 
+                        In the first few months alone it got visited by over 1k people,
+                        and I've hosted it on Vercel in case you'd like to take a look."
                         src="Portfolio.gif"
-                        tag="Hello world"
+                        tag="Tag"
                         link="https://github.com/DanielSteele1/UtilitiesApp"
                         github="https://github.com/DanielSteele1/UtilitiesApp"
 
@@ -84,10 +92,12 @@ function Projects() {
 
 
                     <Project_card
-                        title="FocusDev"
-                        description="hello world"
+                        title="SkyCompass"
+                        description=" Skycompass is a web-based application that allows users to monitor up-to-date weather patterns across the globe. 
+                        It utilises multiple APIs to create a dashboard displaying weather maps, as well a forecast page that predicts weather for up to 7 days. 
+                        Using MongoDB & Bcrypt hashing for security, users can favourite locations for a more personalised experience."
                         src="SkyCompass.gif"
-                        tag="Hello world"
+                        tag="Tag"
                         link="https://github.com/DanielSteele1/UtilitiesApp"
                         github="https://github.com/DanielSteele1/UtilitiesApp"
 
@@ -102,7 +112,7 @@ function Projects() {
 
                     <Project_card
                         title="FocusDev"
-                        description="hello world"
+                        description="EarthSim is a project that I built in C++, using OpenGL and various libraries to create a 3D environment, with the goal of simulating our local system of planets, exposing me to core game development principles and GLSL."
                         src="EarthSim.gif"
                         tag="Hello world"
                         link="https://github.com/DanielSteele1/UtilitiesApp"
