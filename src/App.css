@@ -20,8 +20,7 @@ a {
   min-height: 100vh;
   font-size: 18px;
   font-family: 'Figtree', sans-serif;
-  background: linear-gradient(40deg, #18181b 0%, #232946 60%, #e66465 120%);
-
+  background: #0f121f;
 }
 
 .logo {
@@ -34,11 +33,11 @@ a {
 
 .logo:hover {
 
-  background: linear-gradient(180deg, #e66465, #9198e5);
+  background: linear-gradient(120deg, #e66465, #9198e5);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.5s ease-in-out;
   color: transparent;
 
 }
@@ -46,7 +45,7 @@ a {
 .logo-backtick {
   display: flex;
   font-weight: 900;
-  background: linear-gradient(180deg, #e66465, #9198e5);
+  background: linear-gradient(120deg, #e66465, #9198e5);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -59,26 +58,31 @@ a {
   background: none;
   -webkit-background-clip: initial;
   background-clip: initial;
-  -webkit-text-fill-color: #fff;
-  color: #fff;
+  -webkit-text-fill-color: #ebe5e5;
+  color: #ebe5e5;
   transition: all 0.5s ease-in-out;
 }
 
 .greeting {
   display: flex;
-  height: 100vh;
+  height: 80vh;
   width: 100%;
   flex-direction: column;
   margin: 0 auto;
   justify-content: center;
   align-items: center;
+  margin-bottom: 150px;
 }
 
 .gradient {
-  background: linear-gradient(180deg, #e66465, #9198e5);
+  background: linear-gradient(120deg, #e66465, #9198e5);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.highlight {
+  color:#f39a9a;
 }
 
 .greeting-title {
@@ -92,6 +96,7 @@ a {
   font-family: 'Figtree', sans-serif;
   font-weight: 500;
   font-style: bold;
+
 
 }
 
@@ -138,9 +143,17 @@ a {
   justify-content: center;
   align-items: center;
   padding: 10px;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   margin: 10px;
 
+}
+
+.nav-title:hover {
+  background: linear-gradient(120deg, #e66465, #9198e5);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: 0.3s ease-in-out;
 }
 
 .about {
@@ -212,30 +225,71 @@ a {
   overflow: hidden;
 }
 
+.greeting-text-container{
+  display:flex;
+  margin: 10px;
+  width: 50%;
+}
+
+.greeting-text{
+  font-size: 20px;
+  text-align:center;
+
+}
+
 .Sunglasses {
 
   display: flex;
-  height: 200px;
+  height: 10px;
   border-radius: 400px;
   border: 3px solid;
   border: linear-gradient(180deg, #e66465, #9198e5);
-
 }
 
 .social-item {
 
   display: flex;
   margin: 10px;
-  flex-direction: row;
+  height: fit-content;
   justify-content: center;
   align-items: center;
 }
 
-.socials {
+.social-resume {
 
+  display: flex;
+  height: 45px;
+  width: fit-content;
+  border: 2px solid #e66465;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 5px;
+  margin-right: 5px;
+}
+
+.social-resume:hover {
+  transition: all 0.5s ease;
+  color:#e66465;
+}
+
+.socials {
   display: flex;
   justify-content: center;
   align-items: center;
+  height:80px;
+  width: 50%;
+}
+
+.socials-title {
+  align-items: center;
+  justify-content: center;
+}
+
+.social-title:hover svg {
+color:#e66465;
+transition: 0.5s ease-in-out;
 }
 
 .section-heading {
@@ -331,7 +385,7 @@ a {
   justify-content: center;
   margin: 0 auto;
   align-items: center;
-  width: 70%;
+  width: 50%;
 }
 
 .progress-bar {
@@ -384,7 +438,7 @@ a {
 
 .Project {
   display: flex;
-  width: fit-content;
+  height: fit-content;
   margin: 0 auto;
   flex-direction: column;
   border-bottom-right-radius: 10px;
@@ -446,19 +500,21 @@ a {
 
 .project-buttons {
   display: flex;
+  height: auto;
   flex-direction: row;
+  align-items: flex-end;
 }
 
 .project-tags {
 
-  display:flex;
+  display: flex;
   padding: 10px;
 }
 
 .tag {
 
-  display:flex;
+  display: flex;
   font-size: 10px;
   border: 2px solid #232946;
-  
+
 }

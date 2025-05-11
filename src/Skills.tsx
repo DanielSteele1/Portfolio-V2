@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { SiCplusplus, SiExpress, SiGraphql, SiJavascript, SiNodedotjs, SiReact, SiVite } from "react-icons/si";
+import { SiCplusplus, SiExpress, SiGraphql, SiJavascript, SiNodedotjs, SiVite } from "react-icons/si";
 import { LuPalette } from "react-icons/lu";
 import { FaReact, FaServer } from "react-icons/fa";
 import { TbApi, TbBrandFramerMotion, TbBrandGraphql } from "react-icons/tb";
@@ -9,7 +9,6 @@ import { SiMongodb } from "react-icons/si";
 import { FaHtml5 } from "react-icons/fa";
 import { SiCsswizardry } from "react-icons/si";
 import { FaFigma } from "react-icons/fa";
-
 
 function Skills() {
 

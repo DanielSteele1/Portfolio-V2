@@ -7,7 +7,7 @@ function Navigation() {
         <div className="navigation">
 
             <div className="nav-item">
-                <span className="nav-title">  <div className="logo">D<span className="logo-backtick">/</span>S</div> </span>
+                <span className="nav-title">  <div className="logo">D<span className="logo-backtick">/</span>Steele</div> </span>
             </div>
 
             <div className="nav-item">
@@ -20,8 +20,6 @@ function Navigation() {
 
                 </div>
             </div>
-
-
         </div>
     )
 }
