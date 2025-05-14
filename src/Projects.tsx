@@ -3,7 +3,9 @@ import { FaReact } from "react-icons/fa";
 import { LuGithub } from "react-icons/lu";
 import { RiEarthFill } from "react-icons/ri";
 
-import { Slide } from '@mui/material';
+import { PrimeReactProvider, PrimeReactContext } from 'primereact/api';
+
+//import { Carousel } from 'primereact/carousel';
 
 interface ProjectCardProps {
 
@@ -87,12 +89,10 @@ function Projects() {
 
                     </Project_card>
 
-
                 </div>
 
 
                 <div className="Project">
-
 
                     <Project_card
                         title="SkyCompass"
@@ -112,9 +112,8 @@ function Projects() {
 
                 <div className="Project">
 
-
                     <Project_card
-                        title="FocusDev"
+                        title="EarthSim"
                         description="EarthSim is a project that I built in C++, using OpenGL and various libraries to create a 3D environment, with the goal of simulating our local system of planets, exposing me to core game development principles and GLSL."
                         src="EarthSim.gif"
                         tag=<FaReact style={{ color: ' #61dbfb', fontSize: '25px', fontStyle: 'bold' }} />
@@ -126,8 +125,6 @@ function Projects() {
                     </Project_card>
 
                 </div>
-
-
 
             </div>
 
