@@ -13,6 +13,7 @@ function App() {
 
   return (
     <>
+    <div className="fade-in"> 
         <Navigation />
         <Greeting />
         <Skills />
@@ -20,6 +21,7 @@ function App() {
         <AboutMe />
         <Contact />
         <Footer />
+        </div>
 
     </>
   )

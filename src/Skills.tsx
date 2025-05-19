@@ -9,6 +9,8 @@ import { SiMongodb } from "react-icons/si";
 import { FaHtml5 } from "react-icons/fa";
 import { SiCsswizardry } from "react-icons/si";
 import { FaFigma } from "react-icons/fa";
+import { LuMouse } from "react-icons/lu";
+
 
 function Skills() {
 
@@ -37,12 +39,29 @@ function Skills() {
                     backgroundImage: 'linear-gradient(to right, #ff92a5, #e66465)',
                 },
             }}
-            />
+        />
     }
 
     return (
 
         <div className="skills">
+
+
+
+            <a href="#skills-anchor" className="scroll-container">
+
+                <div className="scroll-button">
+
+                    <span className="scroll-highlight"> Enter Site </span>
+
+                    <LuMouse style={{ fontSize: '25px', margin: '10px', verticalAlign: 'middle', color: '#9198e5' }} />
+
+
+                </div>
+            </a>
+
+
+            <div id="skills-anchor"> </div>
 
             <span className="section-heading">My{"\u00A0"}<span className="gradient">Skills</span> </span>
             <span className="section-sub-heading">A list of all the skills i'm capable of and where I consider myself. I am especially capable at front-end development and can create visually-stunning websites. </span>
@@ -254,7 +273,8 @@ function Skills() {
                 }
 
             </div>
-        </div>
+
+        </div >
     )
 }
 

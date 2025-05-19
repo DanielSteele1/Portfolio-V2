@@ -13,8 +13,8 @@ function Navigation() {
             <div className="nav-item">
                 <div className="nav-menu">
                     
-                    <span className="nav-title"> Projects </span>
-                    <span className="nav-title"> Skills </span>
+                    <span className="nav-title" id="nav-projects"> Projects </span>
+                    <span className="nav-title"> About </span>
                     <span className="nav-title"> Dev Tools </span>
                     <span className="nav-title"> Contact </span>
 
