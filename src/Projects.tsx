@@ -3,7 +3,7 @@ import { FaReact } from "react-icons/fa";
 import { LuGithub } from "react-icons/lu";
 import { RiEarthFill } from "react-icons/ri";
 
-type Tags = '< FaReact />' | 'TypeScript' | 'JavaScript' | 'Node.js' | 'Express' | 'MongoDB' | 'REST API';
+type Tags = 'React' | 'TypeScript' | 'JavaScript' | 'Node.js' | 'Express' | 'MongoDB' | 'REST API';
 
 interface ProjectCardProps {
 

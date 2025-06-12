@@ -34,24 +34,29 @@ function Contact() {
                 </div>
             </div>
 
-            <form className="contact-form">
+            <form 
+            target="_blank" 
+            action="https://formsubmit.co/dsteele1906@gmail.com" 
+            method="POST" 
+            className="contact-form"
+            onSubmit={() => window.location.reload()}
+            >
 
-                <input className="contact-input" id="title" placeholder="Title: ">
+                <input name="Title" className="contact-input" id="title" placeholder="Title: ">
 
                 </input>
 
-                <input className="contact-input" id="email" placeholder="Your Email: ">
+                <input name="Email "className="contact-input" id="email" placeholder="Your Email: ">
 
                 </input>
 
-                <textarea className="contact-input" id="message" placeholder="Your Message: ">
+                <textarea name="Message" className="contact-input" id="message" placeholder="Your Message: ">
 
                 </textarea>
 
-                <button className="send-form">
+                <button type="submit" className="send-form">
                     <span> Send Message </span>
                     <IoSend style={{ margin: '10px' }} />
-
                 </button>
 
             </form>
