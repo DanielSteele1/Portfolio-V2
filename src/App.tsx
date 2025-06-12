@@ -1,5 +1,5 @@
 import React from 'react';
-import {useState} from 'react';
+import { useState } from 'react';
 import './App.css';
 import Navigation from './Navigation';
 import Greeting from './Greeting';
@@ -13,15 +13,17 @@ function App() {
 
   return (
     <>
-    <div className="fade-in"> 
-        <Navigation />
+
+      <Navigation />
+      <div className="fade-in">
         <Greeting />
-        <Skills />
-        <Projects />
-        <AboutMe />
-        <Contact />
-        <Footer />
-        </div>
+      </div>
+
+      <Skills />
+      <Projects />
+      <AboutMe />
+      <Contact />
+      <Footer />
 
     </>
   )

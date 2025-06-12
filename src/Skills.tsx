@@ -56,10 +56,8 @@ function Skills() {
 
                     <LuMouse style={{ fontSize: '25px', margin: '10px', verticalAlign: 'middle', color: '#9198e5' }} />
 
-
                 </div>
             </a>
-
 
             <div id="skills-anchor"> </div>
 

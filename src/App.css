@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
 
-body, html {
+body,
+html {
   display: flex;
   margin: 0;
   padding: 0;
@@ -43,8 +44,9 @@ a {
 
 .logo {
   display: flex;
-  font-weight: 600;
-  font-size: 1.6rem;
+  font-weight: 500;
+  font-size: 1.8rem;
+  margin-top: 10px;
   font-family: 'Figtree', sans-serif;
   color: #fff;
 }
@@ -107,13 +109,12 @@ a {
 
 .greeting {
   display: flex;
-  height: 70vh;
+  height: 85vh;
   width: 100%;
   flex-direction: column;
   margin: 0 auto;
   justify-content: center;
   align-items: center;
-  margin-bottom: 150px;
 }
 
 .gradient {
@@ -155,27 +156,61 @@ a {
 
 .navigation {
   display: flex;
-  height: 60px;
+  height: 70px;
   align-items: center;
   justify-content: space-between;
-  width: 95%;
+  width: 100%;
+  max-width: 1400px;
   position: sticky;
   top: 0;
   z-index: 100;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 .navigation:scroll-bahavior {
 
-  background: linear-gradient(180deg, #e66465, #9198e5);
+  background: linear-gradient(120deg, #0f121f, #232946);
+  backdrop-filter: blur(10px);
 }
 
 .nav-menu {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  width: 100%;
+  gap: 20px;
   height: 100%;
+  margin: 0 20px;
+}
+
+.nav-resume-container {
+
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin: 10px;
+  margin-top: 20px;
+  border-radius: 50px;
+  border: 2px solid #e66465;
+}
+
+.nav-resume {
+
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  font-size: 1.1rem;
+  font-weight: 350;
+  font-family: 'Inter', sans-serif;
+  background-color: #e66465;
+  background: linear-gradient(120deg, #e66465, #9198e5);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+
 }
 
 #nav-projects {
@@ -188,15 +223,16 @@ a {
 }
 
 .nav-title {
-
   height: 100%;
+  width: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
-  font-size: 1.2rem;
-  margin: 10px;
-
+  padding: 10px 15px;
+  font-size: 1.1rem;
+  font-weight: 350;
+  font-family: 'Inter', sans-serif;
+  white-space: nowrap;
 }
 
 .nav-title:hover {
@@ -286,8 +322,82 @@ a {
   justify-content: center;
   width: 100%;
   margin: 0 auto;
-  padding-bottom: 10px;
+}
 
+.contact-form {
+
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 0 auto;
+
+}
+
+.icon {
+
+  display: flex;
+  margin: 10px;
+  font-size: 25px;
+  color: #e66465;
+}
+
+.contact-input {
+  display: flex;
+  width: calc(100% - 20px);
+  margin: 10px;
+  padding-left: 5px;
+  padding: 10px;
+  border: 1px solid #232946;
+  border-radius: 8px;
+  font-family: 'Figtree', sans-serif;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+
+#title,
+#email {
+  height: 50px;
+}
+
+#message {
+
+  height: 100px;
+  min-width: calc(100% - 20px);
+  min-height: fit-content;
+  max-width:fit-content;
+  max-height: 200px;
+  word-break: break-all;
+  
+}
+
+.contact-input:focus {
+
+  outline: 0px;
+  box-shadow: inset 0 -3px #e66465;
+  transition: 0.3s ease-in-out;
+}
+
+.contact-form button {
+  display: flex;
+  width: calc(100% - 20px);
+  height: 50px;
+  margin: 10px;
+  justify-content: center;
+  align-items: center;
+  background-color: #e66465;
+  border: none;
+  color: #fff;
+  font-family: 'Figtree', sans-serif;
+  cursor: pointer;
+  box-sizing: border-box;
 }
 
 .footer {
@@ -355,17 +465,18 @@ a {
   height: 45px;
   width: fit-content;
   border: 2px solid #e66465;
-  border-radius: 20px;
+  border-radius: 25px;
   justify-content: center;
   align-items: center;
   cursor: pointer;
   margin-bottom: 5px;
   margin-right: 5px;
+
 }
 
 .social-resume:hover {
   transition: all 0.5s ease;
-  color: #e66465;
+  background-color: #e66465;
 }
 
 .socials {
@@ -401,10 +512,9 @@ a {
   display: flex;
   width: 40%;
   margin-top: 10px;
-  margin-bottom: 10px;
   text-align: center;
   margin: 0 auto;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 
 }
 
@@ -535,12 +645,8 @@ a {
   height: fit-content;
   margin: 0 auto;
   flex-direction: column;
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px;
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
-  border: 2px solid rgba(255, 255, 255, 0.1);
-
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .project-information {

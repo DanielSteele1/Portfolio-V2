@@ -12,6 +12,10 @@ function Navigation() {
 
             <div className="nav-item">
                 <div className="nav-menu">
+
+                    <div className="nav-resume-container">
+                        <span className="nav-resume"> Download CV </span>
+                    </div>
                     
                     <span className="nav-title" id="nav-projects"> Projects </span>
                     <span className="nav-title"> About </span>

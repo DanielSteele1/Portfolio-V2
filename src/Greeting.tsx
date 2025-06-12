@@ -1,7 +1,5 @@
-import React from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import { LuGithub } from "react-icons/lu";
-import { SiReaddotcv } from "react-icons/si";
 import { IoLogoLinkedin } from "react-icons/io5";
 import { FaLocationArrow } from "react-icons/fa";
 
