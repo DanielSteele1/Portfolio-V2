@@ -1,9 +1,6 @@
-import React from "react";
+import React from 'react';
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { IoMail, IoSend } from "react-icons/io5";
-import { RiEmpathizeLine } from "react-icons/ri";
-import { TbLetterR } from "react-icons/tb";
-
 
 function Contact() {
 
@@ -34,24 +31,21 @@ function Contact() {
                 </div>
             </div>
 
-            <form 
-            target="_blank" 
-            action="https://formsubmit.co/dsteele1906@gmail.com" 
-            method="POST" 
-            className="contact-form"
-            onSubmit={() => window.location.reload()}
+            <form
+                target="_blank"
+                action="https://formsubmit.co/dsteele1906@gmail.com"
+                method="POST"
+                className="contact-form"
+                onSubmit={() => window.location.reload()}
             >
 
                 <input name="Title" className="contact-input" id="title" placeholder="Title: ">
-
                 </input>
 
-                <input name="Email "className="contact-input" id="email" placeholder="Your Email: ">
-
+                <input name="Email " className="contact-input" id="email" placeholder="Your Email: ">
                 </input>
 
                 <textarea name="Message" className="contact-input" id="message" placeholder="Your Message: ">
-
                 </textarea>
 
                 <button type="submit" className="send-form">

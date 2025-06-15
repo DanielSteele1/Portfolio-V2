@@ -1,9 +1,11 @@
-import React from "react";
-import { FaReact } from "react-icons/fa";
+import React, { JSX } from 'react';
+import { FaJs, FaNodeJs, FaReact } from "react-icons/fa";
 import { LuGithub } from "react-icons/lu";
 import { RiEarthFill } from "react-icons/ri";
+import { SiCplusplus, SiMongodb, SiOpengl } from 'react-icons/si';
+import { GoLinkExternal } from "react-icons/go";
 
-type Tags = 'React' | 'TypeScript' | 'JavaScript' | 'Node.js' | 'Express' | 'MongoDB' | 'REST API';
+type Tags = JSX.Element;
 
 interface ProjectCardProps {
 
@@ -36,8 +38,18 @@ const Project_card: React.FC<ProjectCardProps> = ({ title, src, tags, descriptio
 
                 <div className="project-buttons">
 
-                    <div className="project-button"> <a className="live-button" href={link}> <RiEarthFill style={{ display: 'flex', fontSize: "25px", margin: '1px', verticalAlign: 'middle', color: '#' }} /> </a> </div>
-                    <div className="project-button"> <a className="github-button" href={github}> <LuGithub style={{ display: 'flex', fontSize: "25px", margin: '1px', verticalAlign: 'middle' }} /> </a>  </div>
+                    <div className="project-button"> <a className="live-button" href={link}>
+                        <GoLinkExternal style={{ display: 'flex', fontSize: "20px", verticalAlign: 'middle', color: '#' }} />
+                        <span className="button-text">Live Project</span>
+                    </a>
+                    </div>
+
+                    <div className="project-button">
+                        <a className="github-button" href={github}>
+                            <LuGithub style={{ display: 'flex', fontSize: "23px", verticalAlign: 'middle' }} />
+                            <span className="button-text"> Github </span>
+                        </a>
+                    </div>
 
                 </div>
             </div>
@@ -64,7 +76,12 @@ function Projects() {
                         For example, if a developer has to handle a ticket, keep track of meetings or needs to copy paste code snippets over and over, they can add it here and keep on top of things.
                         Features include a Notes app, Reusable code snippet feature, Calender, Github commit graph w/ stats, local weather forecasts to name a few."
                             src="FocusDev.gif"
-                            tags={['< FaReact />', 'TypeScript', 'Node.js']}
+                            tags={[
+                                <FaReact />,
+                                <FaJs />,
+                                <FaNodeJs />,
+                                <SiMongodb />
+                            ]}
                             link="https://github.com/DanielSteele1/UtilitiesApp"
                             github="https://github.com/DanielSteele1/UtilitiesApp"
                         >
@@ -80,7 +97,12 @@ function Projects() {
                         In the first few months alone it got visited by over 1k people,
                         and I've hosted it on Vercel in case you'd like to take a look."
                             src="Portfolio.gif"
-                            tags={['React', 'JavaScript', 'TypeScript']}
+                            tags={[
+                                <FaReact />,
+                                <FaJs />,
+                                <FaNodeJs />,
+                                <SiMongodb />
+                            ]}
                             link="https://github.com/DanielSteele1/UtilitiesApp"
                             github="https://github.com/DanielSteele1/UtilitiesApp"
 
@@ -98,7 +120,12 @@ function Projects() {
                         It utilises multiple APIs to create a dashboard displaying weather maps, as well a forecast page that predicts weather for up to 7 days. 
                         Using MongoDB & Bcrypt hashing for security, users can favourite locations for a more personalised experience."
                             src="SkyCompass.gif"
-                            tags={['React', 'Node.js', 'MongoDB', 'Express', 'REST API']}
+                            tags={[
+                                <FaReact />,
+                                <FaJs />,
+                                <FaNodeJs />,
+                                <SiMongodb />
+                            ]}
                             link="https://github.com/DanielSteele1/UtilitiesApp"
                             github="https://github.com/DanielSteele1/UtilitiesApp"
 
@@ -113,7 +140,10 @@ function Projects() {
                         <Project_card title="EarthSim"
                             description="EarthSim is a project that I built in C++, using OpenGL and various libraries to create a 3D environment, with the goal of simulating our local system of planets, exposing me to core game development principles and GLSL."
                             src="EarthSim.gif"
-                            tags={['JavaScript', 'Node.js']}
+                            tags={[
+                                <SiCplusplus />,
+                                <SiOpengl />,
+                            ]}
                             link="https://github.com/DanielSteele1/UtilitiesApp"
                             github="https://github.com/DanielSteele1/UtilitiesApp"
 

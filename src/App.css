@@ -671,7 +671,7 @@ a {
   align-items: center;
   justify-content: center;
   width: fit-content;
-  margin: 10px;
+  margin-left: 10px;
 
 }
 
@@ -692,17 +692,44 @@ a {
 
 .project-button {
   display: flex;
+  width:25%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   background-color: transparent;
-  color: #ebe5e5 !important;
   margin: 10px;
+  padding: 5px;
+  font-size: 16px;
+  font-family: 'Figtree', sans-serif;
+  font-weight: 500;
+  border: 2px solid #9198e5;
+  border-radius: 8px;
+}
 
+.project-button:hover{
+    background-color: #9198e5;
+    transition: 0.3s ease-in;
+}
+
+.project-button a{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.project-button a:hover{
+  cursor: pointer;
+  transition: 0.3s ease;
+  color:#ebe5e5;
+}
+
+.project-button span{
+  margin-left: 10px;
 }
 
 .project-buttons {
   display: flex;
-  height: auto;
+  height: fit-content;
   flex-direction: row;
-  align-items: flex-end;
 }
 
 .project-tags {
@@ -714,7 +741,8 @@ a {
 .tag {
 
   display: flex;
-  font-size: 10px;
-  border: 2px solid #232946;
+  font-size: 25px;
+  margin-right: 10px;
+  color:#9198e5;
 
 }
