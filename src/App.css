@@ -160,19 +160,24 @@ a {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  max-width: 1400px;
+  max-width: 1300px;
   position: sticky;
   top: 0;
   z-index: 100;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 10px;
+  transition: 0.3s ease-in;
 }
 
-.navigation:scroll-bahavior {
+.navigation.scrolled {
+  
+    align-items: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    backdrop-filter: blur(5px);
 
-  background: linear-gradient(120deg, #0f121f, #232946);
-  backdrop-filter: blur(10px);
 }
+
 
 .nav-menu {
   display: flex;
@@ -188,7 +193,6 @@ a {
   width: 100%;
   justify-content: center;
   margin: 10px;
-  margin-top: 20px;
   border-radius: 50px;
   border: 2px solid #e66465;
 }
@@ -199,7 +203,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
+  margin: 10px;
   font-size: 1.1rem;
   font-weight: 350;
   font-family: 'Inter', sans-serif;
@@ -213,13 +217,9 @@ a {
 
 }
 
-#nav-projects {
-
-  border-radius: 15px;
-  padding: 5px;
-  padding-left: 20px;
-  padding-right: 20px;
-
+.nav-resume-container:hover {
+  background-color: #e66465;
+  transition: 0.3s ease-in-out;
 }
 
 .nav-title {
@@ -228,8 +228,8 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px 15px;
   font-size: 1.1rem;
+  margin: 10px;
   font-weight: 350;
   font-family: 'Inter', sans-serif;
   white-space: nowrap;
@@ -510,7 +510,7 @@ a {
 
 .section-sub-heading {
   display: flex;
-  width: 40%;
+  width: 50%;
   margin-top: 10px;
   text-align: center;
   margin: 0 auto;
@@ -632,28 +632,31 @@ a {
 }
 
 .project-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  width: 80%;
-  margin: 0 auto;
-  gap: 30px;
-
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .Project {
-  display: flex;
-  height: fit-content;
-  margin: 0 auto;
-  flex-direction: column;
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.project-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.03);
 }
 
 .project-information {
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-  border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    gap: 15px;
 }
 
 .project-text {
@@ -735,7 +738,7 @@ a {
 .project-tags {
 
   display: flex;
-  padding: 10px;
+  padding-left: 10px;
 }
 
 .tag {

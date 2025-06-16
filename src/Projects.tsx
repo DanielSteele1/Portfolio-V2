@@ -5,7 +5,13 @@ import { RiEarthFill } from "react-icons/ri";
 import { SiCplusplus, SiMongodb, SiOpengl } from 'react-icons/si';
 import { GoLinkExternal } from "react-icons/go";
 
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 type Tags = JSX.Element;
+import Slider from "react-slick";
+
 
 interface ProjectCardProps {
 
@@ -18,14 +24,17 @@ interface ProjectCardProps {
 }
 
 const Project_card: React.FC<ProjectCardProps> = ({ title, src, tags, description, link, github }) => {
-
     return (
-        <>
-            <div className="project-image"> <img src={src} loading="lazy" /> </div>
+        <div className="project-card">
+            <div className="project-image">
+                <img src={src} loading="lazy" alt={title} />
+            </div>
 
             <div className="project-information">
+                <span className="project-title">
+                    <div className="gradient">{title}</div>
+                </span>
 
-                <span className="project-title"> <div className="gradient"> {title} </div> </span>
                 <div className="project-tags">
                     {tags.map((tag, index) => (
                         <span key={index} className="tag">
@@ -34,40 +43,57 @@ const Project_card: React.FC<ProjectCardProps> = ({ title, src, tags, descriptio
                     ))}
                 </div>
 
-                <div className="project-text"> {description} </div>
+                <div className="project-text">{description}</div>
 
                 <div className="project-buttons">
-
-                    <div className="project-button"> <a className="live-button" href={link}>
-                        <GoLinkExternal style={{ display: 'flex', fontSize: "20px", verticalAlign: 'middle', color: '#' }} />
-                        <span className="button-text">Live Project</span>
-                    </a>
-                    </div>
-
                     <div className="project-button">
-                        <a className="github-button" href={github}>
-                            <LuGithub style={{ display: 'flex', fontSize: "23px", verticalAlign: 'middle' }} />
-                            <span className="button-text"> Github </span>
+                        <a className="live-button" href={link} target="_blank" rel="noopener noreferrer">
+                            <GoLinkExternal style={{ fontSize: "20px" }} />
+                            <span className="button-text">Live Project</span>
                         </a>
                     </div>
 
+                    <div className="project-button">
+                        <a className="github-button" href={github} target="_blank" rel="noopener noreferrer">
+                            <LuGithub style={{ fontSize: "23px" }} />
+                            <span className="button-text">Github</span>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 
-function Projects() {
+function Projects() {    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 800,
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        arrows: true,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        pauseOnHover: true,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    };
 
     return (
         <>
-
             <div className="projects">
 
                 <span className="section-heading"> Featured{"\u00A0"}<div className="gradient"> Projects</div>  </span>
                 <span className="section-sub-heading"> My best and most impressive projects that i've been working on for the last year. You can check them out via the links provided below. </span>
 
-                <div className="project-container">
+                <Slider className="project-container" {...settings}>
 
                     <div className="Project">
                         <Project_card
@@ -87,7 +113,6 @@ function Projects() {
                         >
 
                         </Project_card>
-
                     </div>
 
                     <div className="Project">
@@ -132,7 +157,6 @@ function Projects() {
                         >
 
                         </Project_card>
-
                     </div>
 
                     <div className="Project">
@@ -152,10 +176,10 @@ function Projects() {
                         </Project_card>
 
                     </div>
+                </Slider >
 
-                </div>
 
-            </div>
+            </div >
         </>
     )
 }
