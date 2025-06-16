@@ -1,5 +1,13 @@
 import React, { useEffect, useState } from 'react';
 
+import { Tooltip as ReactTooltip } from "react-tooltip";
+import 'react-tooltip/dist/react-tooltip.css'
+
+import { GrProjects } from "react-icons/gr";
+import { GoPerson } from 'react-icons/go';
+import { FaTools } from 'react-icons/fa';
+import { MdEmail } from "react-icons/md";
+
 function Navigation() {
 
     const [scrolled, setScrolled] = useState(false);
@@ -32,12 +40,25 @@ function Navigation() {
                         <span className="nav-resume"> Download CV </span>
                     </div>
 
-                    <span className="nav-title" id="nav-projects"> Projects </span>
-                    <span className="nav-title"> About </span>
-                    <span className="nav-title"> Dev Tools </span>
-                    <span className="nav-title"> Contact </span>
+                    <span className="nav-title" id="nav-projects"> <a href="#projects"> <GrProjects style={{ marginRight: '5px', fontSize: '15px', alignContent: 'center'}}/> Projects </a> </span>
+                    <span className="nav-title"> <a href="#about"> <GoPerson style={{ marginRight: '5px', fontSize: '15px', alignContent: 'center'}} /> About Me </a> </span>
+                    <span data-tooltip-id="tooltip-1" className="nav-title"> <a href="#devtools"> <FaTools style={{ marginRight: '5px', fontSize: '15px', alignContent: 'center'}} /> Dev Tools </a> </span>
+
+                    <span className="nav-title"> <a href="#contact"> <MdEmail style={{ marginRight: '5px', fontSize: '15px', alignContent: 'center'}} /> Contact </a> </span>
 
                 </div>
+                <ReactTooltip
+                    id="tooltip-1"
+                    place="bottom"
+                    content="Coming Soon!"
+                    style={{
+                        backgroundColor: 'rgba(255, 255, 255, 0.03)',
+                        color: '#e66465',
+                        fontFamily: 'figtree, sans-serif'
+                    }}
+                    
+
+                />
             </div>
         </div>
     )

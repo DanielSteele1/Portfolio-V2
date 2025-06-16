@@ -13,7 +13,6 @@ function Footer() {
             </div>
 
 
-
              <div className="footer-item">
                 <div className="footer-socials"> 
                     <span className="footer-title">  </span>
@@ -21,7 +20,6 @@ function Footer() {
                     <span className="footer-title"> <LuGithub style={{ fontSize: '30px', paddingLeft: '10px'}} /> </span>
                 </div>
             </div>
-
 
         </div>
     )

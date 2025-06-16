@@ -88,7 +88,7 @@ function Projects() {    const settings = {
 
     return (
         <>
-            <div className="projects">
+            <div className="projects" id="projects">
 
                 <span className="section-heading"> Featured{"\u00A0"}<div className="gradient"> Projects</div>  </span>
                 <span className="section-sub-heading"> My best and most impressive projects that i've been working on for the last year. You can check them out via the links provided below. </span>
