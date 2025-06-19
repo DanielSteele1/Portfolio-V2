@@ -4,8 +4,8 @@ import { Tooltip as ReactTooltip } from "react-tooltip";
 import 'react-tooltip/dist/react-tooltip.css'
 
 import { GrProjects } from "react-icons/gr";
-import { GoPerson } from 'react-icons/go';
-import { FaTools } from 'react-icons/fa';
+import { GoArrowBoth, GoArrowSwitch, GoPerson } from 'react-icons/go';
+import { FaArrowCircleDown, FaLocationArrow, FaTools } from 'react-icons/fa';
 import { MdEmail } from "react-icons/md";
 
 function Navigation() {
@@ -37,14 +37,35 @@ function Navigation() {
                 <div className="nav-menu">
 
                     <div className="nav-resume-container">
-                        <span className="nav-resume"> Download CV </span>
+                        <span className="nav-resume">   <FaLocationArrow style={{
+                            fontSize: '20px',
+                            marginRight: '10px',
+                            verticalAlign: 'center',
+                            color: '#e66465',
+                        }} /> View Resume  </span>
                     </div>
 
-                    <span className="nav-title" id="nav-projects"> <a href="#projects"> <GrProjects style={{ marginRight: '5px', fontSize: '15px', alignContent: 'center'}}/> Projects </a> </span>
-                    <span className="nav-title"> <a href="#about"> <GoPerson style={{ marginRight: '5px', fontSize: '15px', alignContent: 'center'}} /> About Me </a> </span>
-                    <span data-tooltip-id="tooltip-1" className="nav-title"> <a href="#devtools"> <FaTools style={{ marginRight: '5px', fontSize: '15px', alignContent: 'center'}} /> Dev Tools </a> </span>
+                    <span className="nav-title" id="nav-projects">
+                        <a href="#projects">
+                            <GrProjects className="nav-icon" /> Projects
+                        </a>
+                    </span>
+                    <span className="nav-title">
+                        <a href="#about">
+                            <GoPerson className="nav-icon" /> About Me
+                        </a>
+                    </span>
+                    <span data-tooltip-id="tooltip-1" className="nav-title">
+                        <a href="#devtools">
+                            <FaTools className="nav-icon" /> Dev Tools
+                        </a>
+                    </span>
 
-                    <span className="nav-title"> <a href="#contact"> <MdEmail style={{ marginRight: '5px', fontSize: '15px', alignContent: 'center'}} /> Contact </a> </span>
+                    <span className="nav-title">
+                        <a href="#contact">
+                            <MdEmail className="nav-icon" /> Contact
+                        </a>
+                    </span>
 
                 </div>
                 <ReactTooltip
@@ -56,7 +77,7 @@ function Navigation() {
                         color: '#e66465',
                         fontFamily: 'figtree, sans-serif'
                     }}
-                    
+
 
                 />
             </div>

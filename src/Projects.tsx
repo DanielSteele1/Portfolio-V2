@@ -1,7 +1,6 @@
 import React, { JSX } from 'react';
 import { FaJs, FaNodeJs, FaReact } from "react-icons/fa";
 import { LuGithub } from "react-icons/lu";
-import { RiEarthFill } from "react-icons/ri";
 import { SiCplusplus, SiMongodb, SiOpengl } from 'react-icons/si';
 import { GoLinkExternal } from "react-icons/go";
 
@@ -66,7 +65,7 @@ const Project_card: React.FC<ProjectCardProps> = ({ title, src, tags, descriptio
 }
 
 function Projects() {    const settings = {
-        dots: true,
+        dots: false,
         infinite: true,
         speed: 800,
         slidesToShow: 2,
@@ -108,8 +107,8 @@ function Projects() {    const settings = {
                                 <FaNodeJs />,
                                 <SiMongodb />
                             ]}
-                            link="https://github.com/DanielSteele1/UtilitiesApp"
-                            github="https://github.com/DanielSteele1/UtilitiesApp"
+                            link="https://focus-dev-tau.vercel.app"
+                            github="https://github.com/DanielSteele1/FocusDev"
                         >
 
                         </Project_card>
@@ -128,8 +127,8 @@ function Projects() {    const settings = {
                                 <FaNodeJs />,
                                 <SiMongodb />
                             ]}
-                            link="https://github.com/DanielSteele1/UtilitiesApp"
-                            github="https://github.com/DanielSteele1/UtilitiesApp"
+                            link=""
+                            github="github.com/DanielSteele1/DanielSteele1.github.io"
 
                         >
 
@@ -151,8 +150,8 @@ function Projects() {    const settings = {
                                 <FaNodeJs />,
                                 <SiMongodb />
                             ]}
-                            link="https://github.com/DanielSteele1/UtilitiesApp"
-                            github="https://github.com/DanielSteele1/UtilitiesApp"
+                            link=""
+                            github="https://github.com/DanielSteele1/SkyCompass"
 
                         >
 
@@ -168,8 +167,8 @@ function Projects() {    const settings = {
                                 <SiCplusplus />,
                                 <SiOpengl />,
                             ]}
-                            link="https://github.com/DanielSteele1/UtilitiesApp"
-                            github="https://github.com/DanielSteele1/UtilitiesApp"
+                            link=""
+                            github="https://github.com/DanielSteele1/SkyCompass"
 
                         >
 
