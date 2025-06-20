@@ -2,10 +2,10 @@ import { TypeAnimation } from 'react-type-animation';
 import { LuGithub } from "react-icons/lu";
 import { IoLogoLinkedin } from "react-icons/io5";
 import { FaLocationArrow } from "react-icons/fa";
-
+import { HiDownload } from "react-icons/hi";
 const Greeting = () => {
     return (
-        <div className="greeting">
+        <div className="greeting" id="top">
             {/*<div className="greetings-image"> <img className="Sunglasses" src="public/Sunglasses_head.png" /> </div> */}
             <span className="greeting-title"> Hey, i'm{"\u00A0"}<span className="gradient"> Daniel Steele </span> </span>
 
@@ -24,6 +24,10 @@ const Greeting = () => {
                 repeat={Infinity}
             />
 
+            <span className="gradient"> 
+                <a href="https://github.com/DanielSteele1/FocusDev"> Curerently working on FocusDev! Check it out here.</a>
+            </span>
+
             <span className="greeting-text-container">
                 <span className="greeting-text">
                     I'm currently looking for remote full-time employment in the UK.
@@ -32,13 +36,12 @@ const Greeting = () => {
             </span>
 
             <div className="socials">
-                <div className="social-resume">
+                <div className="resume">
                     <div className="social-item">
                         <span className="social-title">
-                            <FaLocationArrow style={{
+                            <HiDownload style={{
                                 fontSize: '20px',
                                 marginRight: '10px',
-                                marginTop: '5px',
                                 verticalAlign: 'center',
                                 color: '#e66465',
                             }}

@@ -4,9 +4,11 @@ import { Tooltip as ReactTooltip } from "react-tooltip";
 import 'react-tooltip/dist/react-tooltip.css'
 
 import { GrProjects } from "react-icons/gr";
-import { GoArrowBoth, GoArrowSwitch, GoPerson } from 'react-icons/go';
-import { FaArrowCircleDown, FaLocationArrow, FaTools } from 'react-icons/fa';
+import { GoPerson } from 'react-icons/go';
+import { FaLocationArrow } from 'react-icons/fa';
 import { MdEmail } from "react-icons/md";
+import { FiTool } from "react-icons/fi";
+import { HiDownload } from "react-icons/hi";
 
 function Navigation() {
 
@@ -36,14 +38,13 @@ function Navigation() {
             <div className="nav-item">
                 <div className="nav-menu">
 
-                    <div className="nav-resume-container">
-                        <span className="nav-resume">   <FaLocationArrow style={{
+                    <span className="resume">
+                        <HiDownload style={{
                             fontSize: '20px',
                             marginRight: '10px',
                             verticalAlign: 'center',
                             color: '#e66465',
                         }} /> View Resume  </span>
-                    </div>
 
                     <span className="nav-title" id="nav-projects">
                         <a href="#projects">
@@ -57,7 +58,7 @@ function Navigation() {
                     </span>
                     <span data-tooltip-id="tooltip-1" className="nav-title">
                         <a href="#devtools">
-                            <FaTools className="nav-icon" /> Dev Tools
+                            <FiTool className="nav-icon" /> Dev Tools
                         </a>
                     </span>
 

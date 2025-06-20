@@ -8,6 +8,8 @@ import Skills from './Skills';
 import Projects from './Projects';
 import Contact from './Contact';
 import Footer from './Footer';
+import BackToTop from './BackToTop';
+
 
 function App() {
 
@@ -22,6 +24,7 @@ function App() {
       <Skills />
       <Projects />
       <AboutMe />
+      <BackToTop />
       <Contact />
       <Footer />
 

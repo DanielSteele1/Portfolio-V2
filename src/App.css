@@ -125,12 +125,12 @@ a {
 }
 
 .highlight {
-  display:inline;
+  display: inline;
   color: #ff8a8b;
 }
 
 .highlight-1 {
-  display:inline;
+  display: inline;
   color: #ff8a8b;
   padding: 5px;
 }
@@ -179,11 +179,11 @@ a {
 }
 
 .navigation.scrolled {
-  
-    align-items: center;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    backdrop-filter: blur(5px);
+
+  align-items: center;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  backdrop-filter: blur(5px);
 
 }
 
@@ -196,46 +196,16 @@ a {
 
 }
 
-.nav-resume-container {
 
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  margin: 5px;
-  border-radius: 50px;
-  background-color: transparent;
-  border: 2px solid #e66465;
 
-}
-
-.nav-resume {
-
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 10px;
-  font-size: 1.0rem;
-  font-weight: 350;
-  font-family: 'Figtree', sans-serif;
-  transition: 0.3s ease-in-out;
-  cursor: pointer;
-
-}
-
-.nav-resume-container:hover {
-  background-color: #e66465;
-  transition: 0.3s ease-in-out;
-}
-
-.nav-title a{
+.nav-title a {
   height: 100%;
   width: auto;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.1rem;
-  font-weight:300;
+  font-weight: 300;
   font-family: 'Inter', sans-serif;
   white-space: nowrap;
   flex-direction: row;
@@ -247,14 +217,15 @@ a {
 }
 
 .nav-icon {
-    margin-right: 10px;
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  margin-right: 10px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.nav-icon:hover, .nav-title a:hover {
+.nav-icon:hover,
+.nav-title a:hover {
 
   color: #e26e6e;
   transition: 0.3s ease-in-out;
@@ -306,7 +277,7 @@ a {
 }
 
 .About-img:hover {
-  border-color:#e26e6e;
+  border-color: #e26e6e;
   transition: 0.5s ease-in-out;
 }
 
@@ -394,10 +365,10 @@ a {
   height: 100px;
   min-width: calc(100% - 20px);
   min-height: fit-content;
-  max-width:fit-content;
+  max-width: fit-content;
   max-height: 200px;
   word-break: break-all;
-  
+
 }
 
 .contact-input:focus {
@@ -481,25 +452,6 @@ a {
   align-items: center;
 }
 
-.social-resume {
-
-  display: flex;
-  height: 45px;
-  width: fit-content;
-  border: 2px solid #e66465;
-  border-radius: 25px;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  margin-bottom: 5px;
-  margin-right: 5px;
-
-}
-
-.social-resume:hover {
-  transition: all 0.5s ease;
-  background-color: #e66465;
-}
 
 .socials {
   display: flex;
@@ -655,31 +607,31 @@ a {
 }
 
 .project-container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .Project {
-    padding: 15px;
-    box-sizing: border-box;
+  padding: 15px;
+  box-sizing: border-box;
 }
 
 .project-card {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    background: rgba(255, 255, 255, 0.03);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.03);
 }
 
 .project-information {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    border-radius: 10px;
-    gap: 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 10px;
+  gap: 15px;
 }
 
 .project-text {
@@ -718,7 +670,7 @@ a {
 
 .project-button {
   display: flex;
-  width:25%;
+  width: 25%;
   flex-direction: row;
   align-items: center;
   justify-content: center;
@@ -732,23 +684,24 @@ a {
   border-radius: 8px;
 }
 
-.project-button:hover{
-    background-color: #9198e5;
-    transition: 0.3s ease-in;
+.project-button:hover {
+  background-color: #9198e5;
+  transition: 0.3s ease-in;
 }
 
-.project-button a{
+.project-button a {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-.project-button a:hover{
+
+.project-button a:hover {
   cursor: pointer;
   transition: 0.3s ease;
-  color:#ebe5e5;
+  color: #ebe5e5;
 }
 
-.project-button span{
+.project-button span {
   margin-left: 10px;
 }
 
@@ -769,12 +722,12 @@ a {
   display: flex;
   font-size: 25px;
   margin-right: 10px;
-  color:#9198e5;
+  color: #9198e5;
 
 }
 
 .About-para-title {
-  display:flex;
+  display: flex;
   align-items: center;
   justify-content: flex-start;
   font-size: 1.5rem;
@@ -789,9 +742,10 @@ a {
 .About-paragraph {
   padding: 10px;
   margin: 0 auto;
-  width: 65%;
+  width: 60%;
 
 }
+
 .About-paragraph-text {
   padding-top: 10px;
   justify-content: center;
@@ -799,10 +753,100 @@ a {
 }
 
 #about-icon {
-  display:inline-flex;
-  color:#ff8a8b;
+  display: inline-flex;
+  color: #ff8a8b;
   padding-right: 5px;
   align-items: center;
   justify-content: center;
+}
+
+
+.BackToTop {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 50%;
+  height: 350px;
+  text-align: center;
+  justify-content: center;
+
+}
+
+.back-to-top-text {
+  font-size: 1.8rem;
+  margin: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.back-to-top-button {
+  display: flex;
+  width: fit-content;
+  margin: 10px auto;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  font-family: 'Figtree', sans-serif;
+  cursor: pointer;
+  box-sizing: border-box;
+  border: 2px solid transparent;
+
+}
+
+.back-to-top-button:hover #arrow-icon {
+  transform: rotate(-180deg);
+  transition: transform 0.4s cubic-bezier(0.87, 0.03, 0.41, 0.9);
+
+
+}
+
+.back-to-top-button:hover {
+
+  border-bottom: 2px solid #e66465;
+  transition: 0.4s ease-in-out;
+}
+
+#arrow-icon {
+  transition: transform 0.3s cubic-bezier(0.87, 0.03, 0.41, 0.9);
+  display: inline-flex;
+  justify-content: center;
+  vertical-align: middle;
+  margin-left: 10px;
+  align-items: center;
+  font-size: 25px;
+  width: 25px;
+  color: #e66465;
+
+}
+
+.resume {
+  display: flex;
+  height: 20px;
+  width: fit-content;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  padding: 10px;
+  font-size: 1.0rem;
+  font-weight: 500;
+  font-family: 'Figtree', sans-serif;
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid #e66465;
+  border-radius: 10px;
+}
+
+.resume svg {
+  display: inline-flex;
+  width: 20px;
+  height: 20px;
+    vertical-align: middle;
+}
+
+.resume:hover {
+  transition: all 0.3s ease;
+  color: #e66465;
 
 }

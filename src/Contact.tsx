@@ -39,13 +39,13 @@ function Contact() {
                 onSubmit={() => window.location.reload()}
             >
 
-                <input name="Title" className="contact-input" id="title" placeholder="Title: ">
+                <input name="Title" className="contact-input" id="title" placeholder="Title: " required>
                 </input>
 
-                <input name="Email " className="contact-input" id="email" placeholder="Your Email: ">
+                <input name="Email" className="contact-input" id="email" placeholder="Your Email: " type="email" required>
                 </input>
 
-                <textarea name="Message" className="contact-input" id="message" placeholder="Your Message: ">
+                <textarea name="Message" className="contact-input" id="message" placeholder="Your Message: " required>
                 </textarea>
 
                 <button type="submit" className="send-form">
