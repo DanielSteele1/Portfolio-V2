@@ -37,9 +37,11 @@ function AboutMe() {
                     <span className="About-para-title">  <RiTimeLine id="about-icon"/> <span className="gradient"> My Journey </span> </span>
 
                     <span className="About-paragraph-text">
-                        My jouney began when I was 16, when I learnt of the existance of HTML, CSS & JS. It facinated me that I could use DevTools to
-                        go into any websites source code see how it was written. After then I made a choice to go into the Webdev industry - and never looked back.
-                        <span className="highlight-1"> In 2021 I got a BTEC in Computing, and in 2024 I graduated with a BSc in Computer Science from the University of Plymouth. </span>
+                        My journey began when I was 16, when I learnt of the existance of HTML, CSS & JS. It fasinated me that I could use DevTools to
+                        go into any website's code and see how it was written. After that, I made a choice to go into the web-dev industry - and never looked back.
+                        <span className="highlight-1"> In 2021 I completed a BTEC in Computing, and in 2024 I graduated with a BSc in Computer Science from the University of Plymouth. </span>
+                        <br></br>
+                        <br></br>
                         Today, After graduating at 22, i'm making my own projects and constantly improving upon my skills.
                     </span>
                 </div>
@@ -50,7 +52,7 @@ function AboutMe() {
 
                     <span className="About-paragraph-text">
                         Im a avid techie - I spend most of my time tinkering with new technologies, even outside of web development. <br></br>I like to build computers as a hobby,
-                        & keep up to date with the latest tech news. I also enjoy single-player games, such as <span className="highlight-1"> 'The Elder Scrolls' </span> series, an binge watching box-sets like <span className="highlight-1"> Lord of the Rings. </span>
+                        & keep up to date with the latest tech news. I also enjoy single-player games, such as <span className="highlight-1"> 'The Elder Scrolls' </span> series, and binge watching movies like <span className="highlight-1"> Lord of the Rings. </span>
                     </span>
                 </div>
             </div>

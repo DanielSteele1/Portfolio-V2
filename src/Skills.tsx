@@ -11,7 +11,6 @@ import { SiCsswizardry } from "react-icons/si";
 import { FaFigma } from "react-icons/fa";
 import { LuMouse } from "react-icons/lu";
 
-
 function Skills() {
 
     const [active, setActive] = useState(0);

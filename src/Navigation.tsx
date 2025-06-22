@@ -5,10 +5,10 @@ import 'react-tooltip/dist/react-tooltip.css'
 
 import { GrProjects } from "react-icons/gr";
 import { GoPerson } from 'react-icons/go';
-import { FaLocationArrow } from 'react-icons/fa';
 import { MdEmail } from "react-icons/md";
 import { FiTool } from "react-icons/fi";
 import { HiDownload } from "react-icons/hi";
+import { SlSpeech } from "react-icons/sl";
 
 function Navigation() {
 
@@ -30,7 +30,7 @@ function Navigation() {
 
     return (
 
-        <div className={`navigation ${scrolled ? 'scrolled' : ''}`}>
+        <div id="fade-in3" className={`navigation ${scrolled ? 'scrolled' : ''}`}>
             <div className="nav-item">
                 <span className="nav-title">  <div className="logo">D<span className="logo-backtick">/</span>Steele</div> </span>
             </div>
@@ -57,8 +57,8 @@ function Navigation() {
                         </a>
                     </span>
                     <span data-tooltip-id="tooltip-1" className="nav-title">
-                        <a href="#devtools">
-                            <FiTool className="nav-icon" /> Dev Tools
+                        <a href="#blog">
+                            <SlSpeech className="nav-icon" /> Blog
                         </a>
                     </span>
 

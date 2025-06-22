@@ -1,41 +1,41 @@
 import { TypeAnimation } from 'react-type-animation';
 import { LuGithub } from "react-icons/lu";
 import { IoLogoLinkedin } from "react-icons/io5";
-import { FaLocationArrow } from "react-icons/fa";
 import { HiDownload } from "react-icons/hi";
 const Greeting = () => {
     return (
         <div className="greeting" id="top">
-            {/*<div className="greetings-image"> <img className="Sunglasses" src="public/Sunglasses_head.png" /> </div> */}
-            <span className="greeting-title"> Hey, i'm{"\u00A0"}<span className="gradient"> Daniel Steele </span> </span>
+            <span className="greeting-title" id="fade-in"> Hey, i'm{"\u00A0"}<span className="gradient"> Daniel Steele </span> </span>
 
-            <TypeAnimation
-                className="greeting-subtitle"
-                sequence={[
-                    ' Full Stack Developer',
-                    3000,
-                    ' React Developer',
-                    3000,
-                    ' Tech Enthusiast',
-                    3000,
-                ]}
-                speed={50}
-                wrapper="span"
-                repeat={Infinity}
-            />
+            <div id="fade-in2">
+                <TypeAnimation
+                    className="greeting-subtitle"
+                    sequence={[
+                        ' Full Stack Developer',
+                        3000,
+                        ' React Developer',
+                        3000,
+                        ' Tech Enthusiast',
+                        3000,
+                    ]}
+                    speed={50}
+                    wrapper="span"
+                    repeat={Infinity}
+                />
+            </div>
 
-            <span className="gradient"> 
+            <span className="gradient" id="fade-in1">
                 <a href="https://github.com/DanielSteele1/FocusDev"> Curerently working on FocusDev! Check it out here.</a>
             </span>
 
-            <span className="greeting-text-container">
+            <span className="greeting-text-container" id="fade-in2">
                 <span className="greeting-text">
                     I'm currently looking for remote full-time employment in the UK.
                     If interested, feel free to reach out via <span className="highlight">LinkedIn</span> or <span className="highlight">Email</span>.
                 </span>
             </span>
 
-            <div className="socials">
+            <div className="socials" id="fade-in3">
                 <div className="resume">
                     <div className="social-item">
                         <span className="social-title">

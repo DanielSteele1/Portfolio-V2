@@ -97,10 +97,10 @@ function Projects() {    const settings = {
                     <div className="Project">
                         <Project_card
                             title="FocusDev"
-                            description="FocusDev is primarily developed for developers to organise thier workload into one location. 
-                        For example, if a developer has to handle a ticket, keep track of meetings or needs to copy paste code snippets over and over, they can add it here and keep on top of things.
-                        Features include a Notes app, Reusable code snippet feature, Calender, Github commit graph w/ stats, local weather forecasts to name a few."
-                            src="FocusDev.gif"
+                            description="FocusDev is primarily developed for developers to organise thier workload into one location.
+                            Features include a Notes app, Reusable code snippet feature, Calender, Github commit graph w/ stats, just to name a few.
+                            It uses JavsScript, React, Node.js & MongoDB."
+                            src=""
                             tags={[
                                 <FaReact />,
                                 <FaJs />,

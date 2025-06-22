@@ -1,6 +1,4 @@
 import React from 'react';
-import { useState } from 'react';
-import './App.css';
 import Navigation from './Navigation';
 import Greeting from './Greeting';
 import AboutMe from './About';
@@ -9,7 +7,7 @@ import Projects from './Projects';
 import Contact from './Contact';
 import Footer from './Footer';
 import BackToTop from './BackToTop';
-
+import Blog from './Blog';
 
 function App() {
 
@@ -17,13 +15,15 @@ function App() {
     <>
 
       <Navigation />
-      <div className="fade-in">
-        <Greeting />
-      </div>
 
+      <Greeting />
       <Skills />
-      <Projects />
+
+
       <AboutMe />
+      <Blog />
+
+      <Projects />
       <BackToTop />
       <Contact />
       <Footer />
