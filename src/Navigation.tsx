@@ -10,7 +10,14 @@ import { FiTool } from "react-icons/fi";
 import { HiDownload } from "react-icons/hi";
 import { SlSpeech } from "react-icons/sl";
 
+import Hamburger from 'hamburger-react';
+
+
 function Navigation() {
+
+
+    const [isOpen, setOpen] = useState(false);
+
 
     const [scrolled, setScrolled] = useState(false);
 
@@ -78,10 +85,50 @@ function Navigation() {
                         color: '#e66465',
                         fontFamily: 'figtree, sans-serif'
                     }}
-
-
                 />
             </div>
+
+            <div className="nav-hamburger">
+                <Hamburger toggled={isOpen} toggle={setOpen} />
+            </div>
+
+            {isOpen && (
+
+                <div className="nav-menu-mobile">
+
+                    <span className="resume" >
+                        <HiDownload style={{
+                            fontSize: '20px',
+                            marginRight: '10px',
+                            verticalAlign: 'center',
+                            color: '#e66465',
+                        }} /> View Resume  </span>
+
+                    <span className="nav-title" id="nav-projects">
+                        <a href="#projects" onClick={() => { setOpen(false) }}>
+                            <GrProjects className="nav-icon" /> Projects
+                        </a>
+                    </span>
+                    <span className="nav-title">
+                        <a href="#about" onClick={() => { setOpen(false) }}>
+                            <GoPerson className="nav-icon" /> About Me
+                        </a>
+                    </span>
+                    <span data-tooltip-id="tooltip-1" className="nav-title">
+                        <a href="#blog" onClick={() => { setOpen(false) }}>
+                            <SlSpeech className="nav-icon" /> Blog
+                        </a>
+                    </span>
+
+                    <span className="nav-title">
+                        <a href="#contact" onClick={() => { setOpen(false) }}>
+                            <MdEmail className="nav-icon" /> Contact
+                        </a>
+                    </span>
+
+                </div>
+            )}
+
         </div>
     )
 }

@@ -16,7 +16,7 @@ function AboutMe() {
                     <img className="About-img" src="Daniel_Steele.jpg" />
                 </div>
 
-            <span className="section-subheading"> A little bit about me, my journey and my hobbies.</span>
+            <span className="section-sub-heading"> A little bit about me, my journey and my hobbies.</span>
 
             <div className="About-text">
 

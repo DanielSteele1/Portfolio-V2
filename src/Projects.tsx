@@ -100,7 +100,7 @@ function Projects() {    const settings = {
                             description="FocusDev is primarily developed for developers to organise thier workload into one location.
                             Features include a Notes app, Reusable code snippet feature, Calender, Github commit graph w/ stats, just to name a few.
                             It uses JavsScript, React, Node.js & MongoDB."
-                            src=""
+                            src="https://youtu.be/tpSIyG0BEt0"
                             tags={[
                                 <FaReact />,
                                 <FaJs />,

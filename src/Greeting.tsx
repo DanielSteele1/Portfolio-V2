@@ -5,7 +5,7 @@ import { HiDownload } from "react-icons/hi";
 const Greeting = () => {
     return (
         <div className="greeting" id="top">
-            <span className="greeting-title" id="fade-in"> Hey, i'm{"\u00A0"}<span className="gradient"> Daniel Steele </span> </span>
+            <span className="greeting-title" id="fade-in"> Hey, I'm{"\u00A0"}<span className="gradient"> Daniel Steele </span> </span>
 
             <div id="fade-in2">
                 <TypeAnimation
@@ -24,8 +24,10 @@ const Greeting = () => {
                 />
             </div>
 
-            <span className="gradient" id="fade-in1">
-                <a href="https://github.com/DanielSteele1/FocusDev"> Curerently working on FocusDev! Check it out here.</a>
+            <span className="greeting-cta">
+                <span className="gradient" id="fade-in1">
+                    <a href="https://github.com/DanielSteele1/FocusDev"> Currently working on FocusDev! Check it out here.</a>
+                </span>
             </span>
 
             <span className="greeting-text-container" id="fade-in2">
@@ -38,7 +40,6 @@ const Greeting = () => {
             <div className="socials" id="fade-in3">
                 <div className="resume">
                     <div className="social-item">
-                        <span className="social-title">
                             <HiDownload style={{
                                 fontSize: '20px',
                                 marginRight: '10px',
@@ -46,8 +47,7 @@ const Greeting = () => {
                                 color: '#e66465',
                             }}
                             />
-                        </span>
-                        <span> View Resume </span>
+                            <span>View Resume</span>
                     </div>
 
                 </div>

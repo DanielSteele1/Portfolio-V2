@@ -45,8 +45,6 @@ function Skills() {
 
         <div className="skills">
 
-
-
             <a href="#skills-anchor" className="scroll-container">
 
                 <div className="scroll-button">
@@ -61,7 +59,7 @@ function Skills() {
             <div id="skills-anchor"> </div>
 
             <span className="section-heading">My{"\u00A0"}<span className="gradient">Skills</span> </span>
-            <span className="section-sub-heading">A list of all the skills i'm capable of and where I consider myself. I am especially capable at front-end development and can create visually-stunning websites. </span>
+            <span className="section-sub-heading">A list of all the skills i'm capable of, and where I consider myself. I am especially capable at front-end development and can create visually-stunning websites. </span>
 
             {/* map the tabs to create a button for each item in array. 
             once pressed, setActive(index) updates the tab to the corrosponding section.*/}
@@ -117,8 +115,8 @@ function Skills() {
                             </div>
 
                             <div className="progress-container">
-                                <AnimateProgressbar value={85} />
-                                <div className="Progress-value"> 85 % </div>
+                                <AnimateProgressbar value={75} />
+                                <div className="Progress-value"> 75 % </div>
                             </div>
 
                         </div>
@@ -130,8 +128,8 @@ function Skills() {
                             </div>
 
                             <div className="progress-container">
-                                <AnimateProgressbar value={80} />
-                                <div className="Progress-value"> 80 % </div>
+                                <AnimateProgressbar value={70} />
+                                <div className="Progress-value"> 70 % </div>
                             </div>
 
 
