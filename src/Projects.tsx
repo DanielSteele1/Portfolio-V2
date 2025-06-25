@@ -15,6 +15,8 @@ import Slider from "react-slick";
 interface ProjectCardProps {
 
     title: string;
+    mediaType?: 'image' | 'youtube'; // either image, or youtube link.
+    youtubeId?: string; // only required if mediaType is 'youtube'
     src: string;
     tags: Tags[];
     description: string;
@@ -22,11 +24,36 @@ interface ProjectCardProps {
     github: string;
 }
 
-const Project_card: React.FC<ProjectCardProps> = ({ title, src, tags, description, link, github }) => {
+const Project_card: React.FC<ProjectCardProps> = ({ mediaType = 'image', youtubeId, title, src, tags, description, link, github }) => {
+
+    const renderMedia = () => {
+        switch (mediaType) {
+            case 'youtube':
+                return (
+                    <iframe
+                        className="project-video"
+                        src={`https://www.youtube.com/embed/${youtubeId}`}
+                        title={title}
+                        frameBorder="0"
+                        allow=" autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                    />
+                );
+            case 'image':
+            default:
+                return typeof src === 'string' ? (
+                    <a href={github} target="_blank" rel="noopener noreferrer">
+                        <img src={src} alt={title} loading="lazy" />
+                    </a>
+                ) : (
+                    src
+                );
+        }
+    };
     return (
         <div className="project-card">
-            <div className="project-image">
-                <img src={src} loading="lazy" alt={title} />
+            <div className={`project-image ${mediaType}`}>
+                {renderMedia()}
             </div>
 
             <div className="project-information">
@@ -64,27 +91,7 @@ const Project_card: React.FC<ProjectCardProps> = ({ title, src, tags, descriptio
     )
 }
 
-function Projects() {    const settings = {
-        dots: false,
-        infinite: true,
-        speed: 800,
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        arrows: true,
-        autoplay: true,
-        autoplaySpeed: 4000,
-        pauseOnHover: true,
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }
-        ]
-    };
-
+function Projects() {
     return (
         <>
             <div className="projects" id="projects">
@@ -92,90 +99,78 @@ function Projects() {    const settings = {
                 <span className="section-heading"> Featured{"\u00A0"}<div className="gradient"> Projects</div>  </span>
                 <span className="section-sub-heading"> My best and most impressive projects that i've been working on for the last year. You can check them out via the links provided below. </span>
 
-                <Slider className="project-container" {...settings}>
+                <div className="project-container">
 
-                    <div className="Project">
-                        <Project_card
-                            title="FocusDev"
-                            description="FocusDev is primarily developed for developers to organise thier workload into one location.
+                    <Project_card
+                        title="FocusDev"
+                        description="FocusDev is primarily developed for developers to organise thier workload into one location.
                             Features include a Notes app, Reusable code snippet feature, Calender, Github commit graph w/ stats, just to name a few.
                             It uses JavsScript, React, Node.js & MongoDB."
-                            src="https://youtu.be/tpSIyG0BEt0"
-                            tags={[
-                                <FaReact />,
-                                <FaJs />,
-                                <FaNodeJs />,
-                                <SiMongodb />
-                            ]}
-                            link="https://focus-dev-tau.vercel.app"
-                            github="https://github.com/DanielSteele1/FocusDev"
-                        >
+                        tags={[
+                            <FaReact />,
+                            <FaJs />,
+                            <FaNodeJs />,
+                            <SiMongodb />
+                        ]}
+                        src="FocusDev.png"
+                        link=""
+                        github="https://github.com/DanielSteele1/FocusDev"
+                    >
 
-                        </Project_card>
-                    </div>
+                    </Project_card>
 
-                    <div className="Project">
-                        <Project_card title="Portfolio V1"
-                            description="The first iteration of my portfolio website. (this website). 
+                    <Project_card
+                        title="Portfolio V1"
+                        description="The first iteration of my portfolio website. (this website). 
                         It uses mainly Html/CSS & JS with some basic React work. 
                         In the first few months alone it got visited by over 1k people,
                         and I've hosted it on Vercel in case you'd like to take a look."
-                            src="Portfolio.gif"
-                            tags={[
-                                <FaReact />,
-                                <FaJs />,
-                                <FaNodeJs />,
-                                <SiMongodb />
-                            ]}
-                            link=""
-                            github="github.com/DanielSteele1/DanielSteele1.github.io"
+                        src="PortfolioV1.png"
+                        tags={[
+                            <FaReact />,
+                            <FaJs />,
+                        ]}
+                        link=""
+                        github="https://github.com/DanielSteele1/DanielSteele1.github.io"
 
-                        >
+                    >
 
-                        </Project_card>
+                    </Project_card>
 
-                    </div>
-
-
-                    <div className="Project">
-
-                        <Project_card title="SkyCompass"
-                            description=" Skycompass is a web-based application that allows users to monitor up-to-date weather patterns across the globe. 
+                    <Project_card title="SkyCompass"
+                        description=" Skycompass is a web-based application that allows users to monitor up-to-date weather patterns across the globe. 
                         It utilises multiple APIs to create a dashboard displaying weather maps, as well a forecast page that predicts weather for up to 7 days. 
                         Using MongoDB & Bcrypt hashing for security, users can favourite locations for a more personalised experience."
-                            src="SkyCompass.gif"
-                            tags={[
-                                <FaReact />,
-                                <FaJs />,
-                                <FaNodeJs />,
-                                <SiMongodb />
-                            ]}
-                            link=""
-                            github="https://github.com/DanielSteele1/SkyCompass"
+                        src="SkyCompass.gif"
+                        tags={[
+                            <FaReact />,
+                            <FaJs />,
+                            <FaNodeJs />,
+                            <SiMongodb />
+                        ]}
+                        link=""
+                        github="https://github.com/DanielSteele1/SkyCompass"
 
-                        >
+                    >
 
-                        </Project_card>
-                    </div>
+                    </Project_card>
 
-                    <div className="Project">
+                    <Project_card title="EarthSim"
+                        description="EarthSim is a project that I built in C++, using OpenGL and various libraries to create a 3D environment, with the goal of simulating our local system of planets, exposing me to core game development principles and GLSL."
+                        src="EarthSim.gif"
+                        tags={[
+                            <SiCplusplus />,
+                            <SiOpengl />,
+                        ]}
+                        link=""
+                        github="https://github.com/DanielSteele1/SkyCompass"
 
-                        <Project_card title="EarthSim"
-                            description="EarthSim is a project that I built in C++, using OpenGL and various libraries to create a 3D environment, with the goal of simulating our local system of planets, exposing me to core game development principles and GLSL."
-                            src="EarthSim.gif"
-                            tags={[
-                                <SiCplusplus />,
-                                <SiOpengl />,
-                            ]}
-                            link=""
-                            github="https://github.com/DanielSteele1/SkyCompass"
+                    >
 
-                        >
+                    </Project_card>
 
-                        </Project_card>
+                </div>
 
-                    </div>
-                </Slider >
 
 
             </div >

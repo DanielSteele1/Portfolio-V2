@@ -29,7 +29,6 @@ const Blog_card: React.FC<BlogCardProps> = ({ title, date, description, link }) 
 }
 
 
-
 // make this code more modular - put an interface in here so all I need to change is the description, title and date.
 
 function Blog() {
