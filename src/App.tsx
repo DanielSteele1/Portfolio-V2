@@ -21,7 +21,7 @@ function App() {
 
 
       <AboutMe />
-      <Blog />
+       <Blog /> 
 
       <Projects />
       <BackToTop />

@@ -37,9 +37,12 @@ function Blog() {
 
         <div className="Blog" id="blog">
             <span className="section-heading">My{"\u00A0"}<span className="gradient"> Blog </span> </span>
-            <span className="section-sub-heading">My newly launched blog, where you can view my latest thoughts & experiences on the industry.</span>
+            {/*<span className="section-sub-heading">My newly launched blog, where you can view my latest thoughts & experiences on the industry.</span> */}
 
-            <div className="blog-card-container">
+
+           <span className="blog-coming-soon"> This section is currently under construction, be sure to check back later! </span>
+
+            {/* <div className="blog-card-container">
 
                 <Blog_card
                     title='Welcome to the New Website!'
@@ -65,7 +68,7 @@ function Blog() {
 
                 />
 
-            </div>
+            </div> */}
 
         </div>
 

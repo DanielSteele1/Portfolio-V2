@@ -103,3 +103,19 @@
     margin-left: 3px;
     margin-bottom: 3px;
 }
+
+
+.blog-coming-soon {
+    font-size: 2.0rem;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Figtree', sans-serif;
+    font-weight: 600;
+    color: linear-gradient(120deg, #e66465, #9198e5);
+    
+
+    
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

@@ -141,7 +141,7 @@ function Projects() {
                         description=" Skycompass is a web-based application that allows users to monitor up-to-date weather patterns across the globe. 
                         It utilises multiple APIs to create a dashboard displaying weather maps, as well a forecast page that predicts weather for up to 7 days. 
                         Using MongoDB & Bcrypt hashing for security, users can favourite locations for a more personalised experience."
-                        src="SkyCompass.gif"
+                        src="SkyCompass.png"
                         tags={[
                             <FaReact />,
                             <FaJs />,
@@ -157,7 +157,7 @@ function Projects() {
 
                     <Project_card title="EarthSim"
                         description="EarthSim is a project that I built in C++, using OpenGL and various libraries to create a 3D environment, with the goal of simulating our local system of planets, exposing me to core game development principles and GLSL."
-                        src="EarthSim.gif"
+                        src="EarthSim.png"
                         tags={[
                             <SiCplusplus />,
                             <SiOpengl />,
