@@ -189,7 +189,7 @@ body {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  max-width: 1300px;
+  max-width: 1400px;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -674,15 +674,17 @@ body {
 }
 
 .project-button {
-  display: flex;
-  width: 25%;
+  display: inline-flex;
+  width: fit-content;
+  height:fit-content;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  background-color: transparent;
+  max-width: 200px;
   margin: 10px;
   padding: 5px;
-  font-size: 16px;
+  font-size: 1.0rem;
+  white-space: nowrap;
   font-family: 'Figtree', sans-serif;
   font-weight: 500;
   border: 2px solid #9198e5;
@@ -844,7 +846,6 @@ body {
   background-color: #e66465;
 }
 
-
 @media (min-width: 1000px) {
 
   .nav-menu-mobile {
@@ -860,7 +861,6 @@ body {
 @media (min-width: 750px) and (max-width: 1000px) {
 
   .nav-item {
-
     display: none;
   }
 
@@ -884,6 +884,7 @@ body {
     margin-right: 20px;
     cursor: pointer;
   }
+
 
 }
 
@@ -988,10 +989,12 @@ body {
     width: 100%;
   }
 
+  .projects .project-image image {
+    width: 100%;
+  }
 
-
-  .projects {
-    width: 80%;
+  .project-container {
+      grid-template-columns: repeat(1, 1fr);
   }
 
   .project-card {
@@ -999,7 +1002,7 @@ body {
   }
 
   .project-title {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 
   .project-text {

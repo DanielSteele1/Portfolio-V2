@@ -40,7 +40,7 @@ function Blog() {
             {/*<span className="section-sub-heading">My newly launched blog, where you can view my latest thoughts & experiences on the industry.</span> */}
 
 
-           <span className="blog-coming-soon"> This section is currently under construction, be sure to check back later! </span>
+            <span className="blog-coming-soon"> <span className="gradient"> This section is currently under construction, so be sure to check back later! </span> </span>
 
             {/* <div className="blog-card-container">
 
