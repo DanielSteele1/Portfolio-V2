@@ -115,28 +115,20 @@ body {
   color: #ebe5e5;
 }
 
-.scroll-container {
-  margin-bottom: 100px;
-  cursor: pointer;
+
+.greeting-container {
   display: flex;
-  background-color: transparent;
-  border: none;
-  padding: 10px;
-}
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
 
-.scroll-button {
-  scroll-behavior: smooth;
-}
-
-.scroll-container:hover {
-  color: #e66465;
-  transition: 0.3s ease-in-out;
 }
 
 .greeting {
   display: flex;
-  height: 85vh;
-  width: 100%;
+  height: 100vh;
   flex-direction: column;
   margin: 0 auto;
   justify-content: center;
@@ -196,14 +188,13 @@ body {
   margin: 0 auto;
   padding: 0 10px;
   transition: 0.3s ease-in;
-}
 
-.navigation.scrolled {
-  align-items: center;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   backdrop-filter: blur(5px);
 }
+
+
 
 .nav-menu {
   display: flex;
@@ -468,7 +459,7 @@ body {
 .section-sub-heading {
   display: flex;
   width: 60%;
-  padding: 10px;
+  padding: 15px;
   text-align: center;
   justify-content: center;
   align-items: center;
@@ -584,16 +575,12 @@ body {
 }
 
 .project-container {
-  width: 95%;
+  width: 85%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   margin: 0 auto;
   gap: 30px;
-}
 
-.Project {
-  padding: 15px;
-  box-sizing: border-box;
 }
 
 .project-card {
@@ -635,17 +622,15 @@ body {
 }
 
 .project-image img {
-  height: fit-content;
+  height: 100%;
+  width: 100%;
   object-fit: cover;
-  display: flex;
-  max-width: 100%;
   display: block;
 }
 
 .project-image {
 
-  width: 100%;
-  height: 350px;
+  max-width: 100%;
   overflow: hidden;
   border-radius: 20px;
   display: flex;
@@ -654,29 +639,10 @@ body {
 
 }
 
-.project-image img:hover {
-  background-color: #e26e6e;
-  transition: 0.3s ease-in;
-}
-
-.project-video {
-  height: 330px;
-  object-fit: cover;
-  display: flex;
-  max-width: 100%;
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  border-radius: 15px;
-}
-
-.project-image {
-  height: auto;
-}
-
 .project-button {
   display: inline-flex;
   width: fit-content;
-  height:fit-content;
+  height: fit-content;
   flex-direction: row;
   align-items: center;
   justify-content: center;
@@ -860,8 +826,18 @@ body {
 
 @media (min-width: 750px) and (max-width: 1000px) {
 
-  .nav-item {
-    display: none;
+  .projects,
+  .about,
+  .contact-form {
+    width: 100%;
+  }
+
+  .BackToTop {
+    width: 80%;
+  }
+
+  .nav-title {
+    padding: 10px;
   }
 
   .blog-card-container {
@@ -871,24 +847,9 @@ body {
     width: 100%;
   }
 
-  .nav-menu-mobile {
-
-    display: flex;
-    flex-direction: column;
+  .navigation {
+    height: fit-content;
   }
-
-  .nav-hamburger {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 20px;
-    cursor: pointer;
-  }
-
-
-}
-
-@media (min-width: 300px) and (max-width: 750px) {
 
   .nav-menu {
 
@@ -906,7 +867,54 @@ body {
   .nav-menu-mobile {
 
     display: flex;
+    margin: 0 auto;
     flex-direction: column;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100vw;
+    transition: 0.3s ease-in;
+    backdrop-filter: blur(5px);
+
+  }
+
+}
+
+@media (min-width: 300px) and (max-width: 750px) {
+
+  .navigation {
+    height: fit-content;
+  }
+
+  .nav-menu {
+
+    display: none;
+  }
+
+  .nav-hamburger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+
+  .nav-menu-mobile {
+
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100vw;
+    transition: 0.3s ease-in;
+    backdrop-filter: blur(5px);
+
+  }
+
+  .nav-title {
+    padding: 10px;
   }
 
   .Blog {
@@ -985,8 +993,7 @@ body {
   }
 
   .back-to-top-text {
-    font-size: 1.5rem;
-    width: 100%;
+    font-size: 1.2rem;
   }
 
   .projects .project-image image {
@@ -994,7 +1001,7 @@ body {
   }
 
   .project-container {
-      grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
 
   .project-card {

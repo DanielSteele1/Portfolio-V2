@@ -45,17 +45,6 @@ function Skills() {
 
         <div className="skills">
 
-            <a href="#skills-anchor" className="scroll-container">
-
-                <div className="scroll-button">
-
-                    <span className="scroll-highlight"> Enter Site </span>
-
-                    <LuMouse style={{ fontSize: '25px', margin: '10px', verticalAlign: 'middle', color: '#9198e5' }} />
-
-                </div>
-            </a>
-
             <div id="skills-anchor"> </div>
 
             <span className="section-heading">My{"\u00A0"}<span className="gradient">Skills</span> </span>
