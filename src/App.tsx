@@ -15,6 +15,7 @@ function App() {
 
   return (
     <>
+      <Navigation />
 
       <DotGrid
         dotSize={3}
@@ -28,18 +29,17 @@ function App() {
         returnDuration={1.0}
       >
 
-        <Navigation />
         <Greeting />
 
       </DotGrid>
 
-        <Skills />
-        <AboutMe />
-        <Blog />
-        <Projects />
-        <BackToTop />
-        <Contact />
-        <Footer />
+      <Skills />
+      <AboutMe />
+      <Blog />
+      <Projects />
+      <BackToTop />
+      <Contact />
+      <Footer />
     </>
   )
 }

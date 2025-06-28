@@ -162,6 +162,8 @@ body {
   color: #ebe5e5;
   font-weight: 500;
   font-style: bold;
+
+  margin-top: -100px;
 }
 
 .greeting-subtitle {
@@ -950,7 +952,8 @@ body {
   }
 
   .greeting {
-    height: 71vh;
+    height: 100vh;
+    margin-top: -80px;
   }
 
   .socials {
