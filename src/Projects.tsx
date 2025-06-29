@@ -5,12 +5,8 @@ import { SiCplusplus, SiMongodb, SiOpengl } from 'react-icons/si';
 import { GoLinkExternal } from "react-icons/go";
 
 
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-
 type Tags = JSX.Element;
-import Slider from "react-slick";
-
+import { motion } from "motion/react"
 
 interface ProjectCardProps {
 
@@ -51,43 +47,52 @@ const Project_card: React.FC<ProjectCardProps> = ({ mediaType = 'image', youtube
         }
     };
     return (
-        <div className="project-card">
-            <div className={`project-image ${mediaType}`}>
-                {renderMedia()}
-            </div>
-
-            <div className="project-information">
-                <span className="project-title">
-                    <div className="gradient">{title}</div>
-                </span>
-
-                <div className="project-tags">
-                    {tags.map((tag, index) => (
-                        <span key={index} className="tag">
-                            {tag}
-                        </span>
-                    ))}
+        <motion.div
+            className="projects"
+            id="projects"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.2 }}
+        >
+            <div className="project-card">
+                <div className={`project-image ${mediaType}`}>
+                    {renderMedia()}
                 </div>
 
-                <div className="project-text">{description}</div>
+                <div className="project-information">
+                    <span className="project-title">
+                        <div className="gradient">{title}</div>
+                    </span>
 
-                <div className="project-buttons">
-                    <div className="project-button">
-                        <a className="live-button" href={link} target="_blank" rel="noopener noreferrer">
-                            <GoLinkExternal style={{ fontSize: "20px" }} />
-                            <span className="button-text">Live Project</span>
-                        </a>
+                    <div className="project-tags">
+                        {tags.map((tag, index) => (
+                            <span key={index} className="tag">
+                                {tag}
+                            </span>
+                        ))}
                     </div>
 
-                    <div className="project-button">
-                        <a className="github-button" href={github} target="_blank" rel="noopener noreferrer">
-                            <LuGithub style={{ fontSize: "23px" }} />
-                            <span className="button-text">Github</span>
-                        </a>
+                    <div className="project-text">{description}</div>
+
+                    <div className="project-buttons">
+                        <div className="project-button">
+                            <a className="live-button" href={link} target="_blank" rel="noopener noreferrer">
+                                <GoLinkExternal style={{ fontSize: "20px" }} />
+                                <span className="button-text">Live Project</span>
+                            </a>
+                        </div>
+
+                        <div className="project-button">
+                            <a className="github-button" href={github} target="_blank" rel="noopener noreferrer">
+                                <LuGithub style={{ fontSize: "23px" }} />
+                                <span className="button-text">Github</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }
 
@@ -113,7 +118,7 @@ function Projects() {
                             <SiMongodb />
                         ]}
                         src="FocusDev.png"
-                        link=""
+                        link="https://www.youtube.com/watch?v=tpSIyG0BEt0&t=2s"
                         github="https://github.com/DanielSteele1/FocusDev"
                     >
 
@@ -130,7 +135,7 @@ function Projects() {
                             <FaReact />,
                             <FaJs />,
                         ]}
-                        link=""
+                        link="https://danielsteeleportfoliov1.vercel.app"
                         github="https://github.com/DanielSteele1/DanielSteele1.github.io"
 
                     >
@@ -163,7 +168,7 @@ function Projects() {
                             <SiOpengl />,
                         ]}
                         link=""
-                        github="https://github.com/DanielSteele1/SkyCompass"
+                        github="https://github.com/DanielSteele1/EarthSim"
 
                     >
 

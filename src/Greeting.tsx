@@ -1,5 +1,5 @@
 import { TypeAnimation } from 'react-type-animation';
-import { LuGithub, LuMouse } from "react-icons/lu";
+import { LuGithub } from "react-icons/lu";
 import { IoLogoLinkedin } from "react-icons/io5";
 import { HiDownload } from "react-icons/hi";
 

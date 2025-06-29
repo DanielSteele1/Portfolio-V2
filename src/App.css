@@ -21,7 +21,7 @@ body {
   width: 100%;
   font-size: 18px;
   font-family: 'Figtree', sans-serif;
-  background: linear-gradient(180deg, #232946 10%, #0f121f 100%);
+background: linear-gradient(180deg, #0a0f2c 0%, #0f152f 100%);
   background-attachment: fixed;
   background-size: 200% 200%;
   scroll-behavior: smooth;
@@ -183,8 +183,10 @@ body {
   justify-content: space-between;
   width: 100%;
   max-width: 1400px;
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 100;
   margin: 0 auto;
   padding: 0 10px;
@@ -244,7 +246,7 @@ body {
   align-items: center;
   margin: 0 auto;
   padding: 10px;
-  width: 95%;
+  width: 100%;
 }
 
 .About-image-container {
@@ -268,7 +270,7 @@ body {
   font-size: 1.0rem;
   padding: 10px;
   margin: 0 auto;
-  width: 60%;
+  width: 80%;
 }
 
 .About-img {
@@ -299,7 +301,12 @@ body {
   justify-content: center;
   width: 80%;
   padding: 20px;
+  padding-top: 80px;
   margin: 0 auto;
+}
+
+.contact{
+  padding-top: 0px;
 }
 
 .projects {
@@ -310,7 +317,7 @@ body {
 .contact-form {
   display: flex;
   flex-direction: column;
-  width: 60%;
+  width: 80%;
 }
 
 .icons {
@@ -710,11 +717,7 @@ body {
   padding-right: 10px;
 }
 
-.About-paragraph {
-  padding: 10px;
-  margin: 0 auto;
-  width: 50%;
-}
+
 
 .About-paragraph-text {
   padding-top: 10px;
