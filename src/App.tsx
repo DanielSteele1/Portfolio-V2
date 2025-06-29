@@ -13,18 +13,28 @@ import DotGrid from './DotGrid.tsx';
 
 function App() {
 
+
+  window.addEventListener("blur", () => {
+    document.title = "Come Back! I miss you :(";
+  });
+
+    window.addEventListener("focus", () => {
+    document.title = "Daniel Steele - React Developer";
+  });
+
+
   return (
     <>
       <Navigation />
 
       <DotGrid
         dotSize={3}
-        gap={60}
+        gap={50}
         baseColor="#bfc6e0"
         activeColor="#e66465"
         proximity={150}
-        shockRadius={10}
-        shockStrength={0}
+        shockRadius={0}
+        shockStrength={100}
         resistance={500}
         returnDuration={1.0}
       >

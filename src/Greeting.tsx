@@ -8,7 +8,7 @@ const Greeting = () => {
         <div className="greeting" id="top">
 
             <div className="greeting-container">
-                <span className="greeting-title" id="fade-in"> Hey, I'm{"\u00A0"}<span className="gradient"> Daniel Steele </span> </span>
+                <span className="greeting-title" id="fade-in"> Hey, I'm{"\u00A0"}<span className="gradient"> Daniel Steele. </span> </span>
 
                 <div id="fade-in2">
                     <TypeAnimation
