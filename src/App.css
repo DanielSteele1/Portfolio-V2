@@ -21,7 +21,7 @@ body {
   width: 100%;
   font-size: 18px;
   font-family: 'Figtree', sans-serif;
-background: linear-gradient(180deg, #0a0f2c 0%, #0f152f 100%);
+  background: linear-gradient(180deg, #0a0f2c 0%, #0f152f 100%);
   background-attachment: fixed;
   background-size: 200% 200%;
   scroll-behavior: smooth;
@@ -122,12 +122,11 @@ background: linear-gradient(180deg, #0a0f2c 0%, #0f152f 100%);
   align-items: center;
   height: 100vh;
   width: 100%;
-
 }
 
 .greeting {
   display: flex;
-  height: 100vh;
+  height: 110vh;
   flex-direction: column;
   margin: 0 auto;
   justify-content: center;
@@ -152,16 +151,14 @@ background: linear-gradient(180deg, #0a0f2c 0%, #0f152f 100%);
 }
 
 .greeting-title {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
-  align-items: center;
-  width: 100%;
+  align-items: baseline;
   margin: 0 auto;
   font-size: 5rem;
   color: #ebe5e5;
   font-weight: 500;
   font-style: bold;
-
   margin-top: -100px;
 }
 
@@ -305,7 +302,7 @@ background: linear-gradient(180deg, #0a0f2c 0%, #0f152f 100%);
   margin: 0 auto;
 }
 
-.contact{
+.contact {
   padding-top: 0px;
 }
 
@@ -467,7 +464,7 @@ background: linear-gradient(180deg, #0a0f2c 0%, #0f152f 100%);
 
 .section-sub-heading {
   display: flex;
-  width: 60%;
+  width: 80%;
   padding: 15px;
   text-align: center;
   justify-content: center;
@@ -478,7 +475,6 @@ background: linear-gradient(180deg, #0a0f2c 0%, #0f152f 100%);
 .skills-container {
   display: flex;
   justify-items: center;
-  width: 80%;
   height: 100%;
   padding: 20px 0;
 }
@@ -589,6 +585,7 @@ background: linear-gradient(180deg, #0a0f2c 0%, #0f152f 100%);
   grid-template-columns: repeat(2, 1fr);
   margin: 0 auto;
   gap: 30px;
+  margin-top: 10px;
 
 }
 
@@ -596,6 +593,7 @@ background: linear-gradient(180deg, #0a0f2c 0%, #0f152f 100%);
   display: grid;
   padding: 10px;
   grid-template-rows: auto 1fr;
+  margin: 0 auto;
 
 }
 
@@ -887,8 +885,39 @@ background: linear-gradient(180deg, #0a0f2c 0%, #0f152f 100%);
 
 @media (min-width: 300px) and (max-width: 750px) {
 
+  .skill-item {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 18px;
+    height: fit-content;
+    width: fit-content;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    margin: 5px;
+  }
+
+  .skills-tabs {
+    font-size: 16px;
+  }
+
+
+  .Frontend-skills,
+  .Backend-skills,
+  .Other {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    margin: 0 auto;
+    align-items: center;
+
+  }
+
   .navigation {
     height: fit-content;
+
   }
 
   .nav-menu {
@@ -912,7 +941,7 @@ background: linear-gradient(180deg, #0a0f2c 0%, #0f152f 100%);
     position: absolute;
     top: 80px;
     left: 0;
-    width: 100vw;
+    width: 100%;
     transition: 0.3s ease-in;
     backdrop-filter: blur(5px);
 
@@ -942,12 +971,15 @@ background: linear-gradient(180deg, #0a0f2c 0%, #0f152f 100%);
   }
 
   .section-heading {
-    font-size: 2.4rem;
+    font-size: 2.3rem;
+    width: fit-content;
   }
 
   .section-sub-heading {
-    width: 80%;
+    width: 100%;
     font-size: 1.0rem;
+    margin: 0 auto;
+    text-align: center;
   }
 
   .About-img {
@@ -956,7 +988,6 @@ background: linear-gradient(180deg, #0a0f2c 0%, #0f152f 100%);
 
   .greeting {
     height: 100vh;
-    margin-top: -80px;
   }
 
   .socials {
@@ -1012,6 +1043,7 @@ background: linear-gradient(180deg, #0a0f2c 0%, #0f152f 100%);
 
   .project-card {
     width: 100%;
+    margin: 0 auto;
   }
 
   .project-title {

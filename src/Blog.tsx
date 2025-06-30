@@ -3,6 +3,7 @@ import "./App.css";
 import './Blog.css';
 import { TbCalendarWeekFilled } from 'react-icons/tb';
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
+import GradientText from './GradientText.tsx'
 
 
 interface BlogCardProps {
@@ -12,7 +13,6 @@ interface BlogCardProps {
     description: string;
     link: string;
 }
-
 
 const Blog_card: React.FC<BlogCardProps> = ({ title, date, description, link }) => {
 
@@ -40,7 +40,18 @@ function Blog() {
             {/*<span className="section-sub-heading">My newly launched blog, where you can view my latest thoughts & experiences on the industry.</span> */}
 
 
-            <span className="blog-coming-soon"> <span className="gradient"> This section is currently under construction, so be sure to check back later! </span> </span>
+            <span className="blog-coming-soon">
+                <GradientText
+                    colors={["#e66465", "#9198e5", "#e66465", "#9198e5"]}
+                    animationSpeed={5}
+                    showBorder={false}
+                    className="greeting-title"
+                >
+                    <span className="blog-coming-soon"> 
+                    This section is currently under construction, so be sure to check back later!
+                    </span>
+                </GradientText>
+            </span>
 
             {/* <div className="blog-card-container">
 

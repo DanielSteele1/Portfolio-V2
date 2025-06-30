@@ -3,12 +3,25 @@ import { LuGithub } from "react-icons/lu";
 import { IoLogoLinkedin } from "react-icons/io5";
 import { HiDownload } from "react-icons/hi";
 
+import GradientText from './GradientText.tsx'
+
 const Greeting = () => {
     return (
         <div className="greeting" id="top">
 
             <div className="greeting-container">
-                <span className="greeting-title" id="fade-in"> Hey, I'm{"\u00A0"}<span className="gradient"> Daniel Steele. </span> </span>
+
+                <span className="greeting-title" id="fade-in">
+                    Hey, I'm &nbsp;
+                    <GradientText
+                        colors={["#e66465", "#9198e5", "#e66465", "#9198e5"]}
+                        animationSpeed={4}
+                        showBorder={false}
+                        className="greeting-title"
+                    >
+                        Daniel Steele
+                    </GradientText>
+                </span>
 
                 <div id="fade-in2">
                     <TypeAnimation
