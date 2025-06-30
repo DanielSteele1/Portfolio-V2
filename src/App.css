@@ -133,6 +133,18 @@ body {
   align-items: center;
 }
 
+.greeting-cta {
+  cursor: pointer;
+  transition: 0.3s ease-in;
+  text-decoration-line: underline;
+  text-decoration-color: transparent;
+}
+
+.greeting-cta:hover {
+  text-decoration-line: underline;
+  text-decoration-color: #9198e5;
+}
+
 .gradient {
   background: linear-gradient(120deg, #e66465, #9198e5);
   -webkit-background-clip: text;
@@ -186,22 +198,18 @@ body {
   right: 0;
   z-index: 100;
   margin: 0 auto;
-  padding: 0 10px;
   transition: 0.3s ease-in;
-
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  backdrop-filter: blur(5px);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  backdrop-filter: blur(10px);
+  padding: 10px;
 }
-
-
 
 .nav-menu {
   display: flex;
   align-items: center;
   gap: 20px;
   height: 100%;
-  margin: 0 20px;
 }
 
 .nav-title a {
@@ -600,14 +608,14 @@ body {
 .project-information {
   display: flex;
   flex-direction: column;
-  border-radius: 10px;
+  width:fit-content;
 }
 
 .project-text {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 15px;
+  font-size: 1.0rem;
   max-width: 100%;
   padding: 10px;
 }
@@ -647,26 +655,10 @@ body {
 }
 
 .project-button {
-  display: inline-flex;
-  width: fit-content;
-  height: fit-content;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  max-width: 200px;
   margin: 10px;
-  padding: 5px;
-  font-size: 1.0rem;
+  height: 20px !important;
   white-space: nowrap;
-  font-family: 'Figtree', sans-serif;
-  font-weight: 500;
-  border: 2px solid #9198e5;
-  border-radius: 8px;
-}
 
-.project-button:hover {
-  background-color: #9198e5;
-  transition: 0.3s ease-in;
 }
 
 .project-button a {
@@ -785,10 +777,12 @@ body {
   color: #e66465;
 }
 
-.resume {
+
+.resume,
+.project-button {
   display: flex;
   flex-direction: row;
-  height: 20px;
+  height: 25px;
   width: fit-content;
   justify-content: center;
   align-items: center;
@@ -798,21 +792,22 @@ body {
   font-weight: 500;
   font-family: 'Figtree', sans-serif;
   cursor: pointer;
-  background-color: transparent;
-  border: 2px solid #e66465;
-  border-radius: 10px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #e65555, #7079d6);
+  background-size: 200% 200%;
+  background-position: 0% 50%;
+  box-shadow: 0 4px 16px 0 rgba(230, 100, 101, 0.10), 0 1.5px 4px 0 rgba(145, 152, 229, 0.10);
+  transition: background-position 0.6s cubic-bezier(0.4, 0, 2, 1), box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
 }
 
-.resume svg {
-  display: inline-flex;
-  width: 20px;
-  height: 20px;
-  vertical-align: middle;
-}
-
-.resume:hover {
+.resume:hover,
+.project-button:hover {
   transition: all 0.5s ease;
-  background-color: #e66465;
+  background-position: 100% 50%;
+  box-shadow: 0 6px 24px 0 rgba(230, 100, 101, 0.18), 0 2px 8px 0 rgba(145, 152, 229, 0.15);
+  transition: background-position 0.5s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s;
 }
 
 @media (min-width: 1000px) {
@@ -902,7 +897,6 @@ body {
   .skills-tabs {
     font-size: 16px;
   }
-
 
   .Frontend-skills,
   .Backend-skills,
@@ -1042,7 +1036,7 @@ body {
   }
 
   .project-card {
-    width: 100%;
+    width: fit-content;
     margin: 0 auto;
   }
 

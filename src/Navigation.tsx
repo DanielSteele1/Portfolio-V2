@@ -45,15 +45,6 @@ function Navigation() {
             <div className="nav-item">
                 <div className="nav-menu">
 
-                    <span className="resume">
-                        <HiDownload style={{
-                            fontSize: '20px',
-                            marginRight: '10px',
-                            verticalAlign: 'center',
-                            color: '#e66465',
-                        }} /> View Resume  </span>
-
-
                     <span className="nav-title">
                         <a href="#about">
                             <GoPerson className="nav-icon" /> About Me
@@ -77,6 +68,14 @@ function Navigation() {
                             <MdEmail className="nav-icon" /> Contact
                         </a>
                     </span>
+
+                    <span className="resume">
+                        <HiDownload style={{
+                            fontSize: '20px',
+                            marginRight: '10px',
+                            verticalAlign: 'center',
+                            color: 'white',
+                        }} /> View my CV  </span>
 
                 </div>
                 <ReactTooltip

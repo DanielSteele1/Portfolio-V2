@@ -40,12 +40,6 @@ const Greeting = () => {
                     />
                 </div>
 
-                <span className="greeting-cta">
-                    <span className="gradient" id="fade-in1">
-                        <a href="https://github.com/DanielSteele1/FocusDev"> Currently working on FocusDev! Check it out here.</a>
-                    </span>
-                </span>
-
                 <span className="greeting-text-container" id="fade-in2">
                     <span className="greeting-text">
                         I'm currently looking for remote full-time employment in the UK.
@@ -60,10 +54,10 @@ const Greeting = () => {
                                 fontSize: '20px',
                                 marginRight: '10px',
                                 verticalAlign: 'center',
-                                color: '#e66465',
+                                color: 'white',
                             }}
                             />
-                            <span>View Resume</span>
+                            <span>View my CV</span>
                         </div>
 
                     </div>
