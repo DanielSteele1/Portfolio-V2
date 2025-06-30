@@ -5,9 +5,9 @@ import 'react-tooltip/dist/react-tooltip.css'
 
 import { GrProjects } from "react-icons/gr";
 import { GoPerson } from 'react-icons/go';
-import { MdEmail } from "react-icons/md";
+import { MdEmail, MdHome } from "react-icons/md";
 import { FiTool } from "react-icons/fi";
-import { HiDownload } from "react-icons/hi";
+import { HiDownload, HiHome } from "react-icons/hi";
 import { SlSpeech } from "react-icons/sl";
 
 import Hamburger from 'hamburger-react';
@@ -44,6 +44,12 @@ function Navigation() {
 
             <div className="nav-item">
                 <div className="nav-menu">
+
+                    <span className="nav-title">
+                        <a href="#top">
+                            <HiHome className="nav-icon" /> Home
+                        </a>
+                    </span>
 
                     <span className="nav-title">
                         <a href="#about">
@@ -97,6 +103,12 @@ function Navigation() {
             {isOpen && (
 
                 <div className="nav-menu-mobile">
+
+                    <span className="nav-title">
+                        <a href="#top">
+                            <HiHome className="nav-icon" /> Home
+                        </a>
+                    </span>
 
                     <span className="nav-title">
                         <a href="#about" onClick={() => { setOpen(false) }}>
