@@ -1,4 +1,3 @@
-import React from 'react';
 import "./App.css";
 import { GoPerson } from 'react-icons/go';
 import { RiTimeLine } from "react-icons/ri";

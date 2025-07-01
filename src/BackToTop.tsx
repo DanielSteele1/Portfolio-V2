@@ -1,5 +1,4 @@
 
-import React from 'react';
 import "./App.css";
 
 import { IoArrowDown } from 'react-icons/io5';

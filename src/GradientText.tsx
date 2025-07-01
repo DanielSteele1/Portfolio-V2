@@ -1,6 +1,6 @@
 
 import "./GradientText.css";
-import React, { ReactNode } from "react";
+import { ReactNode } from "react";
 
 interface GradientTextProps {
   children: ReactNode;
