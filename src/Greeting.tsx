@@ -4,7 +4,6 @@ import { IoLogoLinkedin } from "react-icons/io5";
 import { HiDownload } from "react-icons/hi";
 
 import GradientText from './GradientText.tsx'
-import { ReactElement } from 'react';
 
 type Props = {
 
