@@ -4,15 +4,21 @@ import { IoLogoLinkedin } from "react-icons/io5";
 import { HiDownload } from "react-icons/hi";
 
 import GradientText from './GradientText.tsx'
+import { ReactElement } from 'react';
 
-const Greeting = () => {
+type Props = {
+
+    handleDownloadAndView: (event: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => void;
+};
+
+const Greeting = ({ handleDownloadAndView }: Props ) => {
     return (
         <div className="greeting" id="top">
 
             <div className="greeting-container">
 
                 <span className="greeting-title" id="fade-in">
-                    Hey, I'm &nbsp;
+                    Hey, I'm&nbsp;
                     <GradientText
                         colors={["#e66465", "#9198e5", "#e66465", "#9198e5"]}
                         animationSpeed={4}
@@ -48,7 +54,7 @@ const Greeting = () => {
                 </span>
 
                 <div className="socials" id="fade-in3">
-                    <div className="resume">
+                    <span className="resume" onClick={handleDownloadAndView}>
                         <div className="social-item">
                             <HiDownload style={{
                                 fontSize: '20px',
@@ -60,7 +66,7 @@ const Greeting = () => {
                             <span>View my CV</span>
                         </div>
 
-                    </div>
+                    </span>
 
                     <div className="social-item">
                         <span className="social-title">

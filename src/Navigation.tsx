@@ -11,8 +11,11 @@ import { SlSpeech } from "react-icons/sl";
 
 import Hamburger from 'hamburger-react';
 
-function Navigation() {
+type props = { 
+    handleDownloadAndView: (event: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => void;
+};
 
+function Navigation({ handleDownloadAndView }: props) {
 
     const [isOpen, setOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
@@ -71,7 +74,7 @@ function Navigation() {
                         </a>
                     </span>
 
-                    <span className="resume">
+                    <span className="resume" onClick={handleDownloadAndView}>
                         <HiDownload style={{
                             fontSize: '20px',
                             marginRight: '10px',

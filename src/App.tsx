@@ -8,7 +8,13 @@ import Footer from './Footer';
 import BackToTop from './BackToTop';
 import Blog from './Blog';
 
-import DotGrid from './DotGrid.tsx';
+import Squares from './Squares.tsx';
+
+declare global {
+  interface Window {
+    sa_event?: (event: string) => void;
+  }
+}
 
 function App() {
 
@@ -16,29 +22,39 @@ function App() {
     document.title = "Come Back! - Daniel Steele - React Developer";
   });
 
-    window.addEventListener("focus", () => {
+  window.addEventListener("focus", () => {
     document.title = "Daniel Steele - React Developer";
   });
 
+  const handleDownloadAndView = (event: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => {
+    event.preventDefault();
+    if (typeof window.sa_event === 'function') {
+      window.sa_event('cv_downloaded');
+    } else {
+      console.error("Simple Analytics isn't loaded");
+    }
+    // download and view document
+    const link = document.createElement('a');
+    link.href = '/Daniel_Steele_Frontend_Developer_CV.pdf';
+    link.download = '/Daniel_Steele_Frontend_Developer_CV.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <>
-      <Navigation />
+      <Navigation handleDownloadAndView={handleDownloadAndView} />
 
-      <DotGrid
-        dotSize={2}
-        gap={50}
-        baseColor="#bfc6e0"
-        activeColor="#e66465"
-        proximity={150}
-        shockRadius={200}
-        shockStrength={10}
-        resistance={500}
-        returnDuration={0.5}
-      >
-
-        <Greeting />
-
-      </DotGrid>
+      <div className="greeting-bg-wrap">
+        <Squares
+          speed={0.5}
+          squareSize={40}
+          direction='diagonal'
+          borderColor='#5f5959ff'
+        />
+        <Greeting handleDownloadAndView={handleDownloadAndView} />
+      </div>
 
       <Skills />
       <AboutMe />
