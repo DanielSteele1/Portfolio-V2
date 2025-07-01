@@ -1,28 +1,27 @@
-import React from "react";
 import { LuGithub } from "react-icons/lu";
 import { IoLogoLinkedin } from "react-icons/io5";
 
-function Footer() { 
+function Footer() {
+
+    const currentYear = new Date().getFullYear();
 
     return (
 
         <div className="footer">
-            
+
             <div className="footer-item">
-                <span> Daniel Steele </span>
+                <span className="gradient">Daniel Steele ©{currentYear}. All rights reserved.</span>
             </div>
 
-
-             <div className="footer-item">
-                <div className="footer-socials"> 
-                    <span className="footer-title">  </span>
-                    <span className="footer-title"> <IoLogoLinkedin style={{ fontSize: '30px', paddingLeft: '10px'}} /> </span>
-                    <span className="footer-title"> <LuGithub style={{ fontSize: '30px', paddingLeft: '10px'}} /> </span>
+            <div className="footer-item">
+                <div className="footer-socials">
+                    <span className="footer-icon"> <a href="https://www.linkedin.com/in/daniel-steele-b06443198"><IoLogoLinkedin style={{ fontSize: '30px', paddingLeft: '10px' }} /></a> </span>
+                    <span className="footer-icon">  <a href="https://github.com/DanielSteele1"> <LuGithub style={{ fontSize: '30px', paddingLeft: '10px' }} /> </a></span>
                 </div>
             </div>
 
         </div>
     )
- }
+}
 
- export default Footer;
+export default Footer;

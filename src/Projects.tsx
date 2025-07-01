@@ -1,7 +1,7 @@
 import React, { JSX } from 'react';
 import { FaJs, FaNodeJs, FaReact } from "react-icons/fa";
 import { LuGithub } from "react-icons/lu";
-import { SiCplusplus, SiMongodb, SiOpengl } from 'react-icons/si';
+import { SiCplusplus, SiMongodb, SiOpengl, SiTypescript } from 'react-icons/si';
 import { GoLinkExternal } from "react-icons/go";
 
 
@@ -108,9 +108,9 @@ function Projects() {
 
                     <Project_card
                         title="FocusDev"
-                        description="FocusDev is primarily developed for developers to organise thier workload into one location.
-                            Features include a Notes app, Reusable code snippet feature, Calender, Github commit graph w/ stats, just to name a few.
-                            It uses JavsScript, React, Node.js & MongoDB."
+                        description="FocusDev is a a utility app designed for developers.
+                            It featuresa Notes app, Reusable code snippet feature, Calender, Github commit graph w/ stats, just to name a few.
+                            Coded in JavsScript, React, Node.js & MongoDB. It also uses Bcrypt to securely store user data."
                         tags={[
                             <FaReact />,
                             <FaJs />,
@@ -128,7 +128,7 @@ function Projects() {
                         title="Portfolio V1"
                         description="The first iteration of my portfolio website. (this website). 
                         It uses mainly Html/CSS & JS with some basic React work. 
-                        In the first few months alone it got visited by over 1k people,
+                        In the first month alone it was visited by over 1k people,
                         and I've hosted it on Vercel in case you'd like to take a look."
                         src="PortfolioV1.png"
                         tags={[
@@ -173,6 +173,20 @@ function Projects() {
                     >
 
                     </Project_card>
+
+                    <Project_card
+                        title="Coming Soon"
+                        description="A new small frontend project im working on in order to show that I can quickly build and deploy real-world polished web applications. 
+                        More details soon.."
+                        src=""
+                        tags={[
+                            <FaReact />,
+                            <SiTypescript />,
+                        ]}
+                        link=""
+                        github=""
+
+                    ></Project_card>
 
                 </div>
 

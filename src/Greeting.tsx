@@ -27,7 +27,7 @@ const Greeting = () => {
                     <TypeAnimation
                         className="greeting-subtitle"
                         sequence={[
-                            ' Full Stack Developer',
+                            ' Front End Developer',
                             3000,
                             ' React Developer',
                             3000,

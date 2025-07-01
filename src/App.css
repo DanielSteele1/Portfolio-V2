@@ -8,6 +8,7 @@ html {
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 a {
@@ -19,6 +20,8 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
+  min-height: 100vh;
+  height: 100%;
   font-size: 18px;
   font-family: 'Figtree', sans-serif;
   background: linear-gradient(180deg, #0a0f2c 0%, #0f152f 100%);
@@ -199,10 +202,13 @@ body {
   z-index: 100;
   margin: 0 auto;
   transition: 0.3s ease-in;
+  padding: 10px;
+}
+
+.navigation.scrolled {
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   backdrop-filter: blur(10px);
-  padding: 10px;
 }
 
 .nav-menu {
@@ -377,28 +383,32 @@ body {
 .contact-form button {
   display: flex;
   width: calc(100% - 20px);
-  height: 50px;
+  height: fit-content;
   margin: 10px;
   justify-content: center;
   align-items: center;
-  background-color: #e66465;
-  border: none;
-  color: #fff;
+  font-size: 1.0rem;
+  font-weight: 500;
   font-family: 'Figtree', sans-serif;
   cursor: pointer;
-  box-sizing: border-box;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #e65555, #7079d6);
+  background-size: 200% 200%;
+  background-position: 0% 50%;
+  box-shadow: 0 4px 16px 0 rgba(230, 100, 101, 0.10), 0 1.5px 4px 0 rgba(145, 152, 229, 0.10);
+  transition: background-position 0.6s cubic-bezier(0.4, 0, 2, 1), box-shadow 0.3s;
+  overflow: hidden;
+  border: none;
 }
 
 .footer {
   display: flex;
-  margin-top: auto;
-  height: 50px;
-  width: 100%;
-  justify-content: space-between;
+  height: fit-content;
+  padding: 10px;
+  width: 80%;
+  justify-content: space-around;
   align-items: center;
-  position: static;
-  bottom: 0;
-  z-index: 100;
+  margin: 0 auto;
 }
 
 .footer-item {
@@ -407,6 +417,18 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+.footer-icon {
+
+  padding-left: 10px;
+
+}
+
+.footer-icon a:hover {
+  transition: 0.3s ease-in-out;
+  color:#e65555;
+}
+
 
 .greetings-image {
   display: flex;
@@ -427,14 +449,6 @@ body {
 .greeting-text {
   font-size: 20px;
   text-align: center;
-}
-
-.Sunglasses {
-  display: flex;
-  height: 10px;
-  border-radius: 400px;
-  border: 3px solid;
-  border: linear-gradient(180deg, #e66465, #9198e5);
 }
 
 .social-item {
@@ -558,11 +572,6 @@ body {
   background-color: #4b3030 !important;
 }
 
-.css-l16vtb-MuiLinearProgress-bar1 {
-  background-color: #e66465 !important;
-  width: 100% !important;
-}
-
 .skill-icon {
   display: flex;
   color: #e66465;
@@ -608,7 +617,7 @@ body {
 .project-information {
   display: flex;
   flex-direction: column;
-  width:fit-content;
+  width: fit-content;
 }
 
 .project-text {
@@ -801,12 +810,22 @@ body {
 }
 
 .resume:hover,
-.project-button:hover {
-  transition: all 0.5s ease;
+.project-button:hover,
+.contact-form button:hover {
+  transition: all 0.6s ease;
   background-position: 100% 50%;
   box-shadow: 0 6px 24px 0 rgba(230, 100, 101, 0.18), 0 2px 8px 0 rgba(145, 152, 229, 0.15);
   transition: background-position 0.5s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s;
 }
+
+@media (min-width: 1000px) and (max-width: 1200px) {
+
+  .navigation {
+    max-width: 1000px;
+  }
+
+}
+
 
 @media (min-width: 1000px) {
 
@@ -822,15 +841,32 @@ body {
 
 @media (min-width: 750px) and (max-width: 1000px) {
 
+  .greeting-title {
+    font-size: 4.5rem;
+
+  }
+
+  .nav-hamburger {
+    margin-right: 20px;
+  }
+
   .projects,
   .about,
   .contact-form {
     width: 100%;
   }
 
-  .BackToTop {
-    width: 80%;
+  .Frontend-skills,
+  .Backend-skills,
+  .Other {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    margin: 0 auto;
+    align-items: center;
+
   }
+
 
   .nav-title {
     padding: 10px;
@@ -856,7 +892,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 20px;
     cursor: pointer;
   }
 
@@ -909,7 +944,7 @@ body {
 
   .navigation {
     height: fit-content;
-
+    width: 95vw;
   }
 
   .nav-menu {
@@ -921,7 +956,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 20px;
     cursor: pointer;
   }
 
@@ -994,12 +1028,12 @@ body {
   }
 
   .greeting-title {
-    font-size: 2.3rem;
-    padding: 10px;
+    font-size: 2.2rem;
   }
 
   .greeting-subtitle {
     font-size: 1.5rem;
+    padding-bottom: 10px;
   }
 
   .greeting-text {
@@ -1023,6 +1057,10 @@ body {
 
   .back-to-top-text {
     font-size: 1.2rem;
+  }
+
+  .projects {
+    width: 100%;
   }
 
   .projects .project-image image {

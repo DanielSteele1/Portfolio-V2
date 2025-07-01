@@ -1,24 +1,20 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import { Tooltip as ReactTooltip } from "react-tooltip";
 import 'react-tooltip/dist/react-tooltip.css'
 
 import { GrProjects } from "react-icons/gr";
 import { GoPerson } from 'react-icons/go';
-import { MdEmail, MdHome } from "react-icons/md";
-import { FiTool } from "react-icons/fi";
+import { MdEmail } from "react-icons/md";
 import { HiDownload, HiHome } from "react-icons/hi";
 import { SlSpeech } from "react-icons/sl";
 
 import Hamburger from 'hamburger-react';
 
-
 function Navigation() {
 
 
     const [isOpen, setOpen] = useState(false);
-
-
     const [scrolled, setScrolled] = useState(false);
 
     useEffect(() => {
@@ -105,7 +101,7 @@ function Navigation() {
                 <div className="nav-menu-mobile">
 
                     <span className="nav-title">
-                        <a href="#top">
+                        <a href="#top" onClick={() => {setOpen(false) }}>
                             <HiHome className="nav-icon" /> Home
                         </a>
                     </span>

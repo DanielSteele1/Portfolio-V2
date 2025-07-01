@@ -1,4 +1,3 @@
-import React from 'react';
 import Navigation from './Navigation';
 import Greeting from './Greeting';
 import AboutMe from './About';
@@ -13,9 +12,8 @@ import DotGrid from './DotGrid.tsx';
 
 function App() {
 
-  
   window.addEventListener("blur", () => {
-    document.title = "We'll be here when you return - Daniel Steele - React Developer";
+    document.title = "Come Back! - Daniel Steele - React Developer";
   });
 
     window.addEventListener("focus", () => {
