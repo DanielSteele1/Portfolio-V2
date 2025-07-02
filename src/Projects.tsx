@@ -102,7 +102,11 @@ function Projects() {
             <div className="projects" id="projects">
 
                 <span className="section-heading"> Featured{"\u00A0"}<div className="gradient"> Projects</div>  </span>
-                <span className="section-sub-heading"> My best and most impressive projects that i've been working on for the last year. You can check them out via the links provided below. </span>
+                <span className="section-sub-heading">
+                    My best and most impressive projects that i've been working on for the last year.
+                    <br></br>
+                    You can check them out via the links provided below.
+                </span>
 
                 <div className="project-container">
 
@@ -110,7 +114,7 @@ function Projects() {
                         title="FocusDev"
                         description="FocusDev is a a utility app designed for developers.
                             It featuresa Notes app, Reusable code snippet feature, Calender, Github commit graph w/ stats, just to name a few.
-                            Coded in JavsScript, React, Node.js & MongoDB. It also uses Bcrypt to securely store user data."
+                            Coded in JavaScript, React, Node.js & MongoDB. It also uses Bcrypt to securely store user data."
                         tags={[
                             <FaReact />,
                             <FaJs />,
