@@ -470,9 +470,13 @@ font-size: 1.3rem;
   flex-direction: row;
   height: fit-content;
   width: fit-content;
-  margin: 10px;
   justify-content: center;
   align-items: center;
+}
+
+.social-icon {
+  margin-top: 5px;
+    margin-left: 10px;
 }
 
 .socials {

@@ -10,7 +10,7 @@ type Props = {
     handleDownloadAndView: (event: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => void;
 };
 
-const Greeting = ({ handleDownloadAndView }: Props ) => {
+const Greeting = ({ handleDownloadAndView }: Props) => {
     return (
         <div className="greeting" id="top">
 
@@ -68,7 +68,7 @@ const Greeting = ({ handleDownloadAndView }: Props ) => {
                     </span>
 
                     <div className="social-item">
-                        <span className="social-title">
+                        <span className="social-icon">
                             <a href="https://www.linkedin.com/in/daniel-steele-b06443198" target="_blank" rel="noopener noreferrer">
                                 <IoLogoLinkedin id="socialHover" style={{
                                     fontSize: '30px',
@@ -80,8 +80,7 @@ const Greeting = ({ handleDownloadAndView }: Props ) => {
                         </span>
                     </div>
                     <div className="social-item">
-                        <span className="social-title">
-
+                        <span className="social-icon">
                             <a href="https://github.com/DanielSteele1" target="_blank" rel="noopener noreferrer">
                                 <LuGithub id="socialHover" style={{
                                     fontSize: '30px',
@@ -92,7 +91,6 @@ const Greeting = ({ handleDownloadAndView }: Props ) => {
                                 />
                             </a>
                         </span>
-
                     </div>
                 </div>
 
