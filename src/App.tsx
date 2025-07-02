@@ -10,6 +10,8 @@ import Blog from './Blog';
 
 import Squares from './Squares.tsx';
 
+import { Analytics } from "@vercel/analytics/react"
+
 declare global {
   interface Window {
     sa_event?: (event: string) => void;
@@ -63,6 +65,8 @@ function App() {
       <BackToTop />
       <Contact />
       <Footer />
+      <Analytics />
+
     </>
   )
 }
