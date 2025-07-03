@@ -1,4 +1,5 @@
-/* Center the scroll down icon inside the button */
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
 .scroll-down {
   display: flex;
   flex-direction: column;
@@ -28,8 +29,6 @@
   position: relative;
   z-index: 2;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
 
 body,
 html {
@@ -222,12 +221,14 @@ body {
   margin: 0 auto;
   transition: 0.3s ease-in;
   padding: 10px;
+
 }
 
 .navigation.scrolled {
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-  backdrop-filter: blur(10px);
+  background: rgba(20, 20, 40, 0.9);
+
 }
 
 .nav-menu {
@@ -808,15 +809,15 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  
+
 }
 
 .scroll-down-container svg:hover {
-    animation-name: float;
-    animation-duration: 1.0s;
-    animation-fill-mode: forwards;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
+  animation-name: float;
+  animation-duration: 1.0s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
 }
 
 @keyframes float {
@@ -892,7 +893,6 @@ body {
 
 }
 
-
 @media (min-width: 1000px) {
 
   .nav-menu-mobile {
@@ -947,6 +947,7 @@ body {
 
   .navigation {
     height: fit-content;
+    background: rgba(20, 20, 40, 0.6);
   }
 
   .nav-menu {
@@ -971,7 +972,7 @@ body {
     left: 0;
     width: 100vw;
     transition: 0.3s ease-in;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
 
   }
 
@@ -1009,9 +1010,13 @@ body {
   }
 
   .navigation {
-    height: fit-content;
+    height: 8%;
     width: 95vw;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    background: rgba(20, 20, 40, 0.9);
   }
+
 
   .nav-menu {
     display: none;
@@ -1034,17 +1039,20 @@ body {
   }
 
   .nav-menu-mobile {
-
     display: flex;
-    margin: 0 auto;
-    flex-direction: column;
     position: absolute;
-    top: 80px;
     left: 0;
+    top: 100%;
     width: 100%;
+    flex-direction: column;
+    margin: 0 auto;
     transition: 0.3s ease-in;
-    backdrop-filter: blur(5px);
+    z-index: 99;
+    background: rgba(20, 20, 40, 0.9);
+  }
 
+  .nav-menu-mobile.active {
+    background: rgba(20, 20, 40, 0.9);
   }
 
   .nav-title {
