@@ -1,7 +1,7 @@
 import { TypeAnimation } from 'react-type-animation';
 import { LuGithub } from "react-icons/lu";
 import { IoLogoLinkedin } from "react-icons/io5";
-import { HiDownload } from "react-icons/hi";
+import { HiArrowDown, HiDownload } from "react-icons/hi";
 
 import GradientText from './GradientText.tsx'
 
@@ -92,6 +92,13 @@ const Greeting = ({ handleDownloadAndView }: Props) => {
                             </a>
                         </span>
                     </div>
+                </div>
+
+                <div className="scroll-down-container">
+                    <a className="scroll-down" href="#skills">
+                        <span className="gradient">Scroll or click to enter</span>
+                        <HiArrowDown style={{ display: 'flex', fontSize: "30px", margin: '10px', justifyContent: 'center', verticalAlign: 'center' }} />
+                    </a>
                 </div>
 
             </div>

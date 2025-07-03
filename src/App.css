@@ -1,9 +1,19 @@
+/* Center the scroll down icon inside the button */
+.scroll-down {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
 .greeting-bg-wrap {
   position: relative;
   width: 100%;
   height: 100vh;
   overflow: hidden;
 }
+
 .greeting-bg-wrap .squares-canvas {
   position: absolute;
   top: 0;
@@ -13,10 +23,12 @@
   z-index: 1;
   pointer-events: none;
 }
+
 .greeting-bg-wrap .greeting-container {
   position: relative;
   z-index: 2;
 }
+
 @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
 
 body,
@@ -291,9 +303,9 @@ body {
   width: 70%;
 }
 
-#para-finish{
+#para-finish {
 
-font-size: 1.3rem;
+  font-size: 1.3rem;
 
 }
 
@@ -439,7 +451,7 @@ font-size: 1.3rem;
 
 .footer-icon a:hover {
   transition: 0.3s ease-in-out;
-  color:#e65555;
+  color: #e65555;
 }
 
 
@@ -476,7 +488,7 @@ font-size: 1.3rem;
 
 .social-icon {
   margin-top: 5px;
-    margin-left: 10px;
+  margin-left: 10px;
 }
 
 .socials {
@@ -787,6 +799,40 @@ font-size: 1.3rem;
   transition: transform 0.4s cubic-bezier(0.87, 0.03, 0.41, 0.9);
 }
 
+.scroll-down-container {
+  position: absolute;
+  top: 750px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.scroll-down-container svg:hover {
+    animation-name: float;
+    animation-duration: 1.0s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
 .back-to-top-button:hover {
   border-bottom: 2px solid #e66465;
   transition: 0.4s ease-in-out;
@@ -968,7 +1014,6 @@ font-size: 1.3rem;
   }
 
   .nav-menu {
-
     display: none;
   }
 
@@ -977,6 +1022,15 @@ font-size: 1.3rem;
     align-items: center;
     justify-content: center;
     cursor: pointer;
+  }
+
+  .scroll-down-container {
+    position: absolute;
+    top: 650px;
+    display: inline-flex;
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
   }
 
   .nav-menu-mobile {
