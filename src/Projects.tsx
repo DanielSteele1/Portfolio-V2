@@ -4,8 +4,17 @@ import { LuGithub } from "react-icons/lu";
 import { SiCplusplus, SiMongodb, SiOpengl, SiTypescript } from 'react-icons/si';
 import { GoLinkExternal } from "react-icons/go";
 
+import { Tooltip as ReactTooltip } from "react-tooltip";
+import 'react-tooltip/dist/react-tooltip.css'
 
-type Tags = JSX.Element;
+
+// added this interface so that now instead of each tag just being an SVG we can now make each other have it's own name,
+// and then we can display each tag with it's own name this way.
+interface Tag {
+    icon: JSX.Element;
+    name: string;
+}
+
 import { motion } from "motion/react"
 
 interface ProjectCardProps {
@@ -14,7 +23,7 @@ interface ProjectCardProps {
     mediaType?: 'image' | 'youtube'; // either image, or youtube link.
     youtubeId?: string; // only required if mediaType is 'youtube'
     src: string;
-    tags: Tags[];
+    tags: Tag[];
     description: string;
     link: string;
     github: string;
@@ -65,11 +74,30 @@ const Project_card: React.FC<ProjectCardProps> = ({ mediaType = 'image', youtube
                         <div className="gradient">{title}</div>
                     </span>
 
+                    {/* mapping the tags, and the tag tooltips that include each tag's name */}
+
                     <div className="project-tags">
                         {tags.map((tag, index) => (
-                            <span key={index} className="tag">
-                                {tag}
+                            <span
+                                key={index}
+                                className="tag"
+                                data-tooltip-id={`tags-tooltip-${index}`}
+                                data-tooltip-content={tag.name}
+                            >
+                                {tag.icon}
                             </span>
+                        ))}
+                        {tags.map((tag, index) => (
+                            <ReactTooltip
+                                key={index}
+                                id={`tags-tooltip-${index}`}
+                                place="bottom"
+                                style={{
+                                    backgroundColor: '#0f152f',
+                                    color: '#e66465',
+                                    fontFamily: 'figtree, sans-serif'
+                                }}
+                            />
                         ))}
                     </div>
 
@@ -91,6 +119,7 @@ const Project_card: React.FC<ProjectCardProps> = ({ mediaType = 'image', youtube
                         </div>
                     </div>
                 </div>
+
             </div>
         </motion.div>
     )
@@ -116,10 +145,10 @@ function Projects() {
                             It featuresa Notes app, Reusable code snippet feature, Calender, Github commit graph w/ stats, just to name a few.
                             Coded in JavaScript, React, Node.js & MongoDB. It also uses Bcrypt to securely store user data."
                         tags={[
-                            <FaReact />,
-                            <FaJs />,
-                            <FaNodeJs />,
-                            <SiMongodb />
+                            { icon: <FaReact />, name: "React" },
+                            { icon: <FaJs />, name: "JavaScript" },
+                            { icon: <FaNodeJs />, name: "NodeJs" },
+                            { icon: <SiMongodb />, name: "MongoDB" },
                         ]}
                         src="FocusDev.png"
                         link="https://www.youtube.com/watch?v=tpSIyG0BEt0&t=2s"
@@ -136,8 +165,8 @@ function Projects() {
                         and I've hosted it on Vercel in case you'd like to take a look."
                         src="PortfolioV1.png"
                         tags={[
-                            <FaReact />,
-                            <FaJs />,
+                            { icon: <FaReact />, name: "React" },
+                            { icon: <FaJs />, name: "JavaScript" },
                         ]}
                         link="https://danielsteeleportfoliov1.vercel.app"
                         github="https://github.com/DanielSteele1/DanielSteele1.github.io"
@@ -152,10 +181,12 @@ function Projects() {
                         Using MongoDB & Bcrypt hashing for security, users can favourite locations for a more personalised experience."
                         src="SkyCompass.png"
                         tags={[
-                            <FaReact />,
-                            <FaJs />,
-                            <FaNodeJs />,
-                            <SiMongodb />
+
+                            { icon: <FaReact />, name: "React" },
+                            { icon: <FaJs />, name: "JavaScript" },
+                            { icon: <FaNodeJs />, name: "NodeJs" },
+                            { icon: <SiMongodb />, name: "MongoDB" },
+
                         ]}
                         link=""
                         github="https://github.com/DanielSteele1/SkyCompass"
@@ -168,8 +199,8 @@ function Projects() {
                         description="EarthSim is a project that I built in C++, using OpenGL and various libraries to create a 3D environment, with the goal of simulating our local system of planets, exposing me to core game development principles and GLSL."
                         src="EarthSim.png"
                         tags={[
-                            <SiCplusplus />,
-                            <SiOpengl />,
+                            { icon: <SiCplusplus />, name: "C++" },
+                            { icon: <SiOpengl />, name: "OpenGL" }
                         ]}
                         link=""
                         github="https://github.com/DanielSteele1/EarthSim"
@@ -184,8 +215,8 @@ function Projects() {
                         More details soon.."
                         src=""
                         tags={[
-                            <FaReact />,
-                            <SiTypescript />,
+                            { icon: <FaReact />, name: "React" },
+                            { icon: <SiTypescript />, name: "TypeScript" },
                         ]}
                         link=""
                         github=""
