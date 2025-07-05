@@ -87,7 +87,7 @@ const Project_card: React.FC<ProjectCardProps> = ({ mediaType = 'image', youtube
                                 {tag.icon}
                             </span>
                         ))}
-                        {tags.map((tag, index) => (
+                        {tags.map((_tag, index) => (
                             <ReactTooltip
                                 key={index}
                                 id={`tags-tooltip-${index}`}
