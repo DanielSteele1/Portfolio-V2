@@ -56,7 +56,7 @@ function Skills() {
             <div className="skills">
 
                 <span className="section-heading">My{"\u00A0"}<span className="gradient">Skills</span> </span>
-                <span className="section-sub-heading">A list of all the skills i'm capable of, and where I consider myself. I am especially capable at front-end development and can create visually-stunning websites. </span>
+                <span className="section-sub-heading">A list of all the skills and tech I'm familliar with. I'm especially capable at front-end development and can create visually-stunning websites. </span>
 
                 {/* map the tabs to create a button for each item in array. 
             once pressed, setActive(index) updates the tab to the corrosponding section.*/}
