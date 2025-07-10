@@ -212,7 +212,7 @@ body {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  max-width: 1400px;
+  max-width: 1300px;
   position: fixed;
   top: 0;
   left: 0;
@@ -277,14 +277,46 @@ body {
   align-items: center;
   margin: 0 auto;
   padding: 10px;
-  width: 100%;
+  width: 90%;
+  margin-top: 80px;
 }
 
 .About-image-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+
+.About-status-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+  margin: 0 auto;
+  border-radius: 12px;
+}
+
+.About-status {
+  display: flex;
+  width: fit-content;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  font-size: 1.0rem;
+}
+
+.About-status span {
+  margin-left: 5px;
+}
+
+.status-icon {
+  display: inline-flex;
+  width: fit-content;
+  margin-right: 10px;
+}
+
 
 .About-para-container {
   display: flex;
@@ -307,14 +339,14 @@ body {
 #para-finish {
 
   font-size: 1.3rem;
-
 }
 
-.About-img {
+
+.About-image-container .About-img {
   display: flex;
   height: 200px;
   margin: 20px;
-  border-radius: 50px;
+  border-radius: 100px;
   border: 3px solid rgba(255, 255, 255, 0.1);
   transition: border-color 0.5s ease-in-out;
 }
@@ -338,9 +370,10 @@ body {
   justify-content: center;
   width: 80%;
   padding: 20px;
-  padding-top: 80px;
   margin: 0 auto;
 }
+
+
 
 .contact {
   padding-top: 0px;
@@ -890,8 +923,20 @@ body {
 @media (min-width: 1000px) and (max-width: 1200px) {
 
   .navigation {
-    max-width: 1000px;
+    max-width: 80%;
   }
+
+  .About-status-container {
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .About-status {
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
 
 }
 
@@ -908,6 +953,16 @@ body {
 }
 
 @media (min-width: 750px) and (max-width: 1000px) {
+
+  .About-status-container {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .About-status {
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
 
   .greeting-title {
     font-size: 4.5rem;
@@ -948,7 +1003,6 @@ body {
   }
 
   .navigation {
-    height: fit-content;
     background: rgba(20, 20, 40, 0.6);
   }
 
@@ -997,7 +1051,8 @@ body {
   }
 
   .skills-tabs {
-    font-size: 16px;
+    font-size: 15px;
+    margin: 0px;
   }
 
   .Frontend-skills,
@@ -1009,6 +1064,18 @@ body {
     margin: 0 auto;
     align-items: center;
 
+  }
+
+
+  .About-status-container {
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .About-status {
+    margin-bottom: 5px;
+    margin-top: 5px;
   }
 
   .navigation {

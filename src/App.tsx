@@ -58,8 +58,8 @@ function App() {
         <Greeting handleDownloadAndView={handleDownloadAndView} />
       </div>
 
-      <Skills />
       <AboutMe />
+      <Skills />
       <Blog />
       <Projects />
       <BackToTop />

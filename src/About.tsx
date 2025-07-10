@@ -3,7 +3,11 @@ import { GoPerson } from 'react-icons/go';
 import { RiTimeLine } from "react-icons/ri";
 import { IoGameController } from 'react-icons/io5';
 import { motion } from "motion/react"
-import { FaGraduationCap } from "react-icons/fa";
+import { FaGraduationCap, FaHeadphones } from "react-icons/fa";
+import { TbActivityHeartbeat } from "react-icons/tb";
+import { MdWork } from "react-icons/md";
+import { LuGrab, LuGraduationCap, LuHeadphones, LuLaptop } from "react-icons/lu";
+import { CiHeadphones } from "react-icons/ci";
 
 function AboutMe() {
 
@@ -22,11 +26,35 @@ function AboutMe() {
 
                 <span className="section-heading"> About{"\u00A0"}<div className="gradient"> Daniel Steele</div></span>
 
+
                 <div className="About-image-container">
-                    <img className="About-img" src="Daniel_Steele.jpg" />
+                    <img className="About-img" src="Website_Pic.JPG" />
+
                 </div>
 
-                <span className="section-sub-heading"> A little bit about me, my journey and my hobbies.</span>
+                <div className="About-status-container">
+                    <div className="About-status">
+                        <div className="status-icon">
+                            <LuLaptop style={{ color: '#e66465', display: 'inline-flex', verticalAlign: 'middle', fontSize: '23px' }} />
+                        </div>
+                        <div>Currently Working on: </div> <span className="gradient"> FocusDev </span>
+                    </div>
+
+                    <div className="About-status">
+                        <div className="status-icon">
+                            <LuGraduationCap style={{ color: '#e66465', display: 'inline-flex', verticalAlign: 'middle', fontSize: '23px' }} />
+                        </div>
+                        <div> Currently learning : </div> <span className="gradient"> TailwindCSS </span>
+                    </div>
+
+                    <div className="About-status">
+                        <div className="status-icon">
+                            <LuHeadphones style={{ color: '#e66465', display: 'inline-flex', verticalAlign: 'middle', fontSize: '23px' }} />
+                        </div>
+                        <div> Current Music Obsession: </div> <span className="gradient"> Lo-Fi </span>
+                    </div>
+
+                </div>
 
                 <div className="About-text">
 
@@ -68,11 +96,11 @@ function AboutMe() {
                         <span className="About-para-title">  <FaGraduationCap id="about-icon" style={{ verticalAlign: 'middle' }} /> <span className="gradient"> What I'm doing now </span> </span>
 
                         <span className="About-paragraph-text">
-                          Today, after graduating last year, I'm making my own projects and constantly evolving my frontend and backend skills. 
-                          Some of the new technologies I've been looking into include <span className="highlight-1">GraphQL and libraries like React-DnD and GSAP.</span> 
-                          <br></br>
-                          <br></br>
-                          <span className="gradient" id="para-finish">I'm also working on a few projects, including this website, my blog, FocusDev and more.  </span>
+                            Today, after graduating last year, I'm making my own projects and constantly evolving my frontend and backend skills.
+                            Some of the new technologies I've been looking into include <span className="highlight-1">GraphQL and libraries like React-DnD and GSAP.</span>
+                            <br></br>
+                            <br></br>
+                            <span className="gradient" id="para-finish">I'm also working on a few projects, including this website, my blog, FocusDev and more.  </span>
                         </span>
                     </div>
                 </div>
