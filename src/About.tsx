@@ -3,11 +3,8 @@ import { GoPerson } from 'react-icons/go';
 import { RiTimeLine } from "react-icons/ri";
 import { IoGameController } from 'react-icons/io5';
 import { motion } from "motion/react"
-import { FaGraduationCap, FaHeadphones } from "react-icons/fa";
-import { TbActivityHeartbeat } from "react-icons/tb";
-import { MdWork } from "react-icons/md";
-import { LuGrab, LuGraduationCap, LuHeadphones, LuLaptop } from "react-icons/lu";
-import { CiHeadphones } from "react-icons/ci";
+import { FaGraduationCap } from "react-icons/fa";
+import {  LuGraduationCap, LuHeadphones, LuLaptop } from "react-icons/lu";
 
 function AboutMe() {
 
