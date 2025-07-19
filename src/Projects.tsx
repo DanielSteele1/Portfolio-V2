@@ -218,8 +218,8 @@ function Projects() {
                             { icon: <FaReact />, name: "React" },
                             { icon: <SiTypescript />, name: "TypeScript" },
                         ]}
-                        link=""
-                        github=""
+                        link="https://github.com/DanielSteele1/Trello-Clone"
+                        github="https://github.com/DanielSteele1/Trello-Clone"
 
                     ></Project_card>
 
