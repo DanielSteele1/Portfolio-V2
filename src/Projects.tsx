@@ -142,7 +142,7 @@ function Projects() {
                     <Project_card
                         title="FocusDev"
                         description="FocusDev is a a utility app designed for developers.
-                            It featuresa Notes app, Reusable code snippet feature, Calender, Github commit graph w/ stats, just to name a few.
+                            It features a Notes app, Reusable code snippet feature, Calender, Github commit graph w/ stats, just to name a few.
                             Coded in JavaScript, React, Node.js & MongoDB. It also uses Bcrypt to securely store user data."
                         tags={[
                             { icon: <FaReact />, name: "React" },
@@ -188,7 +188,7 @@ function Projects() {
                             { icon: <SiMongodb />, name: "MongoDB" },
 
                         ]}
-                        link=""
+                        link="https://github.com/DanielSteele1/SkyCompass"
                         github="https://github.com/DanielSteele1/SkyCompass"
 
                     >
@@ -202,7 +202,7 @@ function Projects() {
                             { icon: <SiCplusplus />, name: "C++" },
                             { icon: <SiOpengl />, name: "OpenGL" }
                         ]}
-                        link=""
+                        link="https://github.com/DanielSteele1/EarthSim"
                         github="https://github.com/DanielSteele1/EarthSim"
 
                     >
@@ -210,9 +210,8 @@ function Projects() {
                     </Project_card>
 
                     <Project_card
-                        title="Coming Soon"
-                        description="A new small frontend project im working on in order to show that I can quickly build and deploy real-world polished web applications. 
-                        More details soon.."
+                        title="Trello Style Kanban Board (In Progress)"
+                        description="A very in progress Kanban board application, similar to Trello. Planned features include the abillity to add/delete boards, drag & drop to re-order tasks, export board data and share via a link. All user data will be stored in LocalStorage. App isn't live nor fully functional as of yet however you can clone and view via github."
                         src=""
                         tags={[
                             { icon: <FaReact />, name: "React" },
@@ -224,9 +223,6 @@ function Projects() {
                     ></Project_card>
 
                 </div>
-
-
-
             </div >
         </>
     )

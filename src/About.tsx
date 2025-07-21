@@ -41,7 +41,7 @@ function AboutMe() {
                         <div className="status-icon">
                             <LuGraduationCap style={{ color: '#e66465', display: 'inline-flex', verticalAlign: 'middle', fontSize: '23px' }} />
                         </div>
-                        <div> Currently learning : </div> <span className="gradient"> TailwindCSS </span>
+                        <div> Currently learning: </div> <span className="gradient"> TailwindCSS </span>
                     </div>
 
                     <div className="About-status">
