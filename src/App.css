@@ -595,6 +595,11 @@ body {
   transition: 0.3s ease-in-out;
 }
 
+.skills-title{
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
 .skill-item {
   margin: 0 auto;
   display: flex;
@@ -602,18 +607,26 @@ body {
   justify-content: center;
   align-items: flex-start;
   font-size: 18px;
-  height: 60px;
-  width: fit-content;
+  height: 120px;
+  width:400px;
   border-radius: 10px;
   padding: 10px;
   border: 2px solid rgba(255, 255, 255, 0.1);
   margin: 10px;
 }
 
+.skill-description {
+  font-size: 1.0rem;
+  display: flex;
+  color: 2px solid #9198e5;
+  margin: 5px;
+
+}
+
 .skill-sub-item {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-start;
   padding: 5px;
 }
@@ -628,9 +641,14 @@ body {
   align-items: center;
 }
 
+.progress-container{
+  display: flex;
+  width: 100%;
+}
+
 .progress-bar {
   display: flex;
-  width: 200px;
+  width: 90%;
   height: 13px !important;
   border-radius: 50px;
   justify-content: flex-start;
@@ -1036,23 +1054,28 @@ body {
 
 @media (min-width: 300px) and (max-width: 750px) {
 
+  .skills-container{
+    display:flex;
+    width: fit-content;
+  }
+
+
   .skill-item {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    font-size: 18px;
     height: fit-content;
-    width: fit-content;
+    width: 100%;
     border-radius: 10px;
     border: 2px solid rgba(255, 255, 255, 0.1);
-    margin: 10px;
+    margin-bottom: 20px;
   }
 
   .skills-tabs {
+    margin: 0 auto;
     font-size: 15px;
-    margin: 0px;
   }
 
   .Frontend-skills,
@@ -1065,7 +1088,6 @@ body {
     align-items: center;
 
   }
-
 
   .About-status-container {
     flex-direction: column;
@@ -1085,7 +1107,6 @@ body {
     border-bottom-right-radius: 0px;
     background: rgba(20, 20, 40, 0.9);
   }
-
 
   .nav-menu {
     display: none;

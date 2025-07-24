@@ -86,6 +86,10 @@ function Skills() {
                                     <span className="skills-title"> HTML/CSS </span>
                                 </div>
 
+                                <div className="skill-description">
+                                    Markup and styling for web pages.
+                                </div>
+
                                 <div className="progress-container">
                                     <AnimateProgressbar value={100} />
                                     <div className="Progress-value"> 100 % </div>
@@ -97,6 +101,11 @@ function Skills() {
                                     <SiJavascript className="skill-icon" />
                                     <span className="skills-title"> JavaScript </span>
                                 </div>
+
+                                <div className="skill-description">
+                                    The core programming language of the web, used for building interactive websites and applications.
+                                </div>
+
 
                                 <div className="progress-container">
                                     <AnimateProgressbar value={85} />
@@ -111,6 +120,11 @@ function Skills() {
                                     <span className="skills-title"> TypeScript </span>
                                 </div>
 
+                                <div className="skill-description">
+                                    A superset of JavaScript that adds static typing to catch errors early and improve code quality.
+                                </div>
+
+
                                 <div className="progress-container">
                                     <AnimateProgressbar value={75} />
                                     <div className="Progress-value"> 75 % </div>
@@ -124,6 +138,11 @@ function Skills() {
                                     <span className="skills-title"> React </span>
                                 </div>
 
+                                <div className="skill-description">
+                                    A JavaScript library for building user interfaces with reusable components and a virtual DOM.
+                                </div>
+
+
                                 <div className="progress-container">
                                     <AnimateProgressbar value={70} />
                                     <div className="Progress-value"> 70 % </div>
@@ -131,11 +150,18 @@ function Skills() {
 
 
                             </div>
+
                             <div className="skill-item">
                                 <div className="skill-sub-item">
                                     <FaFigma className="skill-icon" />
                                     <span className="skills-title"> Figma </span>
+
                                 </div>
+
+                                <div className="skill-description">
+                                    A design tool used to create user interfaces, prototypes, and design systems in the browser.
+                                </div>
+
 
                                 <div className="progress-container">
                                     <AnimateProgressbar value={100} />
@@ -157,6 +183,11 @@ function Skills() {
                                     <span className="skills-title"> MongoDB </span>
                                 </div>
 
+                                <div className="skill-description">
+                                    A flexible NoSQL database that stores data in JSON-like documents.
+                                </div>
+
+
                                 <div className="progress-container">
                                     <AnimateProgressbar value={90} />
                                     <div className="Progress-value"> 90 % </div>
@@ -168,6 +199,10 @@ function Skills() {
                                 <div className="skill-sub-item">
                                     <SiNodedotjs className="skill-icon" />
                                     <span className="skills-title"> NodeJs </span>
+                                </div>
+
+                                <div className="skill-description">
+                                    A JavaScript runtime environment that allows running JS code on the server side.
                                 </div>
 
                                 <div className="progress-container">
@@ -182,6 +217,10 @@ function Skills() {
 
                                     <SiExpress className="skill-icon" />
                                     <span className="skills-title"> Express </span>
+                                </div>
+
+                                <div className="skill-description">
+                                    A minimal and flexible Node.js framework for building web servers and APIs.
                                 </div>
 
                                 <div className="progress-container">
@@ -202,6 +241,11 @@ function Skills() {
                                     <span className="skills-title"> C++ </span>
                                 </div>
 
+                                <div className="skill-description">
+                                    A high-performance programming language used for system/software development and game engines.
+                                </div>
+
+
                                 <div className="progress-container">
                                     <AnimateProgressbar value={80} />
                                     <div className="Progress-value"> 80 % </div>
@@ -213,6 +257,10 @@ function Skills() {
                                 <div className="skill-sub-item">
                                     <TbApi className="skill-icon" />
                                     <span className="skills-title"> REST API </span>
+                                </div>
+
+                                <div className="skill-description">
+                                    A common web API style that uses HTTP methods to interact with resources.
                                 </div>
 
                                 <div className="progress-container">
@@ -228,6 +276,11 @@ function Skills() {
                                     <span className="skills-title"> GraphQL </span>
                                 </div>
 
+                                <div className="skill-description">
+                                    A query language for APIs that lets clients request exactly the data they need — no more, no less.
+                                </div>
+
+
                                 <div className="progress-container">
                                     <AnimateProgressbar value={80} />
                                     <div className="Progress-value"> 80 % </div>
@@ -241,6 +294,11 @@ function Skills() {
                                     <span className="skills-title"> Framer Motion </span>
                                 </div>
 
+                                <div className="skill-description">
+                                    A React animation library for creating smooth, modern motion and interactions with ease.
+                                </div>
+
+
                                 <div className="progress-container">
                                     <AnimateProgressbar value={60} />
                                     <div className="Progress-value"> 60 % </div>
@@ -252,6 +310,10 @@ function Skills() {
                                 <div className="skill-sub-item">
                                     <SiVite className="skill-icon" />
                                     <span className="skills-title"> Vite </span>
+                                </div>
+
+                                <div className="skill-description">
+                                    A fast, modern build tool and development server for frontend projects, optimized for speed and simplicity.
                                 </div>
 
                                 <div className="progress-container">

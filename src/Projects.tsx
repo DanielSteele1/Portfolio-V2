@@ -1,7 +1,7 @@
 import React, { JSX } from 'react';
 import { FaJs, FaNodeJs, FaReact } from "react-icons/fa";
 import { LuGithub } from "react-icons/lu";
-import { SiCplusplus, SiMongodb, SiOpengl, SiTypescript } from 'react-icons/si';
+import { SiCplusplus, SiCreatereactapp, SiMongodb, SiOpengl, SiTypescript, SiVite } from 'react-icons/si';
 import { GoLinkExternal } from "react-icons/go";
 
 import { Tooltip as ReactTooltip } from "react-tooltip";
@@ -149,10 +149,28 @@ function Projects() {
                             { icon: <FaJs />, name: "JavaScript" },
                             { icon: <FaNodeJs />, name: "NodeJs" },
                             { icon: <SiMongodb />, name: "MongoDB" },
+                            { icon: <SiCreatereactapp />, name: "Create-React-App" },
+
                         ]}
                         src="FocusDev.png"
                         link="https://www.youtube.com/watch?v=tpSIyG0BEt0&t=2s"
                         github="https://github.com/DanielSteele1/FocusDev"
+                    >
+
+                    </Project_card>
+
+                    <Project_card
+                        title="Trello Style Kanban Board (In Progress)"
+                        description="A very in progress Kanban board application, similar to Trello. Planned features include the abillity to add/delete boards, drag & drop to re-order tasks, export board data and share via a link. All user data will be stored in LocalStorage. App isn't live nor fully functional as of yet however you can clone and view via github."
+                        src="coming_soon.png"
+                        tags={[
+                            { icon: <FaReact />, name: "React" },
+                            { icon: <SiTypescript />, name: "TypeScript" },
+                            { icon: <SiVite />, name: "Vite" },
+                        ]}
+                        link="https://github.com/DanielSteele1/Trello-Clone"
+                        github="https://github.com/DanielSteele1/Trello-Clone"
+
                     >
 
                     </Project_card>
@@ -167,6 +185,8 @@ function Projects() {
                         tags={[
                             { icon: <FaReact />, name: "React" },
                             { icon: <FaJs />, name: "JavaScript" },
+                            { icon: <SiCreatereactapp />, name: "Create-React-App" },
+
                         ]}
                         link="https://danielsteeleportfoliov1.vercel.app"
                         github="https://github.com/DanielSteele1/DanielSteele1.github.io"
@@ -186,6 +206,7 @@ function Projects() {
                             { icon: <FaJs />, name: "JavaScript" },
                             { icon: <FaNodeJs />, name: "NodeJs" },
                             { icon: <SiMongodb />, name: "MongoDB" },
+                            { icon: <SiCreatereactapp />, name: "Create-React-App" },
 
                         ]}
                         link="https://github.com/DanielSteele1/SkyCompass"
@@ -196,7 +217,7 @@ function Projects() {
                     </Project_card>
 
                     <Project_card title="EarthSim"
-                        description="EarthSim is a project that I built in C++, using OpenGL and various libraries to create a 3D environment, with the goal of simulating our local system of planets, exposing me to core game development principles and GLSL."
+                        description="EarthSim is a project that I built in C++, using OpenGL and various libraries to create a 3D environment, with the goal of simulating our local system of planets, exposing me to core game development principles and GLSL. I have a web-based version planned."
                         src="EarthSim.png"
                         tags={[
                             { icon: <SiCplusplus />, name: "C++" },
@@ -208,19 +229,6 @@ function Projects() {
                     >
 
                     </Project_card>
-
-                    <Project_card
-                        title="Trello Style Kanban Board (In Progress)"
-                        description="A very in progress Kanban board application, similar to Trello. Planned features include the abillity to add/delete boards, drag & drop to re-order tasks, export board data and share via a link. All user data will be stored in LocalStorage. App isn't live nor fully functional as of yet however you can clone and view via github."
-                        src=""
-                        tags={[
-                            { icon: <FaReact />, name: "React" },
-                            { icon: <SiTypescript />, name: "TypeScript" },
-                        ]}
-                        link="https://github.com/DanielSteele1/Trello-Clone"
-                        github="https://github.com/DanielSteele1/Trello-Clone"
-
-                    ></Project_card>
 
                 </div>
             </div >
