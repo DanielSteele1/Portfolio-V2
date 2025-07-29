@@ -141,7 +141,7 @@ function Projects() {
 
                     <Project_card
                         title="FocusDev"
-                        description="FocusDev is a a utility app designed for developers.
+                        description="FocusDev is a utility app designed for developers. It's currently in progress.
                             It features a Notes app, Reusable code snippet feature, Calender, Github commit graph w/ stats, just to name a few.
                             Coded in JavaScript, React, Node.js & MongoDB. It also uses Bcrypt to securely store user data."
                         tags={[
@@ -153,7 +153,7 @@ function Projects() {
 
                         ]}
                         src="FocusDev.png"
-                        link="https://www.youtube.com/watch?v=tpSIyG0BEt0&t=2s"
+                        link="https://focusdev.vercel.app"
                         github="https://github.com/DanielSteele1/FocusDev"
                     >
 
@@ -161,7 +161,10 @@ function Projects() {
 
                     <Project_card
                         title="Trello Style Kanban Board (In Progress)"
-                        description="A very in progress Kanban board application, similar to Trello. Planned features include the abillity to add/delete boards, drag & drop to re-order tasks, export board data and share via a link. All user data will be stored in LocalStorage. App isn't live nor fully functional as of yet however you can clone and view via github."
+                        description="An in progress Kanban board application, similar to Trello. 
+                        Planned features include the abillity to add/delete boards, drag & drop to re-order tasks, export board data and share via a link. 
+                        All user data will be stored in LocalStorage. 
+                        App isn't live nor fully functional as of yet however you can clone and view via github."
                         src="coming_soon.png"
                         tags={[
                             { icon: <FaReact />, name: "React" },
