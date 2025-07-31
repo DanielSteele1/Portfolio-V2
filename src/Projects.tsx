@@ -165,7 +165,7 @@ function Projects() {
                         Planned features include the abillity to add/delete boards, drag & drop to re-order tasks, export board data and share via a link. 
                         All user data will be stored in LocalStorage. 
                         App isn't live nor fully functional as of yet however you can clone and view via github."
-                        src="coming_soon.png"
+                        src="Task_Tracking_App.png"
                         tags={[
                             { icon: <FaReact />, name: "React" },
                             { icon: <SiTypescript />, name: "TypeScript" },
