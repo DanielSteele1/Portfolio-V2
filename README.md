@@ -2,6 +2,11 @@ The second iteration of my website portfolio. Used to showscase all my current a
 
 Please, do not clone this repository unless you are a recruiter. If you copy my work and try to pass it off as your own (this has happened before!), I will know. 
 
+<img width="1904" height="911" alt="image" src="https://github.com/user-attachments/assets/80091e91-e9ae-4b80-8639-f3a62c9b1ef7" />
+
+
+
+
 ➡️ You can view it here: https://danielsteele.dev 
 
 - This version uses Vite instead of CRA, which should reduce loading time on users and during development.
