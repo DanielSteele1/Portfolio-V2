@@ -294,8 +294,8 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
   width: 70%;
+  align-items: center;
   margin: 0 auto;
   border-radius: 12px;
 }
@@ -304,7 +304,6 @@ body {
   display: flex;
   width: fit-content;
   margin-top: 20px;
-  margin-bottom: 20px;
   border-radius: 8px;
   font-size: 1.0rem;
 }
@@ -536,7 +535,12 @@ body {
   width: 60%;
 }
 
-.social-title:hover svg {
+.social-icon:hover svg{
+  color: #e66465;
+  transition: 0.5s ease-in-out;
+}
+
+.social-title:hover svg{
   color: #e66465;
   transition: 0.5s ease-in-out;
 }
@@ -598,7 +602,7 @@ body {
   transition: 0.3s ease-in-out;
 }
 
-.skills-title{
+.skills-title {
   font-size: 1.2rem;
   font-weight: 500;
 }
@@ -611,7 +615,7 @@ body {
   align-items: flex-start;
   font-size: 18px;
   height: 120px;
-  width:400px;
+  width: 400px;
   border-radius: 10px;
   padding: 10px;
   border: 2px solid rgba(255, 255, 255, 0.1);
@@ -623,7 +627,7 @@ body {
   display: flex;
   color: 2px solid #9198e5;
   margin: 5px;
-  line-height:1.2em;
+  line-height: 1.2em;
 
 }
 
@@ -645,7 +649,7 @@ body {
   align-items: center;
 }
 
-.progress-container{
+.progress-container {
   display: flex;
   width: 100%;
 }
@@ -942,6 +946,26 @@ body {
   transition: background-position 0.5s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s;
 }
 
+
+@media (min-width: 1200px) and (max-width: 1600px) {
+
+  .navigation {
+    max-width: 80%;
+  }
+
+  .About-status-container {
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .About-status {
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+}
+
 @media (min-width: 1000px) and (max-width: 1200px) {
 
   .navigation {
@@ -959,7 +983,6 @@ body {
     margin-top: 10px;
   }
 
-
 }
 
 @media (min-width: 1000px) {
@@ -972,7 +995,9 @@ body {
     display: none;
   }
 
+
 }
+
 
 @media (min-width: 750px) and (max-width: 1000px) {
 
@@ -1054,12 +1079,24 @@ body {
 
   }
 
+  .footer {
+    flex-direction: column;
+    height: auto;
+    gap: 10px;
+    font-size: 0.9rem;
+  }
+
 }
 
 @media (min-width: 300px) and (max-width: 750px) {
 
-  .skills-container{
-    display:flex;
+  .About-status-container {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .skills-container {
+    display: flex;
     width: fit-content;
   }
 
@@ -1095,7 +1132,7 @@ body {
   .About-status-container {
     flex-direction: column;
     justify-content: flex-start;
-    width: 100%;
+    width: 80%;
   }
 
   .About-status {
