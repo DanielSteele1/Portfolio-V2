@@ -1,3 +1,5 @@
+
+import { useEffect } from 'react';
 import Navigation from './Navigation';
 import Greeting from './Greeting';
 import AboutMe from './About';
@@ -8,9 +10,10 @@ import Footer from './Footer';
 import BackToTop from './BackToTop';
 import Blog from './Blog';
 
-import Squares from './Squares.tsx';
-
 import { Analytics } from "@vercel/analytics/react"
+
+import { ThpaceGL } from 'thpace';
+
 
 declare global {
   interface Window {
@@ -19,6 +22,20 @@ declare global {
 }
 
 function App() {
+
+  useEffect(() => {
+    const canvas = document.querySelector('.greeting-canvas') as HTMLCanvasElement | null;
+
+    if (canvas) {
+      const settings = {
+        colors: ['#6b6fc9', '#2b2f3f', '#a14444'],
+        triangleSize: 100,
+      };
+      ThpaceGL.create(canvas, settings);
+    } else {
+      console.error('Canvas not found');
+    }
+  }, []);
 
   window.addEventListener("blur", () => {
     document.title = "Come Back! - Daniel Steele - React Developer";
@@ -49,12 +66,7 @@ function App() {
       <Navigation handleDownloadAndView={handleDownloadAndView} />
 
       <div className="greeting-bg-wrap">
-        <Squares
-          speed={0.5}
-          squareSize={40}
-          direction='diagonal'
-          borderColor='#5f5959ff'
-        />
+
         <Greeting handleDownloadAndView={handleDownloadAndView} />
       </div>
 

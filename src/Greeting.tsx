@@ -12,7 +12,9 @@ type Props = {
 
 const Greeting = ({ handleDownloadAndView }: Props) => {
     return (
-        <div className="greeting" id="top">
+        <div className="greeting">
+
+            <canvas className="greeting-canvas" id="top" />
 
             <div className="greeting-container">
 

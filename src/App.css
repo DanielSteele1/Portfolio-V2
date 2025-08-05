@@ -8,27 +8,7 @@
   width: 100%;
 }
 
-.greeting-bg-wrap {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-}
 
-.greeting-bg-wrap .squares-canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  pointer-events: none;
-}
-
-.greeting-bg-wrap .greeting-container {
-  position: relative;
-  z-index: 2;
-}
 
 body,
 html {
@@ -152,9 +132,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   width: 100%;
-  border-bottom: 3px solid rgba(255, 255, 255, 0.1);
+  height: 100vh;
 }
 
 .greeting {
@@ -165,6 +144,29 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+.greeting-container {
+  position: relative;
+  z-index: 1;
+}
+
+.greeting-wrapper {
+
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.greeting-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  border-bottom: 3px solid #3d4157;
+}
+
 
 .gradient {
   background: linear-gradient(120deg, #e66465, #9198e5);
