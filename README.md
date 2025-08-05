@@ -1,4 +1,6 @@
-The second iteration of my website portfolio. Used to showscase all my current and past projects in the last 12 months. Feel free to clone.
+The second iteration of my website portfolio. Used to showscase all my current and past projects in the last 12 months. 
+
+Please, do not clone this repository unless you are a recruiter. If you copy my work and try to pass it off as your own (this has happened before!), I will know. 
 
 ➡️ You can view it here: https://danielsteele.dev 
 
