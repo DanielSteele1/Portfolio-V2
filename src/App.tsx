@@ -28,7 +28,7 @@ function App() {
 
     if (canvas) {
       const settings = {
-        colors: ['#6b6fc9', '#2b2f3f', '#a14444'],
+        colors: ['#4c4fa8', '#1f2333', '#7a2d2d'],
         triangleSize: 100,
       };
       ThpaceGL.create(canvas, settings);
