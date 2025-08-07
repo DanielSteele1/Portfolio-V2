@@ -162,9 +162,9 @@ function Projects() {
                     <Project_card
                         title="Trello Style Kanban Board (In Progress)"
                         description="An in progress Kanban board application, similar to Trello. 
-                        Planned features include the abillity to add/delete boards, drag & drop to re-order tasks, export board data and share via a link. 
-                        All user data will be stored in LocalStorage. 
-                        App isn't live nor fully functional as of yet however you can clone and view via github."
+                        Planned features include the abillity to add/delete boards, drag & drop to re-order tasks, and export board data.
+                        All user data will be stored in LocalStorage & is my first time using react-router. 
+                        App isn't live as of yet however you can clone and view progress via github."
                         src="Task_Tracking_App.png"
                         tags={[
                             { icon: <FaReact />, name: "React" },
