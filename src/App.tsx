@@ -8,7 +8,7 @@ import Projects from './Projects';
 import Contact from './Contact';
 import Footer from './Footer';
 import BackToTop from './BackToTop';
-import Blog from './Blog';
+// import Blog from './Blog';
 
 import { Analytics } from "@vercel/analytics/react"
 

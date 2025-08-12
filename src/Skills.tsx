@@ -1,9 +1,8 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { SiCplusplus, SiExpress, SiGraphql, SiJavascript, SiNodedotjs, SiVite } from "react-icons/si";
 import { LuPalette } from "react-icons/lu";
 import { FaReact, FaServer } from "react-icons/fa";
 import { TbApi, TbBrandFramerMotion, TbBrandGraphql } from "react-icons/tb";
-import { LinearProgress } from '@mui/material';
 import { SiTypescript } from "react-icons/si";
 import { SiMongodb } from "react-icons/si";
 import { FaHtml5 } from "react-icons/fa";
@@ -18,29 +17,6 @@ function Skills() {
     //diff pages
     const SkillSection = ["Frontend", "Backend", "Other"];
     const icons = [<LuPalette style={{ marginRight: '10px' }} />, <FaServer style={{ marginRight: '10px' }} />, < TbBrandGraphql style={{ marginRight: '10px', verticalAlign: 'center' }} />]
-
-    // function to animate the progressbars 
-    // - basically just stalls the fill up animation to make it slower, giving the illusion of animation.
-    function AnimateProgressbar({ value, ...props }: { value: number }) {
-        const [animate, setAnimate] = useState(0);
-
-        useEffect(() => {
-
-            if (animate < value) {
-
-                const timer = setTimeout(() => setAnimate(animate + 2), 10);
-                return () => clearTimeout(timer);
-            }
-
-        }, [animate, value]);
-        return <LinearProgress variant="determinate" className="progress-bar" value={animate} {...props}
-            sx={{
-                '& .MuiLinearProgress-bar': {
-                    backgroundImage: 'linear-gradient(to right, #ff92a5, #e66465)',
-                },
-            }}
-        />
-    }
 
     return (
 
