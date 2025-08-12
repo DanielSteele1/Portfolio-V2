@@ -160,7 +160,7 @@ function Projects() {
                     </Project_card>
 
                     <Project_card
-                        title="Trello Style Kanban Board (In Progress)"
+                        title="Trello Style Kanban Board"
                         description="An in progress Kanban board application, similar to Trello. 
                         Planned features include the abillity to add/delete boards, drag & drop to re-order tasks, and export board data.
                         All user data will be stored in LocalStorage & is my first time using react-router. 

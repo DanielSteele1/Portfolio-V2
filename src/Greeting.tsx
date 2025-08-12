@@ -98,7 +98,7 @@ const Greeting = ({ handleDownloadAndView }: Props) => {
 
                 <div className="scroll-down-container">
                     <a className="scroll-down" href="#about">
-                        <span className="gradient">Scroll or click to enter</span>
+                        <span>Scroll or click to enter</span>
                         <HiArrowDown style={{ display: 'flex', fontSize: "30px", margin: '10px', justifyContent: 'center', verticalAlign: 'center' }} />
                     </a>
                 </div>

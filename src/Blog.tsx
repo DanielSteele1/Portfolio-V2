@@ -1,32 +1,31 @@
-//import React from 'react';
+import React from 'react';
 import "./App.css";
 import './Blog.css';
-// import { TbCalendarWeekFilled } from 'react-icons/tb';
-// import { HiOutlineArrowNarrowRight } from "react-icons/hi";
- import GradientText from './GradientText.tsx'
+import { TbCalendarWeekFilled } from 'react-icons/tb';
+import { HiOutlineArrowNarrowRight } from "react-icons/hi";
+import GradientText from './GradientText.tsx'
 
+interface BlogCardProps {
 
-// interface BlogCardProps {
+    title: string;
+    date: string;
+    description: string;
+    link: string;
+}
 
-//     title: string;
-//     date: string;
-//     description: string;
-//     link: string;
-// }
+const Blog_card: React.FC<BlogCardProps> = ({ title, date, description, link }) => {
 
-// const Blog_card: React.FC<BlogCardProps> = ({ title, date, description, link }) => {
-
-//     return (
-//         <div className="blog-card">
-//             <span className="blog-title">{title}</span>
-//             <span className="blog-date"> <TbCalendarWeekFilled className="blog-icon" /> {date} </span>
-//             <span className="blog-desc">{description}</span>
-//             <button className="blog-button">
-//                 <a href={link} target="_blank" rel="noopener noreferrer">Read More <HiOutlineArrowNarrowRight /> </a>
-//             </button>
-//         </div>
-//     );
-// }
+    return (
+        <div className="blog-card">
+            <span className="blog-title">{title}</span>
+            <span className="blog-date"> <TbCalendarWeekFilled className="blog-icon" /> {date} </span>
+            <span className="blog-desc">{description}</span>
+            <button className="blog-button">
+                <a href={link} target="_blank" rel="noopener noreferrer">Read More <HiOutlineArrowNarrowRight /> </a>
+            </button>
+        </div>
+    );
+}
 
 
 // make this code more modular - put an interface in here so all I need to change is the description, title and date.
@@ -47,13 +46,13 @@ function Blog() {
                     showBorder={false}
                     className="greeting-title"
                 >
-                    <span className="blog-coming-soon"> 
-                    This section is currently under construction, so be sure to check back later!
+                    <span className="blog-coming-soon">
+                        This section is currently under construction, so be sure to check back later!
                     </span>
                 </GradientText>
             </span>
 
-            {/* <div className="blog-card-container">
+            <div className="blog-card-container">
 
                 <Blog_card
                     title='Welcome to the New Website!'
@@ -79,7 +78,7 @@ function Blog() {
 
                 />
 
-            </div> */}
+            </div>
 
         </div>
 

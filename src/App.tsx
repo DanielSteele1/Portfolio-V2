@@ -14,7 +14,6 @@ import { Analytics } from "@vercel/analytics/react"
 
 import { ThpaceGL } from 'thpace';
 
-
 declare global {
   interface Window {
     sa_event?: (event: string) => void;
@@ -72,7 +71,7 @@ function App() {
 
       <AboutMe />
       <Skills />
-      <Blog />
+      {/* <Blog /> */}
       <Projects />
       <BackToTop />
       <Contact />

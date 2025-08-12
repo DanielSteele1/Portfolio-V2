@@ -17,7 +17,7 @@ function BackToTop() {
             <div className="back-to-top-button">
                 <span className="gradient">
                     <a href="#top">
-                        Click here to go back up to the top
+                        Back to the top
                         <IoArrowDown id="arrow-icon"/>
                     </a>
                 </span>

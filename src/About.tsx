@@ -20,10 +20,7 @@ function AboutMe() {
         >
 
             <div className="about" id="about">
-
                 <span className="section-heading"> About{"\u00A0"}<div className="gradient"> Daniel Steele</div></span>
-
-
                 <div className="About-image-container">
                     <img className="About-img" src="Website_Pic.JPG" />
 

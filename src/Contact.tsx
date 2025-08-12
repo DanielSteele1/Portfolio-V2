@@ -20,7 +20,7 @@ function Contact() {
 
                 <div className="social-bar">
 
-                    <span className="social-heading"> Want to get in touch? contact me via email below, or via my socials: </span>
+                    <span className="contact-sub-heading"> Want to get in touch? contact me via email below, or via my socials: </span>
 
                     <div className="icons">
 

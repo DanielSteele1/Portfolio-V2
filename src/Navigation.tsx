@@ -7,11 +7,10 @@ import { GrProjects } from "react-icons/gr";
 import { GoPerson } from 'react-icons/go';
 import { MdEmail } from "react-icons/md";
 import { HiDownload, HiHome } from "react-icons/hi";
-import { SlSpeech } from "react-icons/sl";
-
+import { FaCode } from "react-icons/fa6";
 import Hamburger from 'hamburger-react';
 
-type props = { 
+type props = {
     handleDownloadAndView: (event: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => void;
 };
 
@@ -56,15 +55,16 @@ function Navigation({ handleDownloadAndView }: props) {
                         </a>
                     </span>
 
+                    {/* 
                     <span data-tooltip-id="tooltip-1" className="nav-title">
                         <a href="#blog">
                             <SlSpeech className="nav-icon" /> Blog
                         </a>
-                    </span>
+                    </span> */}
 
                     <span className="nav-title" id="nav-projects">
                         <a href="#projects">
-                            <GrProjects className="nav-icon" /> Projects
+                            <FaCode className="nav-icon" /> Projects
                         </a>
                     </span>
 
@@ -104,7 +104,7 @@ function Navigation({ handleDownloadAndView }: props) {
                 <div className="nav-menu-mobile">
 
                     <span className="nav-title">
-                        <a href="#top" onClick={() => {setOpen(false) }}>
+                        <a href="#top" onClick={() => { setOpen(false) }}>
                             <HiHome className="nav-icon" /> Home
                         </a>
                     </span>
