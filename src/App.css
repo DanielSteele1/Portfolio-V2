@@ -587,8 +587,8 @@ body {
 .skills-container {
   display: flex;
   justify-items: center;
-  align-items: flex-start;
-  height: 100%;
+  align-items: center;
+  min-height: 310px;
   padding: 10px 10px;
   margin-top: 10px;
 }
