@@ -1,7 +1,7 @@
 import React, { JSX } from 'react';
 import { FaJs, FaNodeJs, FaReact } from "react-icons/fa";
 import { LuGithub } from "react-icons/lu";
-import { SiCplusplus, SiCreatereactapp, SiMongodb, SiOpengl, SiTypescript, SiVite } from 'react-icons/si';
+import { SiCplusplus, SiCreatereactapp, SiMongodb, SiOpengl, SiReactrouter, SiTypescript, SiVite } from 'react-icons/si';
 import { GoLinkExternal } from "react-icons/go";
 
 import { Tooltip as ReactTooltip } from "react-tooltip";
@@ -169,7 +169,9 @@ function Projects() {
                         tags={[
                             { icon: <FaReact />, name: "React" },
                             { icon: <SiTypescript />, name: "TypeScript" },
+                            { icon: <SiReactrouter />, name: "React-Router" },
                             { icon: <SiVite />, name: "Vite" },
+
                         ]}
                         link="https://github.com/DanielSteele1/Trello-Clone"
                         github="https://github.com/DanielSteele1/Trello-Clone"

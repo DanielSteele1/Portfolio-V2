@@ -117,7 +117,7 @@ function Navigation({ handleDownloadAndView }: props) {
 
                     <span className="nav-title" id="nav-projects">
                         <a href="#projects" onClick={() => { setOpen(false) }}>
-                            <GrProjects className="nav-icon" /> Projects
+                            <FaCode className="nav-icon" /> Projects
                         </a>
                     </span>
 
