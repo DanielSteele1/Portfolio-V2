@@ -2,8 +2,6 @@ import { useEffect, useState } from 'react';
 
 import { Tooltip as ReactTooltip } from "react-tooltip";
 import 'react-tooltip/dist/react-tooltip.css'
-
-import { GrProjects } from "react-icons/gr";
 import { GoPerson } from 'react-icons/go';
 import { MdEmail } from "react-icons/md";
 import { HiDownload, HiHome } from "react-icons/hi";
