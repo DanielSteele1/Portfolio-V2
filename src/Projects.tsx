@@ -165,7 +165,7 @@ function Projects() {
                         Planned features include the abillity to add/delete boards, drag & drop to re-order tasks, and export board data.
                         All user data will be stored in LocalStorage & is my first time using react-router. 
                         App isn't live as of yet however you can clone and view progress via github."
-                        src="Task_Managment_tool.png"
+                        src="Task_Tracking_App.png"
                         tags={[
                             { icon: <FaReact />, name: "React" },
                             { icon: <SiTypescript />, name: "TypeScript" },

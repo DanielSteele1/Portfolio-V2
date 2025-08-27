@@ -42,7 +42,6 @@ function Skills() {
                     <span> Click on the below tabs to view my skills </span>
                 </div>
 
-
                 {/* map the tabs to create a button for each item in array. 
             once pressed, setActive(index) updates the tab to the corrosponding section.*/}
                 <div className="skills-tabs">
