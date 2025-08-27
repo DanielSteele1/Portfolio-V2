@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { SiCplusplus, SiExpress, SiGraphql, SiJavascript, SiNodedotjs, SiVite } from "react-icons/si";
 import { LuPalette } from "react-icons/lu";
 import { FaReact, FaServer } from "react-icons/fa";
-import { TbApi, TbBrandFramerMotion, TbBrandGraphql } from "react-icons/tb";
+import { TbApi, TbBrandFramerMotion, TbBrandGraphql, TbClick } from "react-icons/tb";
 import { SiTypescript } from "react-icons/si";
 import { SiMongodb } from "react-icons/si";
 import { FaHtml5 } from "react-icons/fa";
@@ -33,6 +33,15 @@ function Skills() {
 
                 <span className="section-heading">My{"\u00A0"}<span className="gradient">Skills</span> </span>
                 <span className="section-sub-heading">A list of all the skills and tech I'm familliar with. I'm especially capable at front-end development and can create visually-stunning websites. </span>
+                <div className="click-prompt-container">
+
+                    <div className="click-prompt">
+                        <TbClick style={{fontSize: '23px', marginRight: '10px'}} />
+                    </div>
+
+                    <span> Click on the below tabs to view my skills </span>
+                </div>
+
 
                 {/* map the tabs to create a button for each item in array. 
             once pressed, setActive(index) updates the tab to the corrosponding section.*/}
@@ -228,7 +237,7 @@ function Skills() {
                 </div>
 
             </div >
-        </motion.div>
+        </motion.div >
     )
 }
 

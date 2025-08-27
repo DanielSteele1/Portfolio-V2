@@ -901,6 +901,21 @@ body {
 }
 
 
+.click-prompt-container {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.0rem;
+  font-style: italic;
+  font-weight: 300;
+}
+.click-prompt {
+  color: #e66465;
+  font-size: 1.0rem;
+  margin: 10px;
+}
+
 @keyframes float {
   0% {
     transform: translateY(0px);
@@ -1356,4 +1371,12 @@ body {
     font-size: 1.1rem;
     width: 100%;
   }
+
+  .click-prompt-container {
+  font-size: 0.9rem;
+  margin: 10px;
+  width: fit-content;
+  text-align: center;
+}
+
 }
