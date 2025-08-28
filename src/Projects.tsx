@@ -172,7 +172,7 @@ function Projects() {
                             { icon: <SiVite />, name: "Vite" },
 
                         ]}
-                        link="https://trello-style-kanban-board-application-vydq-43cz0h33i.vercel.app"
+                        link="https://trello-style-kanban-board-applicati-orcin.vercel.app"
                         github="https://github.com/DanielSteele1/Trello-Clone"
 
                     >
