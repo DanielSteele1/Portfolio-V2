@@ -891,15 +891,12 @@ body {
 .scroll-down-container svg {
 
   color: #e26e6e;
-
-
   animation-name: float;
   animation-duration: 5.0s;
   animation-fill-mode: forwards;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
 }
-
 
 .click-prompt-container {
   display: inline-flex;
@@ -910,6 +907,7 @@ body {
   font-style: italic;
   font-weight: 300;
 }
+
 .click-prompt {
   color: #e66465;
   font-size: 1.0rem;
@@ -1039,7 +1037,7 @@ body {
     flex-direction: column;
     width: 100%;
   }
-  
+
   .back-to-top {
     width: 100%;
   }
@@ -1050,8 +1048,9 @@ body {
   }
 
 
-  .section-sub-heading, .contact-sub-heading {
-      max-width: 100%;
+  .section-sub-heading,
+  .contact-sub-heading {
+    max-width: 100%;
   }
 
   .About-status {
@@ -1373,10 +1372,10 @@ body {
   }
 
   .click-prompt-container {
-  font-size: 0.9rem;
-  margin: 10px;
-  width: fit-content;
-  text-align: center;
-}
+    font-size: 0.9rem;
+    margin: 10px;
+    width: fit-content;
+    text-align: center;
+  }
 
 }

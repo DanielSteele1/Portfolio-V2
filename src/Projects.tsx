@@ -160,11 +160,10 @@ function Projects() {
                     </Project_card>
 
                     <Project_card
-                        title="Trello Style Kanban Board"
-                        description="An in progress Kanban board application, similar to Trello. 
-                        Planned features include the abillity to add/delete boards, drag & drop to re-order tasks, and export board data.
-                        All user data will be stored in LocalStorage & is my first time using react-router. 
-                        App isn't live as of yet however you can clone and view progress via github."
+                        title="Kanban Board"
+                        description="A kanban board application, similar to Trello. 
+                        Features include the abillity to add/delete boards, drag & drop to re-order tasks, and export board data.
+                        Uses React-router for splitting different boards up, localStorage for persistance & react-toast for user feedback on operations."
                         src="Task_Tracking_App.png"
                         tags={[
                             { icon: <FaReact />, name: "React" },
@@ -173,7 +172,7 @@ function Projects() {
                             { icon: <SiVite />, name: "Vite" },
 
                         ]}
-                        link="https://github.com/DanielSteele1/Trello-Clone"
+                        link="https://trello-style-kanban-board-application-vydq-43cz0h33i.vercel.app"
                         github="https://github.com/DanielSteele1/Trello-Clone"
 
                     >
