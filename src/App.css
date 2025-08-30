@@ -303,14 +303,23 @@ body {
 
 .About-status {
   display: flex;
-  border: 2px solid #3d4157;
+  background-color: #181e3d;
   padding: 10px;
-  width: fit-content;
+  width: 280px;
+  justify-content: flex-start;
+  align-items: center;
   margin-top: 20px;
   border-radius: 8px;
   font-size: 1.0rem;
-
+  border: 2px solid transparent;
 }
+
+.About-status:hover {
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  border: 2px solid #e65555;
+}
+
 
 .About-status span {
   margin-left: 5px;
@@ -979,7 +988,7 @@ body {
 }
 
 
-@media (min-width: 1200px) and (max-width: 1600px) {
+@media (min-width: 1200px) and (max-width: 1800px) {
 
   .navigation {
     max-width: 80%;

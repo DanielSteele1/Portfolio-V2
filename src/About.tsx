@@ -4,9 +4,13 @@ import { RiTimeLine } from "react-icons/ri";
 import { IoGameController } from 'react-icons/io5';
 import { motion } from "motion/react"
 import { FaGraduationCap } from "react-icons/fa";
-import { LuGraduationCap, LuHeadphones, LuLaptop } from "react-icons/lu";
+import { LuGraduationCap, LuLaptop } from "react-icons/lu";
 
 function AboutMe() {
+
+
+    const bars = [0, 1, 2, 3,]
+
 
     return (
 
@@ -27,26 +31,53 @@ function AboutMe() {
                 </div>
 
                 <div className="About-status-container">
-                    <div className="About-status">
+                    <a className="About-status" href="#projects">
                         <div className="status-icon">
                             <LuLaptop style={{ color: '#e66465', display: 'inline-flex', verticalAlign: 'middle', fontSize: '23px' }} />
                         </div>
                         <div>Currently Working on: </div> <span className="gradient"> FocusDev </span>
-                    </div>
+                    </a>
 
-                    <div className="About-status">
+                    <a className="About-status" href="#skills">
                         <div className="status-icon">
                             <LuGraduationCap style={{ color: '#e66465', display: 'inline-flex', verticalAlign: 'middle', fontSize: '23px' }} />
                         </div>
-                        <div> Currently learning: </div> <span className="gradient"> TailwindCSS </span>
-                    </div>
+                        <div>Currently learning: </div> <span className="gradient"> TailwindCSS </span>
+                    </a>
 
-                    <div className="About-status">
-                        <div className="status-icon">
-                            <LuHeadphones style={{ color: '#e66465', display: 'inline-flex', verticalAlign: 'middle', fontSize: '23px' }} />
+                    <motion.div
+                        style={{ display: "flex", gap: "4px", cursor: "pointer", alignItems: "flex-end", margin: '10px', }}
+                    >
+                        <div className="About-status">
+                            <motion.div style={{ display: 'flex', alignItems: 'center', marginRight: '5px' }}>
+
+                                {bars.map((i) => (
+                                    <motion.div
+                                        key={i}
+                                        style={{
+                                            width: "5px",
+                                            backgroundColor: "#e65555",
+                                            borderRadius: "2px",
+                                            transformOrigin: "bottom",
+                                        }}
+                                        initial={{ height: 10 + i * 4 }}
+                                        animate={{
+                                            height: [10, 24, 14, 20],
+                                        }}
+                                        transition={{
+                                            duration: 0.8,
+                                            repeat: Infinity,
+                                            repeatType: "mirror",
+                                            delay: i * 0.45,
+                                        }}
+                                    />
+                                ))}
+
+                            </motion.div>
+
+                            <div>Current Music Obsession: </div> <span className="gradient"> Lo-Fi </span>
                         </div>
-                        <div> Current Music Obsession: </div> <span className="gradient"> Lo-Fi </span>
-                    </div>
+                    </motion.div>
 
                 </div>
 
@@ -101,7 +132,7 @@ function AboutMe() {
 
 
             </div>
-        </motion.div>
+        </motion.div >
 
     )
 }
