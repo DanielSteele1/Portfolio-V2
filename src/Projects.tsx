@@ -164,7 +164,7 @@ function Projects() {
                         description="A kanban board application, similar to Trello. 
                         Features include the abillity to add/delete boards, drag & drop to re-order tasks, and export board data.
                         Uses React-router for splitting different boards up, localStorage for persistance & react-toast for user feedback on operations."
-                        src="Task_Managment_tool.png"
+                        src="Orbit_Kanban_App.png"
                         tags={[
                             { icon: <FaReact />, name: "React" },
                             { icon: <SiTypescript />, name: "TypeScript" },
