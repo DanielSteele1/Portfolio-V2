@@ -160,7 +160,7 @@ function Projects() {
                     </Project_card>
 
                     <Project_card
-                        title="Kanban Board"
+                        title="Orbit - Kanban board"
                         description="A kanban board application, similar to Trello. 
                         Features include the abillity to add/delete boards, drag & drop to re-order tasks, and export board data.
                         Uses React-router for splitting different boards up, localStorage for persistance & react-toast for user feedback on operations."
