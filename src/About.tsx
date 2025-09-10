@@ -8,9 +8,7 @@ import { LuGraduationCap, LuLaptop } from "react-icons/lu";
 
 function AboutMe() {
 
-
     const bars = [0, 1, 2, 3,]
-
 
     return (
 
@@ -35,7 +33,7 @@ function AboutMe() {
                         <div className="status-icon">
                             <LuLaptop style={{ color: '#e66465', display: 'inline-flex', verticalAlign: 'middle', fontSize: '23px' }} />
                         </div>
-                        <div>Currently Working on: </div> <span className="gradient"> FocusDev </span>
+                        <div>Currently Working on: </div> <span className="gradient"> Orbit </span>
                     </a>
 
                     <a className="About-status" href="#skills">
@@ -125,7 +123,7 @@ function AboutMe() {
                             Some of the new technologies I've been looking into include <span className="highlight-1">GraphQL and libraries like React-DnD and GSAP.</span>
                             <br></br>
                             <br></br>
-                            <span className="gradient" id="para-finish">I'm also working on a few projects, including this website, my blog, FocusDev and more.  </span>
+                            <span className="gradient" id="para-finish">I'm also working on a few projects, including this website, Orbit, my blog - and much more.  </span>
                         </span>
                     </div>
                 </div>
