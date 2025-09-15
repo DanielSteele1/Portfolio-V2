@@ -18,15 +18,15 @@ const Greeting = ({ handleDownloadAndView }: Props) => {
         <div className="greeting">
 
             <PixelBlast
-                variant="circle"
-                pixelSize={5}
+                variant="diamond"
+                pixelSize={4}
                 color="#B19EEF"
-                patternScale={4}
+                patternScale={5}
                 patternDensity={1.0}
-                pixelSizeJitter={0.5}
-                liquidRadius={1.2}
-                liquidWobbleSpeed={5}
-                speed={0.6}
+                pixelSizeJitter={0.2}
+                liquidRadius={0}
+                liquidWobbleSpeed={2}
+                speed={0.4}
                 edgeFade={0.10}
             />
 
