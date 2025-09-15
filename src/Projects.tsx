@@ -140,27 +140,7 @@ function Projects() {
                 <div className="project-container">
 
                     <Project_card
-                        title="FocusDev"
-                        description="FocusDev is a utility app designed for developers. It's currently in progress.
-                            It features a Notes app, Reusable code snippet feature, Calender, Github commit graph w/ stats, just to name a few.
-                            Coded in JavaScript, React, Node.js & MongoDB. It also uses Bcrypt to securely store user data."
-                        tags={[
-                            { icon: <FaReact />, name: "React" },
-                            { icon: <FaJs />, name: "JavaScript" },
-                            { icon: <FaNodeJs />, name: "NodeJs" },
-                            { icon: <SiMongodb />, name: "MongoDB" },
-                            { icon: <SiCreatereactapp />, name: "Create-React-App" },
-
-                        ]}
-                        src="FocusDev.png"
-                        link="https://focusdev.vercel.app"
-                        github="https://github.com/DanielSteele1/FocusDev"
-                    >
-
-                    </Project_card>
-
-                    <Project_card
-                        title="Orbit - Kanban board"
+                        title="Orbit - Note Productivity app"
                         description="A kanban board application, similar to Trello. 
                         Features include the abillity to add/delete boards, drag & drop to re-order tasks, and export board data.
                         Uses React-router for splitting different boards up, localStorage for persistance & react-toast for user feedback on operations."
@@ -175,6 +155,26 @@ function Projects() {
                         link="https://trello-style-kanban-board-applicati-orcin.vercel.app"
                         github="https://github.com/DanielSteele1/Trello-Clone"
 
+                    >
+
+                    </Project_card>
+
+                    <Project_card
+                        title="FocusDev"
+                        description="FocusDev is a utility app designed for developers. It's currently in progress.
+                            It features a Notes app, Reusable code snippet feature, Calender, Github commit graph w/ stats, just to name a few.
+                            Coded in JavaScript, React, Node.js & MongoDB. It also uses Bcrypt to securely store user data."
+                        tags={[
+                            { icon: <FaReact />, name: "React" },
+                            { icon: <FaJs />, name: "JavaScript" },
+                            { icon: <FaNodeJs />, name: "NodeJs" },
+                            { icon: <SiMongodb />, name: "MongoDB" },
+                            { icon: <SiCreatereactapp />, name: "Create-React-App" }
+
+                        ]}
+                        src="FocusDev.png"
+                        link="https://focusdev.vercel.app"
+                        github="https://github.com/DanielSteele1/FocusDev"
                     >
 
                     </Project_card>

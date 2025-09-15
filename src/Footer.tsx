@@ -15,9 +15,7 @@ function Footer() {
             </div>
 
             <div className="footer-item">
-                <span className="gradient"> Made with TypeScript , React & lots of coffee
-                    <CiCoffeeCup style={{color: '#e66465', display: 'inline-flex', margin: '10px', verticalAlign: 'middle', fontSize: '25px' }} />
-                </span>
+
             </div>
 
             <div className="footer-item">
@@ -26,7 +24,6 @@ function Footer() {
                     <span className="footer-icon">  <a href="https://github.com/DanielSteele1"> <LuGithub style={{ fontSize: '30px', paddingLeft: '10px' }} /> </a></span>
                 </div>
             </div>
-
         </div>
     )
 }
