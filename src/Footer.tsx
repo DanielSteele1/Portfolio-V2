@@ -1,6 +1,5 @@
 import { LuGithub } from "react-icons/lu";
 import { IoLogoLinkedin } from "react-icons/io5";
-import { CiCoffeeCup } from "react-icons/ci";
 
 function Footer() {
 
