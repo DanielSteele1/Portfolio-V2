@@ -12,11 +12,13 @@
   "dependencies": {
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
+    "@gsap/react": "^2.1.2",
     "@mui/material": "^5.15.15",
     "@vercel/analytics": "^1.5.0",
     "gsap": "^3.13.0",
     "hamburger-react": "^2.5.2",
     "motion": "^12.19.2",
+    "postprocessing": "^6.37.8",
     "primereact": "^10.9.5",
     "react": "^19.1.1",
     "react-dom": "^19.0.0",
@@ -25,13 +27,15 @@
     "react-tooltip": "^5.29.1",
     "react-type-animation": "^3.2.0",
     "slick-carousel": "^1.8.1",
-    "thpace": "^2.0.3"
+    "thpace": "^2.0.3",
+    "three": "^0.180.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.22.0",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
     "@types/react-slick": "^0.23.13",
+    "@types/three": "^0.180.0",
     "@vitejs/plugin-react": "^4.3.4",
     "eslint": "^9.22.0",
     "eslint-plugin-react-hooks": "^5.2.0",

@@ -3,7 +3,7 @@ import "./App.css";
 import './Blog.css';
 import { TbCalendarWeekFilled } from 'react-icons/tb';
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
-import GradientText from './GradientText.tsx'
+import GradientText from './React-Bits/GradientText.tsx'
 
 interface BlogCardProps {
 

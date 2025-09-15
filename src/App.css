@@ -32,7 +32,7 @@ body {
   height: 100%;
   font-size: 18px;
   font-family: 'Figtree', sans-serif;
-  background-color: #0f152f;
+  background-color: #050716;
   background-attachment: fixed;
   background-size: 200% 200%;
   scroll-behavior: smooth;
@@ -131,12 +131,14 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100vh;
+  height: fit-content;
+  line-height: 0.1;
 }
 
 .greeting {
   display: flex;
-  height: 110vh;
+  height: 100vh;
+  position: relative;
   flex-direction: column;
   margin: 0 auto;
   justify-content: center;
@@ -146,12 +148,14 @@ body {
 .greeting-container {
   position: relative;
   z-index: 1;
+  justify-content: center;
+  align-items: center;
 }
 
 .greeting-wrapper {
 
   position: relative;
-  height: 100vh;
+  height: 10vh;
   overflow: hidden;
 }
 
@@ -164,7 +168,6 @@ body {
   height: 100%;
   border-bottom: 3px solid #3d4157;
 }
-
 
 .gradient {
   background: linear-gradient(120deg, #e66465, #9198e5);
@@ -185,24 +188,36 @@ body {
 
 .greeting-title {
   display: inline-flex;
-  justify-content: center;
-  align-items: baseline;
-  margin: 0 auto;
-  font-size: 5.5rem;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 4.5rem;
   color: #ebe5e5;
   font-weight: 500;
   font-style: bold;
-  margin-top: -100px;
+  height: fit-content;
+  margin: 10px;
+  margin-bottom: 100px;
+}
 
+.greeting-title-text {
+  overflow: visible;
+}
+
+.about {
+  display: flex;
+  padding: 0px;
+  height: fit-content;
 }
 
 .greeting-subtitle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: fit-content;
+  height: fit-content;
   margin: 0 auto;
-  font-size: 2.6rem;
+  font-size: 2.5rem;
   color: #ebe5e5;
   font-weight: 300;
 
@@ -210,7 +225,7 @@ body {
 
 .navigation {
   display: flex;
-  height: 70px;
+  height: 45px;
   align-items: center;
   justify-content: space-between;
   width: 100%;
@@ -512,7 +527,7 @@ body {
 
 .greeting-text-container {
   display: flex;
-  margin: 10px;
+  flex-direction: column;
   width: 40%;
 }
 
@@ -877,7 +892,7 @@ body {
 
 .scroll-down-container {
   position: absolute;
-  top: 750px;
+  top: 450px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -1068,7 +1083,6 @@ body {
 
   .greeting-title {
     font-size: 4.5rem;
-
   }
 
   .nav-hamburger {
@@ -1195,11 +1209,17 @@ body {
   }
 
   .navigation {
-    height: 8%;
+    height: 50px;
     width: 95vw;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
     background: rgba(20, 20, 40, 0.9);
+  }
+
+  .navigation.scrolled {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+
   }
 
   .nav-menu {
@@ -1215,7 +1235,7 @@ body {
 
   .scroll-down-container {
     position: absolute;
-    top: 650px;
+    top: 400px;
     display: inline-flex;
     flex-direction: column;
     margin: 0 auto;
@@ -1283,7 +1303,7 @@ body {
   }
 
   .greeting {
-    height: 100vh;
+    height: 90vh;
   }
 
   .socials {
@@ -1299,11 +1319,12 @@ body {
 
   .greeting-title {
     font-size: 2.2rem;
+    margin-bottom: 50px;
   }
 
   .greeting-subtitle {
     font-size: 1.5rem;
-    padding-bottom: 10px;
+    padding-top: 20px;
   }
 
   .greeting-text {

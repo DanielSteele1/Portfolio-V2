@@ -3,7 +3,10 @@ import { LuGithub } from "react-icons/lu";
 import { IoLogoLinkedin } from "react-icons/io5";
 import { HiArrowDown, HiDownload } from "react-icons/hi";
 
-import GradientText from './GradientText.tsx'
+//import GradientText from './React-Bits/GradientText.tsx'
+import SplitText from "./React-Bits/SplitText";
+import PixelBlast from "./React-Bits/PixelBlast"
+
 
 type Props = {
 
@@ -14,44 +17,51 @@ const Greeting = ({ handleDownloadAndView }: Props) => {
     return (
         <div className="greeting">
 
-            <canvas className="greeting-canvas" id="top" />
+            <PixelBlast
+                variant="circle"
+                pixelSize={5}
+                color="#B19EEF"
+                patternScale={4}
+                patternDensity={1.0}
+                pixelSizeJitter={0.5}
+                liquidRadius={1.2}
+                liquidWobbleSpeed={5}
+                speed={0.6}
+                edgeFade={0.10}
+            />
 
             <div className="greeting-container">
-
                 <span className="greeting-title" id="fade-in">
-                    Hey, I'm&nbsp;
-                    <GradientText
-                        colors={["#e66465", "#9198e5", "#e66465", "#9198e5"]}
-                        animationSpeed={4}
-                        showBorder={false}
-                        className="greeting-title"
-                    >
-                        Daniel Steele
-                    </GradientText>
-                </span>
-
-                <div id="fade-in2">
-                    <TypeAnimation
-                        className="greeting-subtitle"
-                        sequence={[
-                            ' Front End Developer',
-                            3000,
-                            ' React Developer',
-                            3000,
-                            ' Tech Enthusiast',
-                            3000,
-                        ]}
-                        speed={50}
-                        wrapper="span"
-                        repeat={Infinity}
+                    <SplitText
+                        text=" Hey, I'm Daniel Steele"
+                        className="greeting-title-text"
+                        delay={100}
+                        duration={0.6}
+                        ease="power3.out"
+                        splitType="chars"
+                        from={{ opacity: 0, y: 40 }}
+                        to={{ opacity: 1, y: 0 }}
+                        threshold={0.1}
+                        textAlign="center"
+                        
                     />
-                </div>
 
-                <span className="greeting-text-container" id="fade-in2">
-                    <span className="greeting-text">
-                        I'm currently looking for remote full-time employment in the UK.
-                        If interested, feel free to reach out via <span className="highlight">LinkedIn</span> or <span className="highlight">Email</span>.
-                    </span>
+                    <div id="fade-in4">
+                        <TypeAnimation
+                            className="greeting-subtitle"
+                            sequence={[
+                                ' Front End Developer',
+                                3000,
+                                ' React Developer',
+                                3000,
+                                ' Tech Enthusiast',
+                                3000,
+                            ]}
+                            speed={50}
+                            wrapper="span"
+                            repeat={Infinity}
+                        />
+                    </div>
                 </span>
 
                 <div className="socials" id="fade-in3">
@@ -102,7 +112,6 @@ const Greeting = ({ handleDownloadAndView }: Props) => {
                         <HiArrowDown style={{ display: 'flex', fontSize: "30px", margin: '10px', justifyContent: 'center', verticalAlign: 'center' }} />
                     </a>
                 </div>
-
             </div>
         </div>
 
