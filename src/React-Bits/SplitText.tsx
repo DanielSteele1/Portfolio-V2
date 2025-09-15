@@ -1,11 +1,8 @@
 import React, { useRef, useEffect, useState } from 'react';
 
 import { gsap } from 'gsap';
-
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
 import { SplitText as GSAPSplitText } from 'gsap/SplitText';
-
 import { useGSAP } from '@gsap/react';
 
 gsap.registerPlugin(ScrollTrigger, GSAPSplitText, useGSAP);
@@ -40,7 +37,6 @@ const SplitText: React.FC<SplitTextProps> = ({
     to = { opacity: 1, y: 0 },
     threshold = 0.1,
     rootMargin = '-100px',
-    textAlign = 'center',
     tag = 'p',
 
     onLetterAnimationComplete
@@ -232,7 +228,6 @@ const SplitText: React.FC<SplitTextProps> = ({
 
         const style: React.CSSProperties = {
 
-            textAlign: 'center',
             overflow: 'visible',
             display: 'inline-block',
             whiteSpace: 'normal',
