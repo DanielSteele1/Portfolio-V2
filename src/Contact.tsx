@@ -2,6 +2,9 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { IoMail, IoSend } from "react-icons/io5";
 import { motion } from "motion/react"
 
+
+import SplitText from "./React-Bits/SplitText";
+
 function Contact() {
 
     return (
@@ -16,12 +19,25 @@ function Contact() {
         >
             <div className="contact" id="contact">
 
-                <span className="section-heading"> Contact </span>
+                <span className="section-heading">
+
+                    <SplitText
+                        text="Want to get in touch?"
+                        className="gradient"
+                        delay={100}
+                        duration={0.6}
+                        ease="power3.out"
+                        splitType="chars"
+                        from={{ opacity: 0, y: 40 }}
+                        to={{ opacity: 1, y: 0 }}
+                        threshold={0.1}
+                        textAlign="center"
+                    />
+
+                </span>
 
                 <div className="social-bar">
-
-                    <span className="contact-sub-heading"> Want to get in touch? contact me via email below, or via my socials: </span>
-
+                    <span className="contact-sub-heading"> You can contact me via email below, or via any of my socials. I look forward to hearing from you.</span>
                     <div className="icons">
 
                         <a className="icon" type="text" href="https://www.linkedin.com/in/daniel-steele-b06443198">

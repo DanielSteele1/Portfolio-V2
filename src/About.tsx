@@ -6,6 +6,8 @@ import { motion } from "motion/react"
 import { FaGraduationCap } from "react-icons/fa";
 import { LuGraduationCap, LuLaptop } from "react-icons/lu";
 
+import SplitText from "./React-Bits/SplitText";
+
 function AboutMe() {
 
     const bars = [0, 1, 2, 3,]
@@ -22,7 +24,20 @@ function AboutMe() {
         >
 
             <div className="about" id="about">
-                <span className="section-heading"> About{"\u00A0"}<div className="gradient"> Daniel Steele</div></span>
+                <span className="section-heading">
+                      <SplitText
+                        text="About Daniel Steele"
+                        className="gradient"
+                        delay={100}
+                        duration={0.6}
+                        ease="power3.out"
+                        splitType="chars"
+                        from={{ opacity: 0, y: 40 }}
+                        to={{ opacity: 1, y: 0 }}
+                        threshold={0.1}
+                        textAlign="center"
+                    />
+                </span>
                 <div className="About-image-container">
                     <img className="About-img" src="Website_Pic.JPG" />
 
@@ -31,20 +46,20 @@ function AboutMe() {
                 <div className="About-status-container">
                     <a className="About-status" href="#projects">
                         <div className="status-icon">
-                            <LuLaptop style={{ color: '#e66465', display: 'inline-flex', verticalAlign: 'middle', fontSize: '23px' }} />
+                            <LuLaptop style={{ display: 'inline-flex', verticalAlign: 'middle', fontSize: '23px' }} />
                         </div>
                         <div>Currently Working on: </div> <span className="gradient"> Orbit </span>
                     </a>
 
                     <a className="About-status" href="#skills">
                         <div className="status-icon">
-                            <LuGraduationCap style={{ color: '#e66465', display: 'inline-flex', verticalAlign: 'middle', fontSize: '23px' }} />
+                            <LuGraduationCap style={{ display: 'inline-flex', verticalAlign: 'middle', fontSize: '23px' }} />
                         </div>
                         <div>Currently learning: </div> <span className="gradient"> TailwindCSS </span>
                     </a>
 
                     <motion.div
-                        style={{ display: "flex", gap: "4px", cursor: "pointer", alignItems: "flex-end", margin: '10px', }}
+                        style={{ display: "flex", gap: "4px", cursor: "pointer", alignItems: "flex-end" }}
                     >
                         <div className="About-status">
                             <motion.div style={{ display: 'flex', alignItems: 'center', marginRight: '5px' }}>
@@ -54,7 +69,7 @@ function AboutMe() {
                                         key={i}
                                         style={{
                                             width: "5px",
-                                            backgroundColor: "#e65555",
+                                            backgroundColor: "#a871f1",
                                             borderRadius: "2px",
                                             transformOrigin: "bottom",
                                         }}

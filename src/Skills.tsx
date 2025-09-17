@@ -10,13 +10,14 @@ import { SiCsswizardry } from "react-icons/si";
 import { FaFigma } from "react-icons/fa";
 import { motion } from "framer-motion";
 
+import SplitText from './React-Bits/SplitText';
 
 function Skills() {
 
     const [active, setActive] = useState(0);
     //diff pages
     const SkillSection = ["Frontend", "Backend", "Other"];
-    const icons = [<LuPalette style={{ marginRight: '10px' }} />, <FaServer style={{ marginRight: '10px' }} />, < TbBrandGraphql style={{ marginRight: '10px', verticalAlign: 'center' }} />]
+    const icons = [<LuPalette style={{ verticalAlign: 'center' }} />, <FaServer style={{ verticalAlign: 'center' }} />, < TbBrandGraphql style={{ verticalAlign: 'center' }} />]
 
     return (
 
@@ -30,13 +31,27 @@ function Skills() {
         >
 
             <div className="skills">
+                <span className="section-heading">
+                    <SplitText
+                        text="My Skills"
+                        className="gradient"
+                        delay={100}
+                        duration={0.6}
+                        ease="power3.out"
+                        splitType="chars"
+                        from={{ opacity: 0, y: 40 }}
+                        to={{ opacity: 1, y: 0 }}
+                        threshold={0.1}
+                        textAlign="center"
+                    />
+                </span>
 
-                <span className="section-heading">My{"\u00A0"}<span className="gradient">Skills</span> </span>
-                <span className="section-sub-heading">A list of all the skills and tech I'm familliar with. I'm especially capable at front-end development and can create visually-stunning websites. </span>
+                <span className="section-sub-heading">
+                    A list of all the skills and tech I'm familliar with. I'm especially capable at front-end development and can create visually-stunning websites. </span>
                 <div className="click-prompt-container">
 
                     <div className="click-prompt">
-                        <TbClick style={{fontSize: '23px', marginRight: '10px'}} />
+                        <TbClick style={{ fontSize: '23px', marginRight: '5px' }} />
                     </div>
 
                     <span> Click on the below tabs to view my skills </span>
@@ -53,7 +68,9 @@ function Skills() {
                             onClick={() => setActive(index)}
                         >
                             {icons[index]}
+                            <span className="skills-tabs-text">
                             {section}
+                            </span>
                         </button>
                     ))}
                 </div>

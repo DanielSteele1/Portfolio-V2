@@ -7,6 +7,7 @@ import { GoLinkExternal } from "react-icons/go";
 import { Tooltip as ReactTooltip } from "react-tooltip";
 import 'react-tooltip/dist/react-tooltip.css'
 
+import SplitText from './React-Bits/SplitText';
 
 // added this interface so that now instead of each tag just being an SVG we can now make each other have it's own name,
 // and then we can display each tag with it's own name this way.
@@ -94,7 +95,7 @@ const Project_card: React.FC<ProjectCardProps> = ({ mediaType = 'image', youtube
                                 place="bottom"
                                 style={{
                                     backgroundColor: '#0f152f',
-                                    color: '#e66465',
+                                    color: '#d06cff',
                                     fontFamily: 'figtree, sans-serif'
                                 }}
                             />
@@ -130,7 +131,21 @@ function Projects() {
         <>
             <div className="projects" id="projects">
 
-                <span className="section-heading"> Featured{"\u00A0"}<div className="gradient"> Projects</div>  </span>
+                <span className="section-heading">
+
+                    <SplitText
+                        text="Featured Projects"
+                        className="gradient"
+                        delay={100}
+                        duration={0.6}
+                        ease="power3.out"
+                        splitType="chars"
+                        from={{ opacity: 0, y: 40 }}
+                        to={{ opacity: 1, y: 0 }}
+                        threshold={0.1}
+                        textAlign="center"
+                    />
+                </span>
                 <span className="section-sub-heading">
                     My best and most impressive projects that i've been working on for the last year.
                     <br></br>
