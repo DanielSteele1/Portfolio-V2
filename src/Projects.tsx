@@ -155,10 +155,10 @@ function Projects() {
                 <div className="project-container">
 
                     <Project_card
-                        title="Orbit - Note Productivity app"
-                        description="A kanban board application, similar to Trello. 
-                        Features include the abillity to add/delete boards, drag & drop to re-order tasks, and export board data.
-                        Uses React-router for splitting different boards up, localStorage for persistance & react-toast for user feedback on operations."
+                        title="Orbit - Productivity Tracker"
+                        description="A Notes/productivity application, a blend of Trello and Google Keep. 
+                        Features include the abillity to add/delete boards, and drag & drop to re-order tasks. Users can switch between two layouts.
+                        Uses React-router for multi-board support, localStorage for persistance & react-toast for user feedback on operations."
                         src="Orbit_Kanban_App.png"
                         tags={[
                             { icon: <FaReact />, name: "React" },
@@ -169,14 +169,13 @@ function Projects() {
                         ]}
                         link="https://trello-style-kanban-board-applicati-orcin.vercel.app"
                         github="https://github.com/DanielSteele1/Trello-Clone"
-
                     >
 
                     </Project_card>
 
                     <Project_card
                         title="FocusDev"
-                        description="FocusDev is a utility app designed for developers. It's currently in progress.
+                        description="FocusDev is a utility app designed for developers.
                             It features a Notes app, Reusable code snippet feature, Calender, Github commit graph w/ stats, just to name a few.
                             Coded in JavaScript, React, Node.js & MongoDB. It also uses Bcrypt to securely store user data."
                         tags={[
