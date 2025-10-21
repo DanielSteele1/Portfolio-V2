@@ -1,18 +1,18 @@
 import { useEffect, useState } from 'react';
 
-import { Tooltip as ReactTooltip } from "react-tooltip";
 import 'react-tooltip/dist/react-tooltip.css'
-import { GoPerson } from 'react-icons/go';
-import { MdEmail } from "react-icons/md";
-import { HiDownload, HiHome } from "react-icons/hi";
-import { FaCode } from "react-icons/fa6";
+import { HiDownload } from "react-icons/hi";
 import Hamburger from 'hamburger-react';
+
+import { IoIosMoon, IoIosSunny } from "react-icons/io";
 
 type props = {
     handleDownloadAndView: (event: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => void;
+    handleThemeButton: (event: React.MouseEvent<HTMLButtonElement>) => void;
+    isThemeOn: boolean;
 };
 
-function Navigation({ handleDownloadAndView }: props) {
+function Navigation({ isThemeOn, handleDownloadAndView, handleThemeButton }: props) {
 
     const [isOpen, setOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
@@ -33,101 +33,129 @@ function Navigation({ handleDownloadAndView }: props) {
 
     return (
 
-        <div id="fade-in3" className={`navigation ${scrolled ? 'scrolled' : ''}`}>
-            <div className="nav-item">
-                <span className="nav-title">  <div className="logo">D<span className="logo-backtick">/</span>Steele</div> </span>
-            </div>
-
-            <div className="nav-item">
-                <div className="nav-menu">
-
+        <div className="nav-container">
+            <div className={`navigation ${scrolled ? "scrolled" : ""}`}>
+                <div className="nav-item">
                     <span className="nav-title">
-                        <a href="#top">
-                            <HiHome className="nav-icon" /> Home
+                        <a href="/">
+                            <div className="logo" id="gradient"> Daniel Steele </div>
                         </a>
                     </span>
+                </div>
 
-                    <span className="nav-title">
-                        <a href="#about">
-                            <GoPerson className="nav-icon" /> About Me
-                        </a>
-                    </span>
+                <div className="nav-item">
+                    <div className="nav-menu">
 
-                    {/* 
-                    <span data-tooltip-id="tooltip-1" className="nav-title">
-                        <a href="#blog">
-                            <SlSpeech className="nav-icon" /> Blog
-                        </a>
-                    </span> */}
+                        <span className="nav-title">
+                            <a href="/">
+                                Home
+                            </a>
+                        </span>
 
-                    <span className="nav-title" id="nav-projects">
-                        <a href="#projects">
-                            <FaCode className="nav-icon" /> Projects
-                        </a>
-                    </span>
+                        <span className="nav-title">
+                            <a href="/About">
+                                About Me
+                            </a>
+                        </span>
 
-                    <span className="nav-title">
-                        <a href="#contact">
-                            <MdEmail className="nav-icon" /> Contact
-                        </a>
-                    </span>
+                        <span data-tooltip-id="tooltip-1" className="nav-title">
+                            <a href="/Blog">
+                                Blog
+                            </a>
+                        </span>
 
-                    <span className="resume" onClick={handleDownloadAndView}>
-                        <HiDownload style={{
-                            fontSize: '20px',
-                            marginRight: '10px',
-                            verticalAlign: 'center',
-                            color: 'white',
-                        }} /> View my CV  </span>
+                        <span className="nav-title" id="nav-projects">
+                            <a href="/Projects">
+                                Projects
+                            </a>
+                        </span>
+
+                        <button className="resume" onClick={handleDownloadAndView}>
+                            <a href="/Daniel_Steele_Frontend_Developer_CV.pdf">
+
+                                <HiDownload style={{
+                                    verticalAlign: 'middle',
+                                    marginRight: '5px',
+                                    fontSize: '20px',
+                                    fontWeight: '900',
+                                }} />
+                                Resume
+                            </a>
+
+                        </button>
+
+                        <button className="theme-button" onClick={handleThemeButton}>
+                            {isThemeOn ?
+
+                                <IoIosMoon style={{
+                                    fontSize: '23px',
+                                }} /> :
+
+                                <IoIosSunny style={{
+                                    fontSize: '23px',
+                                }} />
+                            }
+
+                        </button>
+                    </div>
+                </div>
+
+                <div className="nav-buttons">
+
+                    <button className="theme-button-reduced" onClick={handleThemeButton}>
+                        {isThemeOn ?
+
+                            <IoIosMoon style={{
+                            }} /> :
+
+                            <IoIosSunny style={{
+                            }} />
+                        }
+
+                    </button>
+
+                    <div className="nav-hamburger">
+                        <Hamburger toggled={isOpen} toggle={setOpen} />
+                    </div>
 
                 </div>
-                <ReactTooltip
-                    id="tooltip-1"
-                    place="bottom"
-                    content="Coming Soon!"
-                    style={{
-                        backgroundColor: 'rgba(255, 255, 255, 0.03)',
-                        color: '#e66465',
-                        fontFamily: 'figtree, sans-serif'
-                    }}
-                />
+
+                {isOpen && (
+
+                    <div className="nav-menu-mobile">
+                        <div className="nav-backing-mobile">
+
+                            <span className="nav-title">
+                                <a href="/" onClick={() => { setOpen(false) }}>
+                                    Home
+                                </a>
+                            </span>
+
+                            <span className="nav-title">
+                                <a href="/About" onClick={() => { setOpen(false) }}>
+                                    About Me
+                                </a>
+                            </span>
+
+                            <span className="nav-title" id="nav-projects">
+                                <a href="/Projects" onClick={() => { setOpen(false) }}>
+                                    Projects
+                                </a>
+                            </span>
+
+                            <span className="nav-title">
+                                <a href="/Blog" onClick={() => { setOpen(false) }}>
+                                    Blog
+                                </a>
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                )}
+
             </div>
-
-            <div className="nav-hamburger">
-                <Hamburger toggled={isOpen} toggle={setOpen} />
-            </div>
-
-            {isOpen && (
-
-                <div className="nav-menu-mobile">
-
-                    <span className="nav-title">
-                        <a href="#top" onClick={() => { setOpen(false) }}>
-                            <HiHome className="nav-icon" /> Home
-                        </a>
-                    </span>
-
-                    <span className="nav-title">
-                        <a href="#about" onClick={() => { setOpen(false) }}>
-                            <GoPerson className="nav-icon" /> About Me
-                        </a>
-                    </span>
-
-                    <span className="nav-title" id="nav-projects">
-                        <a href="#projects" onClick={() => { setOpen(false) }}>
-                            <FaCode className="nav-icon" /> Projects
-                        </a>
-                    </span>
-
-                    <span className="nav-title">
-                        <a href="#contact" onClick={() => { setOpen(false) }}>
-                            <MdEmail className="nav-icon" /> Contact
-                        </a>
-                    </span>
-
-                </div>
-            )}
-
         </div>
     )
 }

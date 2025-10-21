@@ -19,16 +19,13 @@
   <meta name="language" content="English">
   <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
-  <title>Daniel Steele - Junior React Developer</title>
+  <title> Daniel Steele </title>
 
 </head>
 
-<body>
+<body id="body" style="display:none">
   <div id="root"></div>
   <script type="module" src="/src/main.tsx"></script>
-  
-  <!-- Script for CSS Background -->
-  <script src="https://unpkg.com/thpace"></script>
 
   <!-- Viewers checking the code, please read below -->
 
@@ -59,6 +56,17 @@
       y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
     })(window, document, "clarity", "script", "rx97uolkbn");
   </script>
+
+
+  <script type="text/javascript">
+    window.onload = function () {
+      setTimeout(function () {
+        document.getElementById("body").style.display = "";
+      }, 400);
+    }
+  </script>
+
+
 
 </body>
 

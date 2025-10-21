@@ -7,8 +7,6 @@ import { GoLinkExternal } from "react-icons/go";
 import { Tooltip as ReactTooltip } from "react-tooltip";
 import 'react-tooltip/dist/react-tooltip.css'
 
-import SplitText from './React-Bits/SplitText';
-
 // added this interface so that now instead of each tag just being an SVG we can now make each other have it's own name,
 // and then we can display each tag with it's own name this way.
 interface Tag {
@@ -17,6 +15,7 @@ interface Tag {
 }
 
 import { motion } from "motion/react"
+import Breadcrumbs from './Breadcrumbs';
 
 interface ProjectCardProps {
 
@@ -57,99 +56,92 @@ const Project_card: React.FC<ProjectCardProps> = ({ mediaType = 'image', youtube
         }
     };
     return (
-        <motion.div
-            className="projects"
-            id="projects"
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease: "easeOut" }}
-            viewport={{ once: true, amount: 0.2 }}
-        >
-            <div className="project-card">
-                <div className={`project-image ${mediaType}`}>
-                    {renderMedia()}
-                </div>
 
-                <div className="project-information">
-                    <span className="project-title">
-                        <div className="gradient">{title}</div>
-                    </span>
-
-                    {/* mapping the tags, and the tag tooltips that include each tag's name */}
-
-                    <div className="project-tags">
-                        {tags.map((tag, index) => (
-                            <span
-                                key={index}
-                                className="tag"
-                                data-tooltip-id={`tags-tooltip-${index}`}
-                                data-tooltip-content={tag.name}
-                            >
-                                {tag.icon}
-                            </span>
-                        ))}
-                        {tags.map((_tag, index) => (
-                            <ReactTooltip
-                                key={index}
-                                id={`tags-tooltip-${index}`}
-                                place="bottom"
-                                style={{
-                                    backgroundColor: '#0f152f',
-                                    color: '#d06cff',
-                                    fontFamily: 'figtree, sans-serif'
-                                }}
-                            />
-                        ))}
-                    </div>
-
-                    <div className="project-text">{description}</div>
-
-                    <div className="project-buttons">
-                        <div className="project-button">
-                            <a className="live-button" href={link} target="_blank" rel="noopener noreferrer">
-                                <GoLinkExternal style={{ fontSize: "20px" }} />
-                                <span className="button-text">Live Project</span>
-                            </a>
-                        </div>
-
-                        <div className="project-button">
-                            <a className="github-button" href={github} target="_blank" rel="noopener noreferrer">
-                                <LuGithub style={{ fontSize: "23px" }} />
-                                <span className="button-text">Github</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
+        <div className="project-card">
+            <div className={`project-image ${mediaType}`}>
+                {renderMedia()}
             </div>
-        </motion.div>
+
+            <div className="project-information">
+                <span className="project-title">
+                    <div className="gradient">{title}</div>
+                </span>
+
+                {/* mapping the tags, and the tag tooltips that include each tag's name */}
+
+                <div className="project-tags">
+                    {tags.map((tag, index) => (
+                        <span
+                            key={index}
+                            className="tag"
+                            data-tooltip-id={`tags-tooltip-${index}`}
+                            data-tooltip-content={tag.name}
+                        >
+                            {tag.icon}
+                        </span>
+                    ))}
+                    {tags.map((_tag, index) => (
+                        <ReactTooltip
+                            key={index}
+                            id={`tags-tooltip-${index}`}
+                            place="bottom"
+                            style={{
+                                backgroundColor: '#0f152f',
+                                color: '#d06cff',
+                                fontFamily: 'figtree, sans-serif'
+                            }}
+                        />
+                    ))}
+                </div>
+
+                <div className="project-text">{description}</div>
+
+                <div className="project-buttons">
+                    <div className="project-button">
+                        <a className="live-button" href={link} target="_blank" rel="noopener noreferrer">
+                            <GoLinkExternal style={{ fontSize: "20px" }} />
+                            <span className="button-text">Live Project</span>
+                        </a>
+                    </div>
+
+                    <div className="project-button" id="github-button">
+                        <a className="github-button" href={github} target="_blank" rel="noopener noreferrer">
+                            <LuGithub style={{ fontSize: "23px" }} />
+                            <span className="button-text">Github</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     )
 }
 
 function Projects() {
     return (
         <>
-            <div className="projects" id="projects">
+            <motion.div
+                className="projects"
+                id="projects"
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, ease: "easeOut" }}
+                viewport={{ once: true, amount: 0.2 }}
+            >
 
-                <span className="section-heading">
+                <div className="page-nav">
+                    <div className="breadcrumbs">
+                      <Breadcrumbs /> 
+                    </div>
+                </div>
 
-                    <SplitText
-                        text="Featured Projects"
-                        className="gradient"
-                        delay={100}
-                        duration={0.6}
-                        ease="power3.out"
-                        splitType="chars"
-                        from={{ opacity: 0, y: 40 }}
-                        to={{ opacity: 1, y: 0 }}
-                        threshold={0.1}
-                        textAlign="center"
-                    />
+                <span className="projects-heading">
+                   My <div id="highlight-name"> Projects </div> 🍵
                 </span>
-                <span className="section-sub-heading">
-                    My best and most impressive projects that i've been working on for the last year.
-                    <br></br>
-                    You can check them out via the links provided below.
+
+                <span className="project-sub-heading">
+                    A collection of my most impressive projects in the last year.
+                    With each project, I put an emphisis on learning a new tool or skill, ensuring I can keep growing as a developer.
                 </span>
 
                 <div className="project-container">
@@ -249,7 +241,7 @@ function Projects() {
                     </Project_card>
 
                 </div>
-            </div >
+            </motion.div>
         </>
     )
 }

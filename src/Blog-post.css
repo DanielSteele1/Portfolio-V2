@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+.blog-post {
+    min-height: 80vh;
+    margin-top: 10px;
+}
+
+.blog-post-top {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.blog-post-heading {
+
+    display: flex;
+    margin: 0 auto;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    font-size: 3.2rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+    font-style: bold;
+    color: var(--text-color);
+}
+
+.blog-post-sub-heading {
+
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 10px;
+    margin-left: 0px;
+    font-size: 1.3rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: var(--text-color);
+}
+
+.blog-post-info {
+    display: flex;
+    flex-direction: row;
+}
+
+.blog-post-date {
+    height: 30px;
+    display: flex;
+    width: fit-content;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.0rem;
+    font-weight: 400;
+    padding: 10px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    justify-content: center !important;
+    align-items: center !important;
+    background-color: var(--button-gradient);
+    border-radius: 8px;
+    margin: 10px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.blog-post-content {
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+@media(min-width: 300px) and (max-width:750px) {
+
+    .blog-post-heading {
+        font-size: 2.6rem;
+        margin-bottom: 10px;  
+        font-weight: 550;
+    }
+
+    .blog-post-sub-heading {
+
+        text-align: none;
+        font-size: 1.2rem;
+        font-weight: 400;
+        line-height: 1.4rem;
+        margin: 5px;
+        margin-left: 0px;
+        margin-bottom: 10px;
+    }
+
+    .blog-post-date {
+        font-size: 0.9rem;
+        height: 40px;
+    }
+
+    .blog-post-info{
+        display:flex;
+        width: 100%;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+}

@@ -1,18 +1,14 @@
 
-import { useEffect } from 'react';
 import Navigation from './Navigation';
-import Greeting from './Greeting';
-import AboutMe from './About';
-import Skills from './Skills';
-import Projects from './Projects';
-import Contact from './Contact';
+import Dashboard from './Dashboard';
 import Footer from './Footer';
-import BackToTop from './BackToTop';
-// import Blog from './Blog';
+import BlogPost from './BlogPost';
+
+import React, { useEffect, useState } from 'react';
 
 import { Analytics } from "@vercel/analytics/react"
 
-import { ThpaceGL } from 'thpace';
+import { BrowserRouter as Router, Routes, Route, BrowserRouter } from 'react-router-dom';
 
 declare global {
   interface Window {
@@ -20,29 +16,52 @@ declare global {
   }
 }
 
+
+import AboutMe from './About';
+import Skills from './Skills';
+import Projects from './Projects';
+import Blog from './Blog';
+
+
 function App() {
 
+  const [isThemeOn, setThemeOn] = useState(() => {
+
+    const savedTheme = localStorage.getItem("theme");
+    return savedTheme ? savedTheme === 'light' : false;
+
+  });
+
+  const handleThemeButton: React.MouseEventHandler<HTMLButtonElement> = () => {
+    setThemeOn(prev => !prev);
+  }
+
   useEffect(() => {
-    const canvas = document.querySelector('.greeting-canvas') as HTMLCanvasElement | null;
 
-    if (canvas) {
-      const settings = {
-        colors: ['#4c4fa8', '#1f2333', '#7a2d2d'],
-        triangleSize: 100,
-      };
-      ThpaceGL.create(canvas, settings);
-    } else {
-      console.error('Canvas not found');
+    const theme = isThemeOn ? "light" : "dark";
+
+    if (!document.startViewTransition) {
+      document.documentElement.setAttribute(
+        "data-theme", theme,
+      );
+      return;
     }
-  }, []);
 
-  window.addEventListener("blur", () => {
-    document.title = "Come Back! - Daniel Steele - React Developer";
-  });
+    document.startViewTransition(() => {
+      document.documentElement.setAttribute(
+        "data-theme", theme,
+      );
 
-  window.addEventListener("focus", () => {
-    document.title = "Daniel Steele - React Developer";
-  });
+      setTimeout(() => {
+        document.documentElement.setAttribute("data-theme", theme);
+      }, 500);
+    });
+
+    localStorage.setItem("theme", theme);
+    console.log("Theme Applied", theme);
+
+  }, [isThemeOn, setThemeOn]);
+
 
   const handleDownloadAndView = (event: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => {
     event.preventDefault();
@@ -60,23 +79,27 @@ function App() {
     document.body.removeChild(link);
   };
 
+
   return (
     <>
-      <Navigation handleDownloadAndView={handleDownloadAndView} />
+      <BrowserRouter>
+        <Navigation
+          handleDownloadAndView={handleDownloadAndView}
+          handleThemeButton={handleThemeButton}
+          isThemeOn={isThemeOn} />
 
-      <div className="greeting-bg-wrap">
+        <Routes>
+          <Route path="/" element={<Dashboard handleDownloadAndView={handleDownloadAndView} />} />
+          <Route path="/About" element={<AboutMe />} />
+          <Route path="/Blog" element={<Blog />} />
+          <Route path="/Blog/:slug" element={<BlogPost />} />
+          <Route path="/Skills" element={<Skills />} />
+          <Route path="/Projects" element={<Projects />} />
+        </Routes>
 
-        <Greeting handleDownloadAndView={handleDownloadAndView} />
-      </div>
-
-      <AboutMe />
-      <Skills />
-      {/* <Blog /> */}
-      <Projects />
-      <BackToTop />
-      <Contact />
-      <Footer />
-      <Analytics />
+        <Footer />
+        <Analytics />
+      </BrowserRouter>
 
     </>
   )
