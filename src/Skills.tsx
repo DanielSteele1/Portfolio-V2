@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { SiCplusplus, SiExpress, SiFigma, SiGraphql, SiJavascript, SiNodedotjs, SiVite } from "react-icons/si";
+import { SiCplusplus, SiExpress, SiGraphql, SiJavascript, SiNodedotjs, SiVite } from "react-icons/si";
 import { FaBrush, FaReact, FaServer } from "react-icons/fa";
 import { TbApi, TbBrandFramerMotion } from "react-icons/tb";
 import { SiTypescript } from "react-icons/si";

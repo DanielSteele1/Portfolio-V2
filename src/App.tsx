@@ -8,14 +8,13 @@ import React, { useEffect, useState } from 'react';
 
 import { Analytics } from "@vercel/analytics/react"
 
-import { BrowserRouter as Router, Routes, Route, BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 declare global {
   interface Window {
     sa_event?: (event: string) => void;
   }
 }
-
 
 import AboutMe from './About';
 import Skills from './Skills';
