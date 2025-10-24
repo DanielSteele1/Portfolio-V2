@@ -30,7 +30,7 @@ const Dashboard = ({ handleDownloadAndView }: Props) => {
                 </div>
 
                 <div className="socials-bottom">
-                    <span className="dashboard-title"> [ Socials ]</span>
+                    <span className="dashboard-title"> [ Socials ] </span>
 
                     <div id="social-link">
                         <IoMdPin />
@@ -106,7 +106,7 @@ const Dashboard = ({ handleDownloadAndView }: Props) => {
 
                     <div className="landing-status">
                         <span id="status-text"> <FaCity /> Open to opportunities </span>
-                        <span id="status-text"> <FaCode /> Current Project: Life Calander Dashboard </span>
+                        <span id="status-text"> <FaCode /> Current Project: Life Calendar Dashboard </span>
                     </div>
 
                     <span className="dashboard-title"> [ Introduction ] </span>
