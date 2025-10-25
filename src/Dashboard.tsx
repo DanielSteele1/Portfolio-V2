@@ -106,7 +106,7 @@ const Dashboard = ({ handleDownloadAndView }: Props) => {
 
                     <div className="landing-status">
                         <span id="status-text"> <FaCity /> Open to opportunities </span>
-                        <span id="status-text"> <FaCode /> Current Project: Life Calendar Dashboard </span>
+                        <span id="status-text"> <FaCode /> Current Project: Reddit Stats Dashboard </span>
                     </div>
 
                     <span className="dashboard-title"> [ Introduction ] </span>
