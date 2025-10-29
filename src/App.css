@@ -12,7 +12,6 @@
 
   .dashboard-component {
     width: 100%;
-    max-width: 600px;
     margin: 0 auto;
     min-width: 0;
     min-height: 120px;
@@ -229,8 +228,8 @@ body {
 }
 
 .main-container {
-  width: 65%;
-  height: 105vh;
+  width: 70%;
+  height: fit-content;
   display: flex;
   flex-direction: row;
   margin: 0 auto;
@@ -242,11 +241,10 @@ body {
 .socials {
   display: flex;
   flex-direction: column;
-  width: 35%;
+  width: 30%;
   border-radius: 8px;
-  margin-right: 20px;
+  margin: 10px;
 }
-
 
 .socials-top {
   width: 100%;
@@ -270,10 +268,15 @@ body {
 }
 
 .socials-bottom {
-  height: 250px;
+  height: fit-content;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-template-columns: repeat(1, 1fr);
+  width: 300px;
+}
+
+.socials-bottom .dashboard-title{
+  padding-left: 10px;
 }
 
 #social-link,
@@ -288,7 +291,6 @@ body {
 #social-link span,
 #social-link-location {
   display: flex;
-  padding: 10px;
   font-size: 1.0rem;
   align-items: center;
   justify-content: center;
@@ -313,7 +315,7 @@ body {
 }
 
 .socials-top img {
-  height: 200px;
+  height: 180px;
   width: auto;
   margin: 0 auto;
   background-image: cover;
@@ -395,12 +397,12 @@ body {
   justify-content: flex-start;
   align-items: center;
   width: 100%;
-  margin: 10px;
+  padding-top: 10px;
   font-size: 2.0rem;
   font-family: 'Roboto', sans-serif;
-  font-weight: 400;
+  font-weight: 600;
+  color: var(--text-color);
   font-style: bold;
-  color: var(--icon-color);
 }
 
 .landing-area {
@@ -461,7 +463,7 @@ body {
 .landing-paragraph {
   display: flex;
   width: 90%;
-  margin: 10px;
+  padding-bottom: 10px;
   text-align: flex-start;
   color: var(--text-color);
 }
@@ -855,7 +857,7 @@ body {
 .footer {
   display: flex;
   height: fit-content;
-  width: 65%;
+  width: 70%;
   padding: 20px;
   margin: 0 auto;
   justify-content: space-between;
@@ -1646,10 +1648,6 @@ svg {
 
 @media (min-width: 1000px) and (max-width: 1600px) {
 
-  .dashboard-container {
-    width: 85%;
-  }
-
   .navigation-container {
     width: 100%;
   }
@@ -1657,16 +1655,24 @@ svg {
   .navigation {
     width: 100%;
   }
+
+  .footer {
+    width: 77%;
+  }
 }
 
 @media (min-width: 1200px) and (max-width: 1600px) {
+
+
+  .main-container{
+    width: 80%;
+  }
 
 
 
   .greeting {
     height: fit-content;
     margin-top: 0px;
-
   }
 
   .skill-grid svg {
@@ -1767,6 +1773,8 @@ svg {
   .socials {
     display: none;
   }
+
+
 
   .footer {
     width: 90%;
@@ -2039,10 +2047,10 @@ svg {
   }
 
   .landing-paragraph {
-    width: 90%;
+    width: 100%;
     padding-bottom: 10px;
+    padding-top: 10px;
     font-size: 1.0rem;
-    margin: 0 auto;
   }
 
   .dashboard-title {
@@ -2165,8 +2173,7 @@ svg {
   .landing-grid {
     display: flex;
     flex-direction: column;
-    width: 90%;
-    margin: 0 auto;
+    width: 95%;
   }
 
   #commit-graph {

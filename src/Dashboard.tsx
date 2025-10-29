@@ -30,7 +30,7 @@ const Dashboard = ({ handleDownloadAndView }: Props) => {
                 </div>
 
                 <div className="socials-bottom">
-                    <span className="dashboard-title"> [ Socials ] </span>
+                    <span className="dashboard-title"> Socials </span>
 
                     <div id="social-link">
                         <IoMdPin />
@@ -109,7 +109,7 @@ const Dashboard = ({ handleDownloadAndView }: Props) => {
                         <span id="status-text"> <FaCode /> Current Project: Reddit Stats Dashboard </span>
                     </div>
 
-                    <span className="dashboard-title"> [ Introduction ] </span>
+                    <span className="dashboard-title"> Introduction </span>
 
                     <div className="landing-paragraph">
                         I'm a junior frontend developer based in the UK, and specializing in TypeScript and React.
@@ -122,7 +122,7 @@ const Dashboard = ({ handleDownloadAndView }: Props) => {
                         </div>
                     </div>
 
-                    <span className="dashboard-title">[ Sections ]</span>
+                    <span className="dashboard-title"> Sections </span>
                 </div>
 
                 <div className="dashboard-container">
