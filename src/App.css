@@ -2004,10 +2004,13 @@ svg {
   }
 
   .socials-reduced #social-link {
-    padding-bottom: 0px;
-    padding-top: 0px;
+    padding-bottom: 5px;
+    padding-top: 5px;
   }
 
+  #social-link svg{
+    margin-right: 10px;
+  }
   .main-container {
     flex-direction: column;
     height: fit-content;
