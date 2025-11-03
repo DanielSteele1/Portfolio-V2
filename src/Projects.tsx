@@ -131,12 +131,12 @@ function Projects() {
 
                 <div className="page-nav">
                     <div className="breadcrumbs">
-                      <Breadcrumbs /> 
+                        <Breadcrumbs />
                     </div>
                 </div>
 
                 <span className="projects-heading">
-                   My <div id="highlight-name"> Projects </div> 🍵
+                    My <div id="highlight-name"> Projects </div> 🍵
                 </span>
 
                 <span className="project-sub-heading">
@@ -185,25 +185,31 @@ function Projects() {
 
                     </Project_card>
 
-                    <Project_card
-                        title="Portfolio V1"
-                        description="The first iteration of my portfolio website. (this website). 
-                        It uses mainly Html/CSS & JS with some basic React work. 
-                        In the first month alone it was visited by over 1k people,
-                        and I've hosted it on Vercel in case you'd like to take a look."
-                        src="PortfolioV1.png"
+                    {/* <Project_card
+                        title="In Progress - Reddit Statistics dashboard"
+                        description="This reddit statistics dashboard aims to provide valuable insight into users reddit accounts, 
+                        displaying data such as users most active communities, most upvoted/downvoted comments etc. 
+                        Uses MongoDB & Bcrypt to store user data."
                         tags={[
                             { icon: <FaReact />, name: "React" },
-                            { icon: <FaJs />, name: "JavaScript" },
-                            { icon: <SiCreatereactapp />, name: "Create-React-App" },
-
+                            { icon: <FaJs />, name: "TypeScript" },
+                            { icon: <SiReactrouter />, name: "React Router" },
+                            { icon: <FaNodeJs />, name: "NodeJs" },
+                            { icon: <SiMongodb />, name: "MongoDB" },
+                            { icon: <SiVite />, name: "Vite" }
                         ]}
-                        link="https://danielsteeleportfoliov1.vercel.app"
-                        github="https://github.com/DanielSteele1/DanielSteele1.github.io"
-
+                        src="FocusDev.png"
+                        link="https://focusdev.vercel.app"
+                        github="https://github.com/DanielSteele1/FocusDev"
                     >
 
-                    </Project_card>
+                    </Project_card> */}
+                </div>
+
+                <span className="projects-heading">
+                    Older <div id="highlight-name"> Work </div>🏗️
+                </span>
+                <div className="project-container">
 
                     <Project_card title="SkyCompass"
                         description=" Skycompass is a web-based application that allows users to monitor up-to-date weather patterns across the globe. 
@@ -237,9 +243,7 @@ function Projects() {
                         github="https://github.com/DanielSteele1/EarthSim"
 
                     >
-
                     </Project_card>
-
                 </div>
             </motion.div>
         </>

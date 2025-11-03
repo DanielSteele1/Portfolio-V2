@@ -28,7 +28,6 @@ function Skills() {
             viewport={{ once: true, amount: 0.2 }}
         >
 
-
             <div className="skills">
                 <div className="skills-main-container">
 

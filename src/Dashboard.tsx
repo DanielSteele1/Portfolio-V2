@@ -56,11 +56,12 @@ const Dashboard = ({ handleDownloadAndView }: Props) => {
 
             <div className="greeting">
                 <div className="landing-area">
+                    <div className="landing-greeting">
+                        <span className="landing-header">
 
-                    <span className="landing-header">
+                            Hey! I'm <div id="highlight-name"> Daniel Steele </div>
 
-                        Hey! I'm <div id="highlight-name"> Daniel Steele </div>
-
+                        </span>
                         <TypeAnimation
                             className='type-animation'
                             sequence={[
@@ -75,8 +76,7 @@ const Dashboard = ({ handleDownloadAndView }: Props) => {
                             speed={10}
                             repeat={Infinity}
                         />
-
-                    </span>
+                    </div>
 
                     <div className="resume-reduced-container">
 
@@ -106,7 +106,7 @@ const Dashboard = ({ handleDownloadAndView }: Props) => {
 
                     <div className="landing-status">
                         <span id="status-text"> <FaCity /> Open to opportunities </span>
-                        <span id="status-text"> <FaCode /> Current Project: Reddit Stats Dashboard </span>
+                        <a id="status-text-a" href="https://reddit-statistics-app.vercel.app"> <FaCode /> Current Project: Reddit Stats Dashboard </a>
                     </div>
 
                     <span className="dashboard-title"> Introduction </span>
@@ -124,8 +124,6 @@ const Dashboard = ({ handleDownloadAndView }: Props) => {
 
                     <span className="dashboard-title"> Sections </span>
                 </div>
-
-                <div className="dashboard-container">
 
                     <div className="dashboard">
 
@@ -163,10 +161,7 @@ const Dashboard = ({ handleDownloadAndView }: Props) => {
                         </div>
                     </div>
                 </div>
-
-
             </div>
-        </div>
     )
 }
 
