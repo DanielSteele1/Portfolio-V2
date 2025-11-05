@@ -2,7 +2,7 @@ The second iteration of my website portfolio. Used to showscase all my current a
 
 Please, do not clone this repository unless you are a recruiter. If you copy my work and try to pass it off as your own (this has happened before!), I will know. 
 
-<img width="1689" height="914" alt="image" src="https://github.com/user-attachments/assets/8cb99ceb-04a2-467b-8d8f-b7bebf256671" />
+<img width="1915" height="919" alt="image" src="https://github.com/user-attachments/assets/61bb802b-6706-4bf2-9a06-04cfb2290aa7" />
 
 ➡️ You can view it here: https://danielsteele.dev 
 
@@ -12,7 +12,7 @@ Please, do not clone this repository unless you are a recruiter. If you copy my 
 
 -- 📌 Status --
 
-This project has launched! Updates and tweaks are being worked on, such as the blog section.
+This project has launched! Updates and tweaks are being worked on.
 
 -- 📫 Contact -- 
 
