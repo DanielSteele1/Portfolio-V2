@@ -1,6 +1,6 @@
 import { FaBookOpen, FaGithub, FaReact } from "react-icons/fa6";
 import { LuChartBar, LuPaintbrush } from "react-icons/lu";
-import { SiChakraui, SiFramer, SiMantine, SiMui, SiNextdotjs, SiReact, SiTypescript, SiVercel, SiVite } from "react-icons/si";
+import { SiChakraui, SiFramer, SiMantine, SiMui, SiNextdotjs, SiReact, SiTypescript, SiVite } from "react-icons/si";
 import { TbBread } from "react-icons/tb";
 
 function Links() {
