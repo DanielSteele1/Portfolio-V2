@@ -149,6 +149,12 @@ function Navigation({ isThemeOn, handleDownloadAndView, handleThemeButton }: pro
                                 </a>
                             </span>
 
+                            <span className="nav-title">
+                                <a href="/Links" onClick={() => { setOpen(false) }}>
+                                    Developer Links 
+                                </a>
+                            </span>
+
                         </div>
 
                     </div>

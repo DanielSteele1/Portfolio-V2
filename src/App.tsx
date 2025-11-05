@@ -20,6 +20,7 @@ import AboutMe from './About';
 import Skills from './Skills';
 import Projects from './Projects';
 import Blog from './Blog';
+import Links from './Links';
 
 
 function App() {
@@ -94,6 +95,7 @@ function App() {
           <Route path="/Blog/:slug" element={<BlogPost />} />
           <Route path="/Skills" element={<Skills />} />
           <Route path="/Projects" element={<Projects />} />
+          <Route path="/Links" element={<Links />} />
         </Routes>
 
         <Footer />

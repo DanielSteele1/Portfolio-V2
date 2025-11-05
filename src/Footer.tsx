@@ -1,4 +1,4 @@
-import { LuGithub } from "react-icons/lu";
+import { LuGithub, LuLink } from "react-icons/lu";
 import { IoLogoLinkedin } from "react-icons/io5";
 
 function Footer() {
@@ -14,7 +14,9 @@ function Footer() {
             </div>
 
             <div className="footer-item">
-
+                <span className="footer-link">
+                    <a href="/Links"> <LuLink style={{ margin: '10px'}}/> Dev Links </a>
+                </span>
             </div>
 
             <div className="footer-item">
