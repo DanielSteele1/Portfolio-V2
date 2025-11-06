@@ -740,17 +740,16 @@ body {
 }
 
 .about,
-.Blog,
-.links {
+.links,
+.Blog {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  width: 50%;
+  width: 45%;
   min-height: 50vh;
   margin-top: 100px;
-
 }
 
 .Blog,
@@ -806,7 +805,7 @@ body {
 
 }
 
-.link a{
+.link a {
   color: var(--font-color);
 }
 

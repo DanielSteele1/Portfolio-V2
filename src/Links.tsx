@@ -26,7 +26,6 @@ function Links() {
                             <FaGithub /> Github
                         </div>
                     </a>
-
                     <a href="https://github.com/DanielSteele1/developer-portfolios">
                         <div className="link">
                             <FaGithub /> Emma Bostian's Developer Portfolio list

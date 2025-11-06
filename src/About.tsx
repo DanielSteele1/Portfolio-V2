@@ -73,11 +73,11 @@ function AboutMe() {
                     <span className="About-para-title"> What am i up to right now? </span>
 
                     <span className="About-paragraph-text">
-                        Right now, i'm making my own projects in order to constantly iterate on my skills to become a better developer.
-                        Some of the new technologies I've been using recently include <span className="highlight-1"> GraphQL and libraries such as React-DnD and GSAP.</span>
+                        Right now, i'm making my own projects in order to constantly iterate on my skills to become more skilled as a developer.
+                        Some of the new technologies I've been using recently include GraphQL and libraries such as React-DnD and GSAP.
                     </span>
 
-                    <span className="About-paragraph-text"> I'm also working on a few projects, including Orbit - a recently released notes app, this website, my blog - and a lot more planned.  </span>
+                    <span className="About-paragraph-text"> I'm also working on a few projects, including Orbit - a recently released notes app, a reddit based - and a lot more planned. </span>
 
                 </div>
             </div>
@@ -86,7 +86,6 @@ function AboutMe() {
                 <span id="image-description"> Picture of Plymouth Hoe, Devon, United Kingdom - Where I studied and graduated.</span>
             </div>
         </motion.div >
-
     )
 }
 
