@@ -5,7 +5,6 @@ import "/node_modules/flag-icons/css/flag-icons.min.css";
 import Breadcrumbs from "./Breadcrumbs";
 
 function AboutMe() {
-
     return (
         <motion.div
             className="about"
@@ -15,9 +14,7 @@ function AboutMe() {
             transition={{ duration: 0.7, ease: "easeOut" }}
             viewport={{ once: true, amount: 0.2 }}
         >
-
             <div className="page-nav">
-
                 <div className="breadcrumbs">
                    <Breadcrumbs />
                 </div>

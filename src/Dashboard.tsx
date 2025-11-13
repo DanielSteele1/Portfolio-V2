@@ -106,7 +106,7 @@ const Dashboard = ({ handleDownloadAndView }: Props) => {
 
                     <div className="landing-status">
                         <span id="status-text"> <FaCity /> Open to opportunities </span>
-                        <a id="status-text-a" href="https://reddit-statistics-app.vercel.app"> <FaCode /> Current Project: Reddit Stats Dashboard </a>
+                        <a id="status-text-a" href="https://reddit-statistics-app.vercel.app"> <FaCode /> Current Project: AudioStats - Spotify Charts App </a>
                     </div>
 
                     <span className="dashboard-title"> Introduction </span>
