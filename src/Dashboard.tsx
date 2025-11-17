@@ -125,43 +125,62 @@ const Dashboard = ({ handleDownloadAndView }: Props) => {
                     <span className="dashboard-title"> Sections </span>
                 </div>
 
-                    <div className="dashboard">
+                <div className="dashboard">
 
-                        <div className="dashboard-component component-about" onClick={() => window.location.href = '/About'}>
-                            <div className="component-about">
-                                <div className="component-info" id="component-info-about">
-                                    <span className="component-title"> About me 💻 </span>
-                                    <span className="component-description"> Find out more about me. </span>
-                                </div>
+                    <div className="dashboard-component component-about" onClick={() => window.location.href = '/About'}>
+                        <div className="component-about">
+                            <div className="component-info" id="component-info-about">
+                                <span className="component-title"> About me 💻 </span>
+                                <span className="component-description"> Find out more about me. </span>
                             </div>
                         </div>
+                    </div>
 
-                        <div className="dashboard-component component-projects" onClick={() => window.location.href = '/Projects'}>
-                            <div className="component-info">
-                                <span className="component-title">
-                                    Projects 🍵</span>
-                                <span className="component-description"> My collection of personal web projects. </span>
-                            </div>
+                    <div className="dashboard-component component-projects" onClick={() => window.location.href = '/Projects'}>
+                        <div className="component-info">
+                            <span className="component-title">
+                                Projects 🍵</span>
+                            <span className="component-description"> My collection of personal web projects. </span>
+                        </div>
+                    </div>
+
+                    <div className="dashboard-component component-skills" id="skills-bg" onClick={() => window.location.href = '/Skills'}>
+
+                        <div className="component-info">
+                            <span className="component-title"> Skills 🏗️ </span>
+                            <span className="component-description"> A list of technologies I'm skilled with. </span>
                         </div>
 
-                        <div className="dashboard-component component-skills" id="skills-bg" onClick={() => window.location.href = '/Skills'}>
+                    </div>
 
-                            <div className="component-info">
-                                <span className="component-title"> Skills 🏗️ </span>
-                                <span className="component-description"> A list of technologies I'm skilled with. </span>
-                            </div>
-
+                    <div className="dashboard-component component-blog" onClick={() => window.location.href = '/Blog'}>
+                        <div className="component-info">
+                            <span className="component-title"> Blog 📰 </span>
+                            <span className="component-description"> Write-ups of my projects & more. </span>
                         </div>
+                    </div>
 
-                        <div className="dashboard-component component-blog" onClick={() => window.location.href = '/Blog'}>
-                            <div className="component-info">
-                                <span className="component-title"> Blog 📰 </span>
-                                <span className="component-description"> Write-ups of my projects & more. </span>
+                    <div className="dashboard-component component-links" onClick={() => window.location.href = '/Links'}>
+                        <div className="component-links">
+                            <div className="component-info" id="component-info-links">
+                                <span className="component-title"> Useful Links 📌 </span>
+                                <span className="component-description"> Bookmarks & useful repositories for devs. </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="dashboard-component component-none" onClick={() => window.location.href = 'mailto:Dsteele1906@gmail.com'}>
+                        <div className="component-links">
+                            <div className="component-info" id="component-info-links">
+                                <span className="none-title"> Interested? </span>
+                                <span className="none-desc"> Click here to shoot me an email. </span>
+
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
     )
 }
 

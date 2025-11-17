@@ -10,12 +10,6 @@
     gap: 20px;
   }
 
-  .dashboard-component {
-    width: 100%;
-    margin: 0 auto;
-    min-width: 0;
-    min-height: 120px;
-  }
 }
 
 ::view-transition-old(root) {
@@ -229,7 +223,7 @@ body {
 }
 
 .main-container {
-  width: 55%;
+  width: 50%;
   height: fit-content;
   display: flex;
   flex-direction: row;
@@ -394,12 +388,12 @@ body {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  width: 100%;
-  font-size: 2.0rem;
+  height: fit-content;
+  width: fit-content;
+  font-size: 2.5rem;
   font-family: 'Roboto', sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   color: var(--heading-color);
-  font-style: bold;
 }
 
 .landing-area {
@@ -489,7 +483,10 @@ body {
 
 .landing-paragraph {
   display: flex;
-  width: 90%;
+  height: 80px;
+  align-items: center;
+  justify-content: center;
+  width: 65%;
   padding-bottom: 10px;
   text-align: flex-start;
   color: var(--text-color);
@@ -507,13 +504,15 @@ body {
   padding-bottom: 10px;
 }
 
-.dashboard-component {
+.dashboard-component,
+.component-none {
   display: flex;
   flex-direction: column;
   border-radius: 8px;
   background-color: var(--component-background);
-  height: 150px;
+  height: 120px;
   width: 100%;
+  border: 2px solid transparent;
 }
 
 .dashboard-component:hover {
@@ -563,6 +562,9 @@ body {
   background-clip: padding-box;
 }
 
+.dashboard-component.component-links {
+  width: 100%;
+}
 
 .dashboard-component.component-projects {
   background-size: cover;
@@ -571,6 +573,44 @@ body {
 
 .dashboard-component.component-skills {
   z-index: 1;
+}
+
+.component-none {
+  width: 100%;
+  flex-direction: row;
+  background-color: #a871f1;
+  border-radius: 8px;
+  min-width: fit-content;
+}
+
+.none-email{
+  font-size: 1.3rem;
+}
+
+.none-title {
+  font-size: 2.0rem;
+  color: whitesmoke;
+}
+
+.none-desc {
+  display: flex;
+  font-size: 1.2rem;
+
+}
+
+#none-email {
+  display: flex;
+  margin-left: 10px;
+  color: whitesmoke;
+}
+
+#none-email:hover {
+  
+  text-decoration: underline;
+}
+
+.component-none:hover {
+  transition: translateY(10px) !important;
 }
 
 .skill-grid {
@@ -626,15 +666,15 @@ body {
   height: 60px;
   align-items: center;
   justify-content: space-between;
-  width: 55%;
+  width: 50%;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 100;
   margin: 0 auto;
-  padding: 10px;
-
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .nav-buttons {
@@ -733,7 +773,7 @@ body {
   flex-direction: column;
   justify-content: center;
   margin: 0 auto;
-  width: 55%;
+  width: 50%;
   height: fit-content;
   margin-top: 100px;
   margin-bottom: 20px;
@@ -747,7 +787,7 @@ body {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  width: 45%;
+  width: 50%;
   min-height: 50vh;
   margin-top: 100px;
 }
@@ -762,7 +802,7 @@ body {
 .links {
   display: flex;
   flex-direction: column;
-  width: 55%;
+  width: 50%;
   margin: 0 auto;
   align-items: center;
   margin-top: 100px;
@@ -970,12 +1010,11 @@ body {
 .footer {
   display: flex;
   height: fit-content;
-  width: 55%;
+  width: 50%;
   padding: 20px;
   margin: 0 auto;
   justify-content: space-between;
   align-items: center;
-  border-top: 1px solid var(--component-background);
 }
 
 .footer-item {
@@ -1956,7 +1995,7 @@ svg {
 
   .dashboard-component {
     width: 100%;
-    height: 180px;
+    height: 120px;
   }
 
   .theme-button-reduced {
@@ -2176,9 +2215,8 @@ svg {
   }
 
   .landing-paragraph {
+    height: 90px;
     width: 100%;
-    padding-bottom: 10px;
-    padding-top: 10px;
     font-size: 1.0rem;
   }
 
@@ -2236,7 +2274,7 @@ svg {
   .dashboard-component {
     margin: 0 auto;
     width: 100%;
-    max-width: 85%;
+    max-width: 90%;
     height: 150px;
     grid-column: auto;
   }
@@ -2442,11 +2480,12 @@ svg {
   }
 
   .nav-title a {
-    font-size: 1.2rem;
     padding: 10px;
+    font-size: 1.2rem;
     align-items: flex-start;
     justify-content: flex-start;
     font-weight: 450;
+    padding-left: 30px;
   }
 
   #blog {
@@ -2607,6 +2646,8 @@ svg {
     display: flex;
     flex-direction: column;
     width: 80%;
+    height: 80px;
+    margin: 0 auto;
     align-items: flex-start;
     text-align: center;
   }

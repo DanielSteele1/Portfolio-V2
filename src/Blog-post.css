@@ -32,11 +32,11 @@
 
     display: flex;
     margin: 0 auto;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     width: 100%;
-    margin: 10px;
-    margin-left: 0px;
+    margin-bottom: 10px;
+    margin-top: 10px;
     font-size: 1.3rem;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;

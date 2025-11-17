@@ -3,12 +3,23 @@ import { LuChartBar, LuPaintbrush } from "react-icons/lu";
 import { SiChakraui, SiFramer, SiMantine, SiMui, SiNextdotjs, SiReact, SiTypescript, SiVite } from "react-icons/si";
 import { TbBread } from "react-icons/tb";
 
+import Breadcrumbs from './Breadcrumbs';
+
 function Links() {
 
     return (
         <section className="links">
+
+            <div className="page-nav">
+
+                <div className="breadcrumbs">
+                    <Breadcrumbs />
+                </div>
+
+            </div>
+
             <div className="section-heading">
-                Developer <div id="highlight-name">links </div> ⛓️
+                Useful <div id="highlight-name">links</div> 📌
             </div>
 
             <div className="section-sub-heading">
@@ -37,7 +48,6 @@ function Links() {
                             <FaGithub /> "Ideas-for-projects-people-would-use" github list
                         </div>
                     </a>
-
                 </div>
 
                 <span className="links-grid-title"> Documentation Websites </span>
