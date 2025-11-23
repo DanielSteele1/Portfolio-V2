@@ -13,7 +13,6 @@ function Footer() {
                 <span className="gradient">Daniel Steele ©{currentYear} </span>
             </div>
 
-
             <div className="footer-item">
                 <div className="footer-socials">
                     <span className="footer-icon"> <a href="https://www.linkedin.com/in/daniel-steele-b06443198"><IoLogoLinkedin style={{ fontSize: '30px', paddingLeft: '10px' }} /></a> </span>

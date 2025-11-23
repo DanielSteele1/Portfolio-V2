@@ -3,6 +3,7 @@ import { motion } from "motion/react"
 
 import "/node_modules/flag-icons/css/flag-icons.min.css";
 import Breadcrumbs from "./Breadcrumbs";
+import { SlPicture } from "react-icons/sl";
 
 function AboutMe() {
     return (
@@ -16,14 +17,14 @@ function AboutMe() {
         >
             <div className="page-nav">
                 <div className="breadcrumbs">
-                   <Breadcrumbs />
+                    <Breadcrumbs />
                 </div>
-                
+
             </div>
             <div className="section-heading"> About <div id="highlight-name"> Me </div> 💻 </div>
             <div className="banner">
                 <img src="Picture of the Bay -website.jpg"></img>
-                <span id="image-description"> Picture of Torbay, Devon, United Kingdom - Taken by myself in late 2023</span>
+                <span id="image-description"> <SlPicture /> Picture of Torbay, Devon, United Kingdom - Taken by myself in late 2023</span>
             </div>
 
             <div className="About-text">
@@ -74,13 +75,12 @@ function AboutMe() {
                         Some of the new technologies I've been using recently include GraphQL and libraries such as React-DnD and GSAP.
                     </span>
 
-                    <span className="About-paragraph-text"> I'm also working on a few projects, including Orbit - a recently released notes app, a reddit based - and a lot more planned. </span>
-
+                    <span className="About-paragraph-text"> I'm also working on a few projects, including Orbit - a recently released notes app, a Spotify insights app - and a lot more planned. </span>
                 </div>
             </div>
             <div className="about-footer">
                 <img src="Plymouth_Hoe.jpg"></img>
-                <span id="image-description"> Picture of Plymouth Hoe, Devon, United Kingdom - Where I studied and graduated.</span>
+                <span id="image-description"> <SlPicture />  Picture of Plymouth Hoe, Devon, United Kingdom - Where I studied and graduated.</span>
             </div>
         </motion.div >
     )

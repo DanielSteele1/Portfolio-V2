@@ -5,9 +5,7 @@ import Footer from './Footer';
 import BlogPost from './BlogPost';
 
 import React, { useEffect, useState } from 'react';
-
 import { Analytics } from "@vercel/analytics/react"
-
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 declare global {
@@ -21,7 +19,6 @@ import Skills from './Skills';
 import Projects from './Projects';
 import Blog from './Blog';
 import Links from './Links';
-
 
 function App() {
 
@@ -62,7 +59,6 @@ function App() {
 
   }, [isThemeOn, setThemeOn]);
 
-
   const handleDownloadAndView = (event: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => {
     event.preventDefault();
     if (typeof window.sa_event === 'function') {
@@ -89,7 +85,7 @@ function App() {
           isThemeOn={isThemeOn} />
 
         <Routes>
-          <Route path="/" element={<Dashboard handleDownloadAndView={handleDownloadAndView} />} />
+          <Route path="/" element={React.createElement(Dashboard as any, { isThemeOn, handleDownloadAndView })} />
           <Route path="/About" element={<AboutMe />} />
           <Route path="/Blog" element={<Blog />} />
           <Route path="/Blog/:slug" element={<BlogPost />} />
