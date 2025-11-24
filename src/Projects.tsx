@@ -1,7 +1,7 @@
 import React, { JSX } from 'react';
 import { FaJs, FaNodeJs, FaReact } from "react-icons/fa";
 import { LuGithub } from "react-icons/lu";
-import { SiCplusplus, SiCreatereactapp, SiMongodb, SiOpengl, SiReactrouter, SiTypescript, SiVite } from 'react-icons/si';
+import { SiCplusplus, SiCreatereactapp, SiMantine, SiMongodb, SiOpengl, SiReactrouter, SiSpotify, SiTypescript, SiVite } from 'react-icons/si';
 import { GoLinkExternal } from "react-icons/go";
 
 import { Tooltip as ReactTooltip } from "react-tooltip";
@@ -16,6 +16,7 @@ interface Tag {
 
 import { motion } from "motion/react"
 import Breadcrumbs from './Breadcrumbs';
+import { MdApi } from 'react-icons/md';
 
 interface ProjectCardProps {
 
@@ -185,25 +186,26 @@ function Projects() {
 
                     </Project_card>
 
-                    {/* <Project_card
-                        title="In Progress - Reddit Statistics dashboard"
-                        description="This reddit statistics dashboard aims to provide valuable insight into users reddit accounts, 
-                        displaying data such as users most active communities, most upvoted/downvoted comments etc. 
-                        Uses MongoDB & Bcrypt to store user data."
+                    <Project_card
+                        title="Audio Stats - Spotify stats App (WIP)"
+                        description="An in progress full-stack web application intended to use Spotify's authentication and API service to get a users listening habits,
+                        and to visualise that data using vis libraries such as D3.js. Uses MongoDB on the backend with React/TS on the frontend."
+                        src=""
                         tags={[
                             { icon: <FaReact />, name: "React" },
-                            { icon: <FaJs />, name: "TypeScript" },
-                            { icon: <SiReactrouter />, name: "React Router" },
-                            { icon: <FaNodeJs />, name: "NodeJs" },
+                            { icon: <SiTypescript />, name: "TypeScript" },
                             { icon: <SiMongodb />, name: "MongoDB" },
-                            { icon: <SiVite />, name: "Vite" }
+                            { icon: <SiReactrouter />, name: "React-Router" },
+                            { icon: <SiSpotify />, name: "Spotify's public API" },
+                            { icon: <SiMantine />, name: "MantineUI" },
+                            { icon: <SiVite />, name: "Vite" },
                         ]}
-                        src="FocusDev.png"
-                        link="https://focusdev.vercel.app"
-                        github="https://github.com/DanielSteele1/FocusDev"
+                        link="https://github.com/DanielSteele1/Spotify-Statistics-Dashboard"
+                        github="https://github.com/DanielSteele1/Spotify-Statistics-Dashboard"
                     >
 
-                    </Project_card> */}
+                    </Project_card>
+
                 </div>
 
                 <span className="projects-heading">
@@ -225,7 +227,7 @@ function Projects() {
                             { icon: <SiCreatereactapp />, name: "Create-React-App" },
 
                         ]}
-                        link="https://github.com/DanielSteele1/SkyCompass"
+                        link=""
                         github="https://github.com/DanielSteele1/SkyCompass"
 
                     >

@@ -1267,14 +1267,11 @@ body {
   display: grid;
   grid-template-rows: auto 1fr;
   margin: 0 auto;
-  background-color: var(--background-secondary);
-  border-radius: 8px;
 }
 
 .project-card:hover {
   transition: 0.4s ease-in;
   border-color: var(--icon-color);
-  transform: translateY(-5px);
 }
 
 .project-information {

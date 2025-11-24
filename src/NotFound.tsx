@@ -4,15 +4,6 @@ import Dashboard from './Dashboard';
 import Footer from './Footer';
 import BlogPost from './BlogPost';
 
-import NotFound from './NotFound';
-
-import AboutMe from './About';
-import Skills from './Skills';
-import Projects from './Projects';
-import Blog from './Blog';
-import Links from './Links';
-
-
 import React, { useEffect, useState } from 'react';
 import { Analytics } from "@vercel/analytics/react"
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -23,7 +14,13 @@ declare global {
   }
 }
 
-function App() {
+import AboutMe from './About';
+import Skills from './Skills';
+import Projects from './Projects';
+import Blog from './Blog';
+import Links from './Links';
+
+function NotFound() {
 
   const [isThemeOn, setThemeOn] = useState(() => {
 
@@ -107,4 +104,4 @@ function App() {
   )
 }
 
-export default App;
+export default NotFound;
