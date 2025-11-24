@@ -16,7 +16,6 @@ interface Tag {
 
 import { motion } from "motion/react"
 import Breadcrumbs from './Breadcrumbs';
-import { MdApi } from 'react-icons/md';
 
 interface ProjectCardProps {
 
@@ -205,7 +204,6 @@ function Projects() {
                     >
 
                     </Project_card>
-
                 </div>
 
                 <span className="projects-heading">
