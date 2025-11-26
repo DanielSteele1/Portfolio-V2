@@ -59,7 +59,7 @@ return (
                 <div className="landing-greeting">
                     <span className="landing-header">
 
-                        Hey! I'm <div id="highlight-name"> Daniel Steele </div>
+                        Hey, I'm <div id="highlight-name"> Daniel Steele </div>
 
                     </span>
                     <TypeAnimation
@@ -116,7 +116,7 @@ return (
                 <span className="dashboard-title"> Introduction </span>
 
                 <div className="landing-paragraph">
-                    I'm a junior frontend developer based in the UK, and specializing in TypeScript and React.
+                    I'm a junior frontend developer based in the UK, specializing in TypeScript and React.
                     I'm currently looking for new opportunities to grow my skills and contribute to exciting projects.
                 </div>
 

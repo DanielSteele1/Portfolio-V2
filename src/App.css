@@ -946,7 +946,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 80%;
+  width: 75%;
   min-height: 100vh;
   height: fit-content;
   margin: 0 auto;
@@ -1316,10 +1316,10 @@ body {
   max-width: 100%;
   overflow: hidden;
   display: flex;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+  border-radius: 8px;
   align-items: center;
   justify-content: center;
+
 
 }
 
@@ -1898,11 +1898,29 @@ svg {
 
 @media (min-width: 1400px) and (max-width: 1600px) {
 
+  .Frontend-skills,
+  .Backend-skills,
+  .Other{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .skills-container{
+    width: 100%;
+  }
+
+  .skills-sub-heading{
+    width: 100%;
+  }
+
+  .skills{
+    width: 75%;
+    margin: 0 auto;
+    margin-top: 30px
+  }
+
   .main-container,
   .projects,
-  .about,
-  .skills {
-
+  .about{
     width: 60%;
   }
 
@@ -1933,6 +1951,23 @@ svg {
 }
 
 @media (min-width: 1200px) and (max-width: 1400px) {
+
+  .Frontend-skills,
+  .Backend-skills,
+  .Other{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .skills-main-container{
+    margin-top: 30px;
+    width: fit-content;
+  }
+
+  .Frontend-skills,
+  .Backend-skills,
+  .Other{
+    grid-template-columns: repeat(2, 1fr);
+  }
 
   .landing-status-container {
     width: 100%;
@@ -1989,14 +2024,24 @@ svg {
 
   .main-container,
   .projects,
-  .about,
-  .skills {
+  .about {
 
     width: 75%;
   }
 
   .navigation {
     width: 75%;
+  }
+
+  .skills-main-container{
+    margin-top: 100px;
+    width: fit-content;
+  }
+
+  .Frontend-skills,
+  .Backend-skills,
+  .Other{
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
